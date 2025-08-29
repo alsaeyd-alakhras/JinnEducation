@@ -1,0 +1,17 @@
+{
+  "name": "jinnedu-frontend",
+  "version": "1.0.0",
+  "description": "JINN EDU Educational Platform Frontend",
+  "main": "index.html",
+  "scripts": {
+    "dev": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --watch",
+    "build": "tailwindcss -i ./src/input.css -o ./assets/css/tailwind.css --minify",
+    "serve": "python -m http.server 8000"
+  },
+  "dependencies": {
+    "@tailwindcss/cli": "^4.1.12"
+  },
+  "devDependencies": {
+    "tailwindcss": "^4.1.12"
+  }
+}
