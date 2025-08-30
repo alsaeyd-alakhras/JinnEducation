@@ -6,11 +6,22 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>JINN EDU - Test</title>
 
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
     <!-- Tailwind CSS -->
     <link rel="stylesheet" href="./assets/css/tailwind.css">
 
     <!-- Font Awesome -->
     <link rel="stylesheet" href="./assets/css/all.min.css">
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.css">
+    <script src="https://cdn.jsdelivr.net/npm/swiper@11/swiper-bundle.min.js"></script>
 </head>
 
 <body class="bg-gray-50">
@@ -19,7 +30,7 @@
     <header class="fixed top-0 bottom-0 left-0 z-50 w-full bg-white shadow-sm h-[120px]">
         <!-- Top Navigation Bar -->
         <div class="text-white bg-primary-600">
-            <div class="px-4 py-2 mx-auto max-w-7xl">
+            <div class="container px-4 py-2 mx-auto">
                 <div class="flex justify-between items-center">
 
                     <!-- Search Bar -->
@@ -87,7 +98,7 @@
 
         <!-- Main Navigation -->
         <div class="bg-gray-50">
-            <div class="px-4 mx-auto max-w-7xl">
+            <div class="container px-4 mx-auto">
                 <div class="flex justify-between items-center h-16">
 
                     <!-- Logo -->
@@ -538,7 +549,7 @@
         </div>
 
         <!-- Main Container -->
-        <div class="relative z-10 px-4 mx-auto w-full max-w-7xl">
+        <div class="container relative z-10 px-4 mx-auto w-full">
             <div class="grid lg:grid-cols-2 gap-8 lg:gap-12 items-center min-h-[600px]">
 
                 <!-- Text Content Section -->
@@ -677,7 +688,7 @@
 
         <!-- Dots Indicators -->
         <div class="flex absolute bottom-8 left-1/2 z-20 gap-2 transform -translate-x-1/2">
-            <button class="w-8 h-3 bg-blue-600 rounded-full transition-all duration-300 hero-dot"
+            <button class="w-3 h-3 bg-blue-600 rounded-full transition-all duration-300 hero-dot"
                 data-slide="0"></button>
             <button class="w-3 h-3 bg-gray-300 rounded-full transition-all duration-300 hero-dot"
                 data-slide="1"></button>
@@ -688,11 +699,11 @@
 
     <!-- Statistics Section -->
     <section class="py-16 bg-white">
-        <div class="px-4 mx-auto max-w-7xl">
+        <div class="container px-4 mx-auto">
 
             <!-- Section Title -->
             <div class="mb-12 text-center">
-                <h2 class="mb-4 text-4xl font-black text-gray-900">Our Numbers</h2>
+                <h2 class="mb-4 h-section">Our Numbers</h2>
                 <p class="mx-auto max-w-2xl text-xl text-gray-600">
                     Statistics that confirm the quality and excellence of the JINN educational platform
                 </p>
@@ -703,7 +714,7 @@
 
                 <!-- Educational Services - Blue -->
                 <div
-                    class="p-8 bg-blue-100 rounded-2xl transition-all duration-300 cursor-pointer stats-card group hover:bg-blue-200 hover:scale-105 hover:shadow-xl">
+                    class="p-8 bg-blue-100 rounded-md transition-all duration-300 cursor-pointer stats-card group hover:bg-blue-200 hover:scale-105 hover:shadow-xl">
                     <div class="flex items-center">
                         <div class="mr-4 rtl:mr-0 rtl:ml-4">
                             <!-- <i class="text-4xl text-blue-600 transition-colors duration-300 fas fa-cog group-hover:text-blue-700"></i> -->
@@ -724,7 +735,7 @@
 
                 <!-- Students Count - Purple -->
                 <div
-                    class="p-8 bg-purple-100 rounded-2xl transition-all duration-300 cursor-pointer stats-card group hover:bg-purple-200 hover:scale-105 hover:shadow-xl">
+                    class="p-8 bg-purple-100 rounded-md transition-all duration-300 cursor-pointer stats-card group hover:bg-purple-200 hover:scale-105 hover:shadow-xl">
                     <div class="flex items-center">
                         <div class="mr-4 rtl:mr-0 rtl:ml-4">
                             <!-- <i class="text-4xl text-purple-600 transition-colors duration-300 fas fa-graduation-cap group-hover:text-purple-700"></i> -->
@@ -745,7 +756,7 @@
 
                 <!-- Tutors Count - Dark Gray/Slate -->
                 <div
-                    class="p-8 rounded-2xl transition-all duration-300 cursor-pointer stats-card group bg-slate-200 hover:bg-slate-300 hover:scale-105 hover:shadow-xl">
+                    class="p-8 rounded-md transition-all duration-300 cursor-pointer stats-card group bg-slate-200 hover:bg-slate-300 hover:scale-105 hover:shadow-xl">
                     <div class="flex items-center">
                         <div class="mr-4 rtl:mr-0 rtl:ml-4">
                             <!-- <i class="text-4xl transition-colors duration-300 fas fa-user-tie text-slate-700 group-hover:text-slate-800"></i> -->
@@ -766,7 +777,7 @@
 
                 <!-- Courses Count - Yellow/Amber -->
                 <div
-                    class="p-8 bg-amber-100 rounded-2xl transition-all duration-300 cursor-pointer stats-card group hover:bg-amber-200 hover:scale-105 hover:shadow-xl">
+                    class="p-8 bg-amber-100 rounded-md transition-all duration-300 cursor-pointer stats-card group hover:bg-amber-200 hover:scale-105 hover:shadow-xl">
                     <div class="flex items-center">
                         <div class="mr-4 rtl:mr-0 rtl:ml-4">
                             <!-- <i class="p-2 text-4xl text-amber-600 rounded transition-colors duration-300 fas fa-laptop group-hover:text-amber-700"></i> -->
@@ -791,40 +802,40 @@
 
     <!-- Recent Courses Section -->
     <section class="px-4 py-16">
-        <div class="mx-auto max-w-7xl">
+        <div class="container mx-auto">
 
             <!-- Section Title -->
-            <h2 class="mb-12 text-4xl font-bold text-center text-gray-900">Recent courses</h2>
+            <h2 class="mb-6 text-center h-section">Recent courses</h2>
 
             <!-- Category Filter -->
             <div class="flex flex-wrap gap-6 justify-center mb-12">
                 <button
-                    class="px-6 py-3 text-sm font-medium text-white bg-blue-600 rounded-full shadow-md transition-all duration-300 category-btn active"
+                    class="px-6 py-3 text-lg font-medium text-blue-600 transition-all duration-300 category-btn active hover:text-blue-600 hover:scale-105"
                     data-type="all">
                     All categories
                 </button>
                 <button
-                    class="px-6 py-3 text-sm font-medium text-gray-700 bg-gray-200 rounded-full transition-all duration-300 category-btn hover:bg-gray-300"
+                    class="px-6 py-3 text-lg font-medium text-black transition-all duration-300 category-btn hover:text-blue-600 hover:scale-105"
                     data-type="AI">
                     Artificial Intelligence - AI
                 </button>
                 <button
-                    class="px-6 py-3 text-sm font-medium text-gray-700 bg-gray-200 rounded-full transition-all duration-300 category-btn hover:bg-gray-300"
+                    class="px-6 py-3 text-lg font-medium text-black transition-all duration-300 category-btn hover:text-blue-600 hover:scale-105"
                     data-type="Business">
                     Business
                 </button>
                 <button
-                    class="px-6 py-3 text-sm font-medium text-gray-700 bg-gray-200 rounded-full transition-all duration-300 category-btn hover:bg-gray-300"
+                    class="px-6 py-3 text-lg font-medium text-black transition-all duration-300 category-btn hover:text-blue-600 hover:scale-105"
                     data-type="Programming">
                     Programming
                 </button>
                 <button
-                    class="px-6 py-3 text-sm font-medium text-gray-700 bg-gray-200 rounded-full transition-all duration-300 category-btn hover:bg-gray-300"
+                    class="px-6 py-3 text-lg font-medium text-black transition-all duration-300 category-btn hover:text-blue-600 hover:scale-105"
                     data-type="Design">
                     Design
                 </button>
                 <button
-                    class="px-6 py-3 text-sm font-medium text-gray-700 bg-gray-200 rounded-full transition-all duration-300 category-btn hover:bg-gray-300"
+                    class="px-6 py-3 text-lg font-medium text-black transition-all duration-300 category-btn hover:text-blue-600 hover:scale-105"
                     data-type="Marketing">
                     Marketing
                 </button>
@@ -1055,11 +1066,11 @@
     </section>
 
     <!-- Upgrade Skills Section -->
-    <section class="px-24 py-16 bg-white lg:px-4">
-        <div class="mx-auto max-w-7xl">
+    <section class="px-8 py-16 bg-white md:px-20 lg:px-4">
+        <div class="container mx-auto">
 
             <!-- Main Container with Shadow -->
-            <div class="overflow-hidden bg-white rounded-2xl shadow-lg">
+            <div class="overflow-hidden bg-white rounded-lg shadow-xl">
 
                 <!-- Content Grid -->
                 <div class="grid grid-cols-1 lg:grid-cols-3 min-h-[400px]">
@@ -1068,12 +1079,7 @@
                     <div class="flex relative col-span-2 items-center p-8 lg:p-12 lg:order-1 rtl:order-3">
                         <!-- Grid Pattern Background -->
                         <!-- Grid Lines Background -->
-                        <div class="absolute inset-0" style="
-                            background-image: 
-                                linear-gradient(#1B449C0D 1px, transparent 1px),
-                                linear-gradient(90deg, #1B449C0D 1px, transparent 1px);
-                            background-size: 20px 20px;
-                        "></div>
+                        <div class="absolute inset-0 pattern-skills-section"></div>
 
                         <!-- Text Content -->
                         <div class="relative z-10 max-w-lg">
@@ -1124,17 +1130,16 @@
     </section>
 
     <!-- Find a Tutor Section -->
-    <section class="px-24 py-16 bg-white lg:px-4">
-        <div class="mx-auto max-w-7xl">
-
-            <!-- Section Title -->
-            <div class="flex items-center mb-8">
-                <i class="mr-3 text-xl text-blue-600 fas fa-search rtl:mr-0 rtl:ml-3"></i>
-                <h2 class="text-2xl font-bold text-gray-900">Find a Tutor</h2>
-            </div>
-
+    <section class="px-8 py-16 bg-white md:px-20 lg:px-4">
+        <div class="container mx-auto">
             <!-- Filter Form -->
-            <div class="p-8 bg-white rounded-2xl shadow-lg">
+            <div class="p-8 bg-white rounded-2xl border border-gray-200 shadow-lg">
+
+                <!-- Section Title -->
+                <div class="flex items-center mb-8">
+                    <i class="mr-3 text-xl text-blue-600 fas fa-search rtl:mr-0 rtl:ml-3"></i>
+                    <h2 class="text-2xl font-bold text-gray-900">Find a Tutor</h2>
+                </div>
 
                 <!-- First Row -->
                 <div class="grid grid-cols-1 gap-6 mb-6 md:grid-cols-2 lg:grid-cols-4">
@@ -1311,21 +1316,327 @@
     </section>
 
 
-    <!-- Popular Tutors -->
+
+    <!-- Popular Tutors Section -->
+    <section class="overflow-hidden relative px-4 py-16 bg-white">
+        <h2 class="mb-12 text-center h-section">Popular Tutors</h2>
+        <div class="bg-[#1B449C08] overflow-hidden relative">
+            <!-- Background Shape 1 - Bottom Left -->
+            <div class="absolute top-0 left-0 pointer-events-none animate-float rotate-x-[180deg]" id="shape1">
+                <img src="./assets/imgs/hero/shape2.png" alt="">
+            </div>
+
+            <!-- Background Shape 2 - Top Right -->
+            <div class="absolute bottom-[-200px] right-[95px] w-auto pointer-events-none animate-float-reverse rotate-[90deg]"
+                id="shape2">
+                <img src="./assets/imgs/hero/shape1.png" alt="" class="h-full">
+            </div>
+            <div class="container relative z-10 py-16 mx-auto">
+                <!-- Section Header -->
+                <div class="flex justify-end items-center mb-2">
+                    <a href="#"
+                        class="text-lg font-medium text-blue-700 underline transition-colors duration-300 hover:text-blue-600 hover:scale-105">
+                        Load More
+                    </a>
+                </div>
+
+                <!-- Slider Container -->
+                <div class="relative">
+                    <!-- Custom Navigation Buttons -->
+                    <button
+                        class="flex absolute left-[-65px] top-1/2 z-20 justify-center items-center w-12 h-12 rounded-full shadow-lg transition-all duration-300 transform -translate-y-1/2 swiper-button-prev-custom bg-[#1B449C12] hover:bg-primary text-[#1B449C] hover:text-black hover:cursor-pointer hover:scale-110">
+                        <i class="text-lg fas fa-chevron-left"></i>
+                    </button>
+                    <button
+                        class="flex absolute right-[-65px] top-1/2 z-20 justify-center items-center w-12 h-12 rounded-full shadow-lg transition-all duration-300 transform -translate-y-1/2 swiper-button-next-custom bg-[#1B449C12] hover:bg-primary text-[#1B449C] hover:text-black hover:cursor-pointer hover:scale-110">
+                        <i class="text-lg fas fa-chevron-right"></i>
+                    </button>
+
+                    <!-- Swiper -->
+                    <div class="swiper tutors-swiper">
+                        <div class="swiper-wrapper">
+                            <!-- Tutor Card 1 -->
+                            <div class="swiper-slide">
+                                <div
+                                    class="p-6 mx-2 bg-white rounded-xl shadow-lg transition-all duration-300 transform hover:shadow-xl hover:-translate-y-2 hover:scale-105">
+                                    <div class="flex justify-center mb-6">
+                                        <img src="./assets/imgs/tutors/1.jpg"
+                                            alt="Aya hadeel" class="object-cover w-24 h-24 rounded-full">
+                                    </div>
+                                    <div class="text-left rtl:text-left">
+                                        <h3 class="mb-2 text-xl font-bold text-[#1B449C]">Aya hadeel</h3>
+                                        <p class="mb-4 font-medium text-black">Business Administration</p>
+                                        <div class="flex items-center mb-4 text-gray-500">
+                                            <i class="mr-2 fas fa-map-marker-alt text-[#1B449C] rtl:ml-2 rtl:mr-0"></i>
+                                            <span class="text-sm">Germany</span>
+                                        </div>
+                                        <div class="flex flex-col items-left rtl:items-right">
+                                            <div class="flex items-center mr-3 rtl:ml-3 rtl:mr-0">
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="text-gray-300 fas fa-star"></i>
+                                            </div>
+                                            <span class="mt-2 text-sm text-gray-500">4.0 / 5</span>
+                                        </div>
+                                        <div class="flex gap-2 justify-between my-3">
+                                            <button
+                                                class="text-[12px] px-4 py-3 w-full font-medium text-white rounded-lg transition-colors duration-300 bg-[#1B449C] hover:bg-[#1B449C]/90">
+                                                Trial Lesson
+                                            </button>
+                                            <button
+                                                class="text-[12px] px-4 py-3 w-full font-medium rounded-lg border-2 transition-all duration-300 border-[#1B449C] text-[#1B449C] hover:bg-[#1B449C] hover:text-white">
+                                                Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="p-6 mx-2 bg-white rounded-xl shadow-lg transition-all duration-300 transform hover:shadow-xl hover:-translate-y-2 hover:scale-105">
+                                    <div class="flex justify-center mb-6">
+                                        <img src="./assets/imgs/tutors/1.jpg"
+                                            alt="Aya hadeel" class="object-cover w-24 h-24 rounded-full">
+                                    </div>
+                                    <div class="text-left rtl:text-left">
+                                        <h3 class="mb-2 text-xl font-bold text-[#1B449C]">Aya hadeel</h3>
+                                        <p class="mb-4 font-medium text-black">Business Administration</p>
+                                        <div class="flex items-center mb-4 text-gray-500">
+                                            <i class="mr-2 fas fa-map-marker-alt text-[#1B449C] rtl:ml-2 rtl:mr-0"></i>
+                                            <span class="text-sm">Germany</span>
+                                        </div>
+                                        <div class="flex flex-col items-left rtl:items-right">
+                                            <div class="flex items-center mr-3 rtl:ml-3 rtl:mr-0">
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="text-gray-300 fas fa-star"></i>
+                                            </div>
+                                            <span class="mt-2 text-sm text-gray-500">4.0 / 5</span>
+                                        </div>
+                                        <div class="flex gap-2 justify-between my-3">
+                                            <button
+                                                class="text-[12px] px-4 py-3 w-full font-medium text-white rounded-lg transition-colors duration-300 bg-[#1B449C] hover:bg-[#1B449C]/90">
+                                                Trial Lesson
+                                            </button>
+                                            <button
+                                                class="text-[12px] px-4 py-3 w-full font-medium rounded-lg border-2 transition-all duration-300 border-[#1B449C] text-[#1B449C] hover:bg-[#1B449C] hover:text-white">
+                                                Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="p-6 mx-2 bg-white rounded-xl shadow-lg transition-all duration-300 transform hover:shadow-xl hover:-translate-y-2 hover:scale-105">
+                                    <div class="flex justify-center mb-6">
+                                        <img src="./assets/imgs/tutors/1.jpg"
+                                            alt="Aya hadeel" class="object-cover w-24 h-24 rounded-full">
+                                    </div>
+                                    <div class="text-left rtl:text-left">
+                                        <h3 class="mb-2 text-xl font-bold text-[#1B449C]">Aya hadeel</h3>
+                                        <p class="mb-4 font-medium text-black">Business Administration</p>
+                                        <div class="flex items-center mb-4 text-gray-500">
+                                            <i class="mr-2 fas fa-map-marker-alt text-[#1B449C] rtl:ml-2 rtl:mr-0"></i>
+                                            <span class="text-sm">Germany</span>
+                                        </div>
+                                        <div class="flex flex-col items-left rtl:items-right">
+                                            <div class="flex items-center mr-3 rtl:ml-3 rtl:mr-0">
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="text-gray-300 fas fa-star"></i>
+                                            </div>
+                                            <span class="mt-2 text-sm text-gray-500">4.0 / 5</span>
+                                        </div>
+                                        <div class="flex gap-2 justify-between my-3">
+                                            <button
+                                                class="text-[12px] px-4 py-3 w-full font-medium text-white rounded-lg transition-colors duration-300 bg-[#1B449C] hover:bg-[#1B449C]/90">
+                                                Trial Lesson
+                                            </button>
+                                            <button
+                                                class="text-[12px] px-4 py-3 w-full font-medium rounded-lg border-2 transition-all duration-300 border-[#1B449C] text-[#1B449C] hover:bg-[#1B449C] hover:text-white">
+                                                Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="p-6 mx-2 bg-white rounded-xl shadow-lg transition-all duration-300 transform hover:shadow-xl hover:-translate-y-2 hover:scale-105">
+                                    <div class="flex justify-center mb-6">
+                                        <img src="./assets/imgs/tutors/1.jpg"
+                                            alt="Aya hadeel" class="object-cover w-24 h-24 rounded-full">
+                                    </div>
+                                    <div class="text-left rtl:text-left">
+                                        <h3 class="mb-2 text-xl font-bold text-[#1B449C]">Aya hadeel</h3>
+                                        <p class="mb-4 font-medium text-black">Business Administration</p>
+                                        <div class="flex items-center mb-4 text-gray-500">
+                                            <i class="mr-2 fas fa-map-marker-alt text-[#1B449C] rtl:ml-2 rtl:mr-0"></i>
+                                            <span class="text-sm">Germany</span>
+                                        </div>
+                                        <div class="flex flex-col items-left rtl:items-right">
+                                            <div class="flex items-center mr-3 rtl:ml-3 rtl:mr-0">
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="text-gray-300 fas fa-star"></i>
+                                            </div>
+                                            <span class="mt-2 text-sm text-gray-500">4.0 / 5</span>
+                                        </div>
+                                        <div class="flex gap-2 justify-between my-3">
+                                            <button
+                                                class="text-[12px] px-4 py-3 w-full font-medium text-white rounded-lg transition-colors duration-300 bg-[#1B449C] hover:bg-[#1B449C]/90">
+                                                Trial Lesson
+                                            </button>
+                                            <button
+                                                class="text-[12px] px-4 py-3 w-full font-medium rounded-lg border-2 transition-all duration-300 border-[#1B449C] text-[#1B449C] hover:bg-[#1B449C] hover:text-white">
+                                                Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="p-6 mx-2 bg-white rounded-xl shadow-lg transition-all duration-300 transform hover:shadow-xl hover:-translate-y-2 hover:scale-105">
+                                    <div class="flex justify-center mb-6">
+                                        <img src="./assets/imgs/tutors/1.jpg"
+                                            alt="Aya hadeel" class="object-cover w-24 h-24 rounded-full">
+                                    </div>
+                                    <div class="text-left rtl:text-left">
+                                        <h3 class="mb-2 text-xl font-bold text-[#1B449C]">Aya hadeel</h3>
+                                        <p class="mb-4 font-medium text-black">Business Administration</p>
+                                        <div class="flex items-center mb-4 text-gray-500">
+                                            <i class="mr-2 fas fa-map-marker-alt text-[#1B449C] rtl:ml-2 rtl:mr-0"></i>
+                                            <span class="text-sm">Germany</span>
+                                        </div>
+                                        <div class="flex flex-col items-left rtl:items-right">
+                                            <div class="flex items-center mr-3 rtl:ml-3 rtl:mr-0">
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="text-gray-300 fas fa-star"></i>
+                                            </div>
+                                            <span class="mt-2 text-sm text-gray-500">4.0 / 5</span>
+                                        </div>
+                                        <div class="flex gap-2 justify-between my-3">
+                                            <button
+                                                class="text-[12px] px-4 py-3 w-full font-medium text-white rounded-lg transition-colors duration-300 bg-[#1B449C] hover:bg-[#1B449C]/90">
+                                                Trial Lesson
+                                            </button>
+                                            <button
+                                                class="text-[12px] px-4 py-3 w-full font-medium rounded-lg border-2 transition-all duration-300 border-[#1B449C] text-[#1B449C] hover:bg-[#1B449C] hover:text-white">
+                                                Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="p-6 mx-2 bg-white rounded-xl shadow-lg transition-all duration-300 transform hover:shadow-xl hover:-translate-y-2 hover:scale-105">
+                                    <div class="flex justify-center mb-6">
+                                        <img src="./assets/imgs/tutors/1.jpg"
+                                            alt="Aya hadeel" class="object-cover w-24 h-24 rounded-full">
+                                    </div>
+                                    <div class="text-left rtl:text-left">
+                                        <h3 class="mb-2 text-xl font-bold text-[#1B449C]">Aya hadeel</h3>
+                                        <p class="mb-4 font-medium text-black">Business Administration</p>
+                                        <div class="flex items-center mb-4 text-gray-500">
+                                            <i class="mr-2 fas fa-map-marker-alt text-[#1B449C] rtl:ml-2 rtl:mr-0"></i>
+                                            <span class="text-sm">Germany</span>
+                                        </div>
+                                        <div class="flex flex-col items-left rtl:items-right">
+                                            <div class="flex items-center mr-3 rtl:ml-3 rtl:mr-0">
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="text-gray-300 fas fa-star"></i>
+                                            </div>
+                                            <span class="mt-2 text-sm text-gray-500">4.0 / 5</span>
+                                        </div>
+                                        <div class="flex gap-2 justify-between my-3">
+                                            <button
+                                                class="text-[12px] px-4 py-3 w-full font-medium text-white rounded-lg transition-colors duration-300 bg-[#1B449C] hover:bg-[#1B449C]/90">
+                                                Trial Lesson
+                                            </button>
+                                            <button
+                                                class="text-[12px] px-4 py-3 w-full font-medium rounded-lg border-2 transition-all duration-300 border-[#1B449C] text-[#1B449C] hover:bg-[#1B449C] hover:text-white">
+                                                Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="swiper-slide">
+                                <div
+                                    class="p-6 mx-2 bg-white rounded-xl shadow-lg transition-all duration-300 transform hover:shadow-xl hover:-translate-y-2 hover:scale-105">
+                                    <div class="flex justify-center mb-6">
+                                        <img src="./assets/imgs/tutors/1.jpg"
+                                            alt="Aya hadeel" class="object-cover w-24 h-24 rounded-full">
+                                    </div>
+                                    <div class="text-left rtl:text-left">
+                                        <h3 class="mb-2 text-xl font-bold text-[#1B449C]">Aya hadeel</h3>
+                                        <p class="mb-4 font-medium text-black">Business Administration</p>
+                                        <div class="flex items-center mb-4 text-gray-500">
+                                            <i class="mr-2 fas fa-map-marker-alt text-[#1B449C] rtl:ml-2 rtl:mr-0"></i>
+                                            <span class="text-sm">Germany</span>
+                                        </div>
+                                        <div class="flex flex-col items-left rtl:items-right">
+                                            <div class="flex items-center mr-3 rtl:ml-3 rtl:mr-0">
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="mr-1 fas fa-star text-[#FFC700]"></i>
+                                                <i class="text-gray-300 fas fa-star"></i>
+                                            </div>
+                                            <span class="mt-2 text-sm text-gray-500">4.0 / 5</span>
+                                        </div>
+                                        <div class="flex gap-2 justify-between my-3">
+                                            <button
+                                                class="text-[12px] px-4 py-3 w-full font-medium text-white rounded-lg transition-colors duration-300 bg-[#1B449C] hover:bg-[#1B449C]/90">
+                                                Trial Lesson
+                                            </button>
+                                            <button
+                                                class="text-[12px] px-4 py-3 w-full font-medium rounded-lg border-2 transition-all duration-300 border-[#1B449C] text-[#1B449C] hover:bg-[#1B449C] hover:text-white">
+                                                Message
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <!-- Pagination -->
+                    <div class="mt-20 swiper-pagination !bottom-[-30px]"></div>
+                </div>
+            </div>
+        </div>
+    </section>
 
 
     <!-- Become a Tutor Section -->
-    <section class="px-4 py-16 bg-white">
-        <div class="mx-auto max-w-7xl">
+    <section class="px-4 py-16 bg-white rounded-lg shadow-xl">
+        <div class="container mx-auto">
 
             <!-- Main Container with Shadow and Border -->
-            <div class="overflow-hidden bg-white rounded-lg shadow-xl">
+            <div class="overflow-hidden p-4 bg-white rounded-lg shadow-md">
 
                 <!-- Content Grid -->
                 <div class="grid grid-cols-1 lg:grid-cols-2">
 
                     <!-- Image Section -->
-                    <div class="overflow-hidden relative order-2 lg:order-1 rtl:order-2">
+                    <div class="overflow-hidden relative order-2 rounded-lg lg:order-1 rtl:order-2">
                         <!-- Main Image -->
                         <img src="./assets/imgs/become_tutor/imgs.png" alt="Professional tutor working"
                             class="w-full h-full object-cover min-h-[400px] lg:min-h-[500px]">
@@ -1348,44 +1659,35 @@
                         <div class="relative z-10 w-full">
 
                             <!-- Main Title -->
-                            <h2 class="mb-6 text-3xl font-bold leading-tight text-gray-900 lg:text-4xl">
+                            <h2 class="mb-6 text-lg font-bold leading-tight text-gray-900 md:text-xl lg:text-2xl">
                                 Become a Tutor
                             </h2>
 
                             <!-- Description -->
-                            <p class="mb-8 text-lg leading-relaxed text-gray-600">
+                            <p class="mb-8 text-lg leading-relaxed text-gray-600 md:text-base">
                                 Raise income by sharing your expertise with students. Register to begin online tutoring
                                 with JINN EDU
                             </p>
 
                             <!-- Features List -->
-                            <div class="mb-8 space-y-6">
+                            <div class="flex justify-between items-center mb-8">
 
                                 <!-- Feature 1 -->
                                 <div class="flex items-center">
-                                    <div
-                                        class="flex flex-shrink-0 justify-center items-center mr-4 w-8 h-8 bg-yellow-100 rounded-full rtl:mr-0 rtl:ml-4">
-                                        <i class="text-sm text-yellow-600 fas fa-search"></i>
-                                    </div>
-                                    <span class="font-medium text-gray-700">Find new students</span>
+                                    <i class="mr-2 text-sm text-yellow-600 fas fa-search rtl:mr-0 rtl:ml-4"></i>
+                                    <span class="text-sm font-medium text-gray-700">Find new students</span>
                                 </div>
 
                                 <!-- Feature 2 -->
                                 <div class="flex items-center">
-                                    <div
-                                        class="flex flex-shrink-0 justify-center items-center mr-4 w-8 h-8 bg-purple-100 rounded-full rtl:mr-0 rtl:ml-4">
-                                        <i class="text-sm text-purple-600 fas fa-chart-line"></i>
-                                    </div>
-                                    <span class="font-medium text-gray-700">Grow your business</span>
+                                    <i class="mr-2 text-sm text-purple-600 fas fa-chart-line rtl:mr-0 rtl:ml-4"></i>
+                                    <span class="text-sm font-medium text-gray-700">Grow your business</span>
                                 </div>
 
                                 <!-- Feature 3 -->
                                 <div class="flex items-center">
-                                    <div
-                                        class="flex flex-shrink-0 justify-center items-center mr-4 w-8 h-8 bg-blue-100 rounded-full rtl:mr-0 rtl:ml-4">
-                                        <i class="text-sm text-blue-600 fas fa-dollar-sign"></i>
-                                    </div>
-                                    <span class="font-medium text-gray-700">Get paid securely</span>
+                                    <i class="mr-2 text-sm text-blue-600 fas fa-dollar-sign rtl:mr-0 rtl:ml-4"></i>
+                                    <span class="text-sm font-medium text-gray-700">Get paid securely</span>
                                 </div>
 
                             </div>
@@ -1413,12 +1715,12 @@
 
 
     <!-- Three Steps Section -->
-    <section class="w-full bg-white">
+    <section class="py-6 w-full bg-white">
 
         <!-- First Image Container -->
         <div class="w-full">
-            <img src="./assets/imgs/steps/img1.png"
-                alt="Student learning with laptop" class="object-cover w-full h-auto">
+            <img src="./assets/imgs/steps/img1.png" alt="Student learning with laptop"
+                class="object-cover w-full h-auto">
         </div>
 
         <!-- Blue Message Container -->
@@ -1431,19 +1733,286 @@
         <!-- Second Image Container -->
         <div class="w-full">
             <div class="px-4 mx-auto max-w-[90%]">
-                <img src="./assets/imgs/steps/img2.png"
-                    alt="Learning steps infographic" class="object-cover w-full h-auto">
+                <img src="./assets/imgs/steps/img2.png" alt="Learning steps infographic"
+                    class="object-cover w-full h-auto">
             </div>
         </div>
 
     </section>
 
     <!-- Footer -->
-    <footer class="py-8 text-white bg-jinn-dark">
-        <div class="px-4 mx-auto max-w-7xl text-center">
-            <p>&copy; 2025 JINN EDU. All rights reserved.</p>
+    <footer class="bg-[#374151] text-white">
+        <!-- المحتوى الرئيسي للفوتر -->
+        <div class="container px-6 pt-12 pb-6 mx-auto">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-4 lg:gap-12">
+
+                <!-- العمود الأول: الشعار والوصف -->
+                <div class="text-center md:text-left rtl:md:text-right md:col-span-1">
+                    <div class="mb-4">
+                        <img src="./assets/imgs/logo-white.png" alt="Jinn Education Logo" class="w-32">
+                    </div>
+                    <p class="text-sm leading-relaxed text-gray-300 md:text-base">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                </div>
+
+                <!-- العمود الثاني: قوائم الروابط -->
+                <div class="grid grid-cols-1 gap-6 md:col-span-2 lg:grid-cols-3 md:grid-cols-2">
+                    <div>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    How JINN Works
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Live Private Classes
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Live Group Classes
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Categories
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    K-12
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Help For Student
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Help For Tutor
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Student Guide
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Tutor Guide
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Help Center
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Technical Support
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Free Courses
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="space-y-3">
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Terms and Conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Privacy and Usage Policy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Intellectual Property and Copyrights
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
+                                    Refund Policy
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- العمود الثالث: النشرة الإخبارية -->
+                <div class="text-center md:text-left rtl:md:text-right md:col-span-1">
+                    <p class="mb-6 text-sm text-gray-300 md:text-base">
+                        Subscribe to our newsletter Updated digest of what's new and exciting from JINN EDU.
+                    </p>
+                    <!-- نموذج الاشتراك -->
+                    <div class="flex gap-3 mx-auto max-w-md md:mx-0">
+                        <input type="email" placeholder="Enter your email"
+                            class="flex-1 px-4 py-3 placeholder-gray-400 text-black bg-white rounded-lg border border-gray-500 transition-all duration-300 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50" />
+                        <button
+                            class="px-6 py-3 font-medium text-white bg-blue-600 rounded-lg transition-all duration-300 transform hover:bg-blue-700 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50">
+                            Subscribe
+                        </button>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- أسفل الفوتر -->
+        <div class="container px-6 pb-6 mx-auto">
+            <!-- خط الفصل -->
+            <div class="mb-6 border-t border-gray-600"></div>
+
+            <div class="flex flex-col gap-4 justify-between items-center md:flex-row">
+                <!-- حقوق النشر -->
+                <div class="flex items-center text-sm text-gray-400">
+                    <i class="mr-2 far fa-copyright rtl:ml-2 rtl:mr-0"></i>
+                    2025 JINN EDU. All rights reserved.
+                </div>
+
+                <!-- أيقونات السوشال ميديا -->
+                <div class="flex space-x-4 rtl:space-x-reverse">
+                    <a href="#"
+                        class="flex justify-center items-center w-10 h-10 text-white bg-gray-600 rounded-full transition-all duration-300 transform hover:bg-blue-600 hover:scale-110 group">
+                        <i class="text-sm fab fa-facebook-f group-hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="flex justify-center items-center w-10 h-10 text-white bg-gray-600 rounded-full transition-all duration-300 transform hover:bg-pink-600 hover:scale-110 group">
+                        <i class="text-sm fab fa-instagram group-hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="flex justify-center items-center w-10 h-10 text-white bg-gray-600 rounded-full transition-all duration-300 transform hover:bg-blue-400 hover:scale-110 group">
+                        <i class="text-sm fab fa-twitter group-hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="flex justify-center items-center w-10 h-10 text-white bg-gray-600 rounded-full transition-all duration-300 transform hover:bg-gray-800 hover:scale-110 group">
+                        <i class="text-sm fab fa-x-twitter group-hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="flex justify-center items-center w-10 h-10 text-white bg-gray-600 rounded-full transition-all duration-300 transform hover:bg-blue-700 hover:scale-110 group">
+                        <i class="text-sm fab fa-linkedin-in group-hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="flex justify-center items-center w-10 h-10 text-white bg-gray-600 rounded-full transition-all duration-300 transform hover:bg-red-600 hover:scale-110 group">
+                        <i class="text-sm fab fa-youtube group-hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="flex justify-center items-center w-10 h-10 text-white bg-gray-600 rounded-full transition-all duration-300 transform hover:bg-purple-600 hover:scale-110 group">
+                        <i class="text-sm fab fa-discord group-hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="flex justify-center items-center w-10 h-10 text-white bg-gray-600 rounded-full transition-all duration-300 transform hover:bg-blue-900 hover:scale-110 group">
+                        <i class="text-sm fab fa-telegram-plane group-hover:text-white"></i>
+                    </a>
+                </div>
+            </div>
         </div>
     </footer>
+
+    <!-- زر واتساب عائم -->
+    <div class="fixed right-6 bottom-6 z-50 rtl:left-6 rtl:right-auto group">
+        <a href="https://wa.me/1234567890?text=مرحبا، أحتاج مساعدة" target="_blank"
+            class="flex relative justify-center items-center w-14 h-14 text-white bg-green-500 rounded-full shadow-lg transition-all duration-300 transform hover:bg-green-600 hover:scale-110 hover:shadow-xl group">
+            <i class="text-2xl fab fa-whatsapp"></i>
+
+            <!-- رسالة التوضيح من الجانب -->
+            <div
+                class="absolute top-1/2 right-full px-3 py-2 mr-3 text-sm text-white whitespace-nowrap bg-gray-800 rounded-lg shadow-lg opacity-0 transition-all duration-300 transform -translate-y-1/2 pointer-events-none rtl:left-full rtl:right-auto rtl:ml-3 rtl:mr-0 group-hover:opacity-100">
+                تواصل معنا عبر واتساب
+                <!-- السهم الجانبي -->
+                <div
+                    class="absolute top-1/2 left-full w-0 h-0 border-t-4 border-b-4 border-l-4 border-transparent transform -translate-y-1/2 rtl:right-full rtl:left-auto rtl:border-r-4 rtl:border-l-0 border-l-gray-800 rtl:border-r-gray-800">
+                </div>
+            </div>
+        </a>
+    </div>
 
     <!-- Direction Toggle Button -->
     <div class="fixed bottom-4 z-50 start-4">

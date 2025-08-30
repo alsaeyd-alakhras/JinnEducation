@@ -20,8 +20,7 @@ module.exports = {
 
             // الخط
             fontFamily: {
-                sans: ["Inter", "ui-sans-serif", "system-ui"],
-                arabic: ["Cairo", "Amiri", "ui-sans-serif", "system-ui"], // للعربي
+                sans: ["Poppins", "ui-sans-serif", "system-ui"],
             },
 
             // الظلال

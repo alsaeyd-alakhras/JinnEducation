@@ -383,7 +383,6 @@ $(document).ready(function () {
 
   $(document).on("click", "#mobile-direction-toggle", function (e) {
     e.preventDefault();
-    console.log("Mobile direction toggle clicked");
 
     const currentDir = $("html").attr("dir") || "ltr";
     const newDir = currentDir === "ltr" ? "rtl" : "ltr";
@@ -587,12 +586,12 @@ $(document).ready(function () {
     $(".hero-dot").each(function (i) {
       if (i === index) {
         $(this)
-          .addClass("w-8 bg-blue-600")
-          .removeClass("w-3 bg-gray-300 hover:bg-gray-400");
+          .addClass("bg-blue-600")
+          .removeClass("bg-gray-300 hover:bg-gray-400");
       } else {
         $(this)
-          .removeClass("w-8 bg-blue-600")
-          .addClass("w-3 bg-gray-300 hover:bg-gray-400");
+          .removeClass("bg-blue-600")
+          .addClass("bg-gray-300 hover:bg-gray-400");
       }
     });
 
@@ -651,27 +650,22 @@ $(document).ready(function () {
 
 // Courses Filtering
 $(document).ready(function () {
-  let currentDisplayed = 4; // عدد الكورسات المعروضة حالياً
+  let currentDisplayed = 4;
+  let selectedType = "all";
 
   // Category Filter Function
   $(".category-btn").on("click", function () {
-    const selectedType = $(this).data("type");
+    selectedType = $(this).data("type");
 
     // Update active button
     $(".category-btn")
       .removeClass("active")
-      .removeClass("bg-blue-600")
-      .removeClass("text-white")
-      .removeClass("shadow-md")
-      .addClass("bg-gray-200")
-      .addClass("text-gray-700");
+      .removeClass("text-blue-600")
+      .addClass("text-black");
     $(this)
       .addClass("active")
-      .removeClass("bg-gray-200")
-      .removeClass("text-gray-700")
-      .addClass("bg-blue-600")
-      .addClass("text-white")
-      .addClass("shadow-md");
+      .removeClass("text-black")
+      .addClass("text-blue-600");
 
     // إخفاء سريع للكروت القديمة
     $(".course-card:visible").fadeOut(100);
@@ -742,14 +736,34 @@ $(document).ready(function () {
         });
       }
 
-      // إعادة تعيين العداد
+      // إعادة تعيين العداد وتحديث زر Load More
       currentDisplayed = 4;
+      setTimeout(function () {
+        updateLoadMoreButton();
+      }, 300);
     }, 150);
   });
 
   // Load More Function
   $("#loadMoreBtn").on("click", function () {
-    let hiddenCards = $(".course-card:hidden").slice(0, 4);
+    let hiddenCards;
+
+    if (selectedType === "all") {
+      hiddenCards = $(".course-card")
+        .filter(function () {
+          return $(this).css("display") === "none";
+        })
+        .slice(0, 4);
+    } else {
+      hiddenCards = $(".course-card")
+        .filter(function () {
+          return (
+            $(this).data("type") === selectedType &&
+            $(this).css("display") === "none"
+          );
+        })
+        .slice(0, 4);
+    }
 
     if (hiddenCards.length > 0) {
       hiddenCards.each(function (index) {
@@ -776,19 +790,41 @@ $(document).ready(function () {
               },
               complete: function () {
                 $(this).css("transform", "translateY(0)");
+
+                // بعد آخر عنصر يظهر... شغّل التحقق
+                if (index === hiddenCards.length - 1) {
+                  updateLoadMoreButton();
+                }
               },
             }
           );
       });
 
       currentDisplayed += hiddenCards.length;
-
-      // إخفاء الزر إذا لم تعد هناك كورسات أخرى
-      if ($(".course-card:hidden").length === 0) {
-        $(this).fadeOut(300);
-      }
     }
   });
+
+  function updateLoadMoreButton() {
+    let totalCards, hiddenCards;
+
+    if (selectedType === "all") {
+      totalCards = $(".course-card");
+      hiddenCards = totalCards.filter(function () {
+        return $(this).css("display") === "none";
+      });
+    } else {
+      totalCards = $('.course-card[data-type="' + selectedType + '"]');
+      hiddenCards = totalCards.filter(function () {
+        return $(this).css("display") === "none";
+      });
+    }
+
+    if (hiddenCards.length === 0 || totalCards.length <= 4) {
+      $("#loadMoreBtn").fadeOut(200);
+    } else {
+      $("#loadMoreBtn").fadeIn(200);
+    }
+  }
 });
 
 // Find Tutor Form
@@ -806,19 +842,49 @@ $(document).ready(function () {
   $("#search-button").on("click", function (e) {
     e.preventDefault();
 
-    // Add loading state
     $(this).html(
       '<i class="mr-2 fas fa-spinner fa-spin rtl:mr-0 rtl:ml-2"></i>Searching...'
     );
 
-    // Simulate search delay
     setTimeout(function () {
       $("#search-button").html(
         '<i class="mr-2 fas fa-search rtl:mr-0 rtl:ml-2"></i>Search Tutors'
       );
-
-      // Here you would typically handle the actual search
       console.log("Search initiated with current filters");
     }, 2000);
   });
+});
+
+// Initialize Swiper
+const swiper = new Swiper(".tutors-swiper", {
+  slidesPerView: 1,
+  spaceBetween: 20,
+  loop: true,
+  // autoplay: {
+  //   delay: 4000,
+  //   disableOnInteraction: false,
+  // },
+  pagination: {
+    el: ".swiper-pagination",
+    clickable: true,
+    dynamicBullets: true,
+  },
+  navigation: {
+    nextEl: ".swiper-button-next-custom",
+    prevEl: ".swiper-button-prev-custom",
+  },
+  breakpoints: {
+    640: {
+      slidesPerView: 2,
+      spaceBetween: 20,
+    },
+    768: {
+      slidesPerView: 3,
+      spaceBetween: 30,
+    },
+    1024: {
+      slidesPerView: 4,
+      spaceBetween: 30,
+    },
+  },
 });
