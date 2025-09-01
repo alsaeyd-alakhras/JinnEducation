@@ -513,7 +513,7 @@ $(document).ready(function () {
   const $textSlides = $(".hero-slide");
   const $imgSlides = $(".hero-image");
   const totalSlides = $textSlides.length;
-  const autoplayTime = 4000;
+  const autoplayTime = 20000;
   let interval;
 
   function showSlide(index) {
@@ -557,30 +557,28 @@ $(document).ready(function () {
     // فallback لو المتصفح ما أطلق الحدث لأي سبب
     setTimeout(hideOld, 750);
 
-    // ----- IMAGE (لو عندك صور فعالة) -----
-    const rtl = $("html").attr("dir") === "rtl";
-    const fromX = rtl ? "-translate-x-12" : "translate-x-12";
-    const toX = rtl ? "translate-x-12" : "-translate-x-12";
+    // ----- IMAGE SECTION - IMPROVED FOR YOUR LAYOUT -----
+    if ($imgSlides.length > 0) {
+      const $oldI = $imgSlides.eq(currentSlide);
+      const $newI = $imgSlides.eq(index);
 
-    const $oldI = $imgSlides.eq(currentSlide);
-    const $newI = $imgSlides.eq(index);
+      // إخفاء الصورة القديمة فوراً
+      $oldI
+        .removeClass("opacity-100 scale-100 translate-x-0")
+        .addClass("opacity-0 scale-95 hidden");
 
-    $oldI
-      .removeClass("opacity-100 translate-x-0 scale-100")
-      .addClass(`opacity-0 ${toX} scale-95`);
-
-    $newI.removeClass("hidden").addClass(`opacity-0 scale-95 ${fromX}`);
-
-    setTimeout(() => {
-      void $newI[0].offsetWidth;
+      // إظهار الصورة الجديدة بدون حركة معقدة
       $newI
-        .removeClass(`${fromX} opacity-0 scale-95`)
-        .addClass("opacity-100 translate-x-0 scale-100");
-    }, 20);
+        .removeClass("hidden opacity-0 scale-95 translate-x-0")
+        .addClass("opacity-0 scale-95");
 
-    setTimeout(() => {
-      $oldI.addClass("hidden").removeClass(`${toX} opacity-0 scale-95`);
-    }, 720);
+      // تأخير قصير ثم إظهار
+      setTimeout(() => {
+        $newI
+          .removeClass("opacity-0 scale-95")
+          .addClass("opacity-100 scale-100");
+      }, 100);
+    }
 
     // تحديث Dots Indicators
     $(".hero-dot").each(function (i) {
@@ -597,6 +595,7 @@ $(document).ready(function () {
 
     currentSlide = index;
   }
+  
   $(".hero-dot").on("click", function () {
     stopAutoplay();
     const index = parseInt($(this).attr("data-slide"));
@@ -614,7 +613,7 @@ $(document).ready(function () {
   }
 
   function startAutoplay() {
-    interval = setInterval(nextSlide, autoplayTime);
+    interval = setInterval(nextSlide, autoplayTime); // احذف nextSlide(); من هنا
   }
   function stopAutoplay() {
     clearInterval(interval);
@@ -627,10 +626,10 @@ $(document).ready(function () {
     .removeClass("hidden opacity-0 translate-y-16")
     .addClass("opacity-100 translate-y-0");
 
-  $imgSlides.addClass("hidden opacity-0 scale-95 translate-x-12");
+  $imgSlides.addClass("hidden opacity-0 scale-95");
   $imgSlides
     .eq(0)
-    .removeClass("hidden opacity-0 scale-95 translate-x-12")
+    .removeClass("hidden opacity-0 scale-95")
     .addClass("opacity-100 translate-x-0 scale-100");
 
   // أزرار التنقل (لو موجودة)
@@ -645,7 +644,7 @@ $(document).ready(function () {
     startAutoplay();
   });
 
-  startAutoplay();
+  // startAutoplay();
 });
 
 // Courses Filtering
