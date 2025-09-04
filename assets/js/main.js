@@ -84,6 +84,11 @@ $(document).ready(function () {
     );
   });
 
+  $(document).on("click", "#mobile-search-bar-toggle", function () {
+    $("#mobile-search-bar").toggleClass("hidden");
+    $(this).find("i").toggleClass("fa-search fa-times");
+  });
+
   // ==================
   // RTL-Aware Hover Effects (Header Only)
   // Language & Currency Dropdowns (Top Bar)
@@ -200,6 +205,15 @@ $(document).ready(function () {
     }
   );
 
+  // User Menu Mobile Dropdown
+  // $("header .user-menu-mobile").click(
+  //   function () {
+  //     $(this)
+  //       .find('div[class*="absolute"]')
+  //       .removeClass("opacity-0 invisible translate-y-2");
+  //   }
+  // );
+
   // ==================
   // Search Bar Focus Effects
   $('header input[type="text"]')
@@ -257,7 +271,7 @@ $(document).ready(function () {
   let isLoggedIn = false;
 
   $('header .guest-auth a[href="#"]:contains("Login")').click(function (e) {
-    e.preventDefault();
+    // e.preventDefault();
 
     // Simulate login process
     $(this).html('<i class="mr-2 fas fa-spinner fa-spin"></i>Logging in...');
@@ -266,15 +280,17 @@ $(document).ready(function () {
       isLoggedIn = true;
       $("header .guest-auth").addClass("hidden");
       $("header .user-menu").removeClass("hidden");
+      $("header .user-menu-mobile").removeClass("hidden");
     }, 1500);
   });
 
   // Logout functionality
   $('header .user-menu a:contains("Logout")').click(function (e) {
-    e.preventDefault();
+    // e.preventDefault();
 
     isLoggedIn = false;
     $("header .user-menu").addClass("hidden");
+    $("header .user-menu-mobile").addClass("hidden");
     $("header .guest-auth").removeClass("hidden");
 
     // Reset login button
@@ -289,20 +305,20 @@ $(document).ready(function () {
   // });
 
   function toggleMobileMenu() {
-    const $mobileMenu = $("#mobile-menu");
-    const $menuButton = $("header .lg\\:hidden button");
+    let mobileMenu = $("#mobile-menu");
+    let menuButton = $("header button#mobile-menu-toggle");
     if (!isMobileMenuOpen) {
       // فتح القائمة
-      $mobileMenu.removeClass("hidden opacity-0").slideDown(300);
-      $menuButton.find("i").removeClass("fa-bars").addClass("fa-times");
+      mobileMenu.removeClass("hidden").slideDown(300);
+      menuButton.find("i").removeClass("fa-bars").addClass("fa-times");
       isMobileMenuOpen = true;
       console.log("Mobile menu opened");
     } else {
       // إغلاق القائمة
-      $mobileMenu.slideUp(300, function () {
-        $(this).addClass("hidden opacity-0");
+      mobileMenu.slideUp(300, function () {
+        $(this).addClass("hidden");
       });
-      $menuButton.find("i").removeClass("fa-times").addClass("fa-bars");
+      menuButton.find("i").removeClass("fa-times").addClass("fa-bars");
       isMobileMenuOpen = false;
       console.log("Mobile menu closed");
     }
@@ -351,11 +367,10 @@ $(document).ready(function () {
 
   $(document).on(
     "click",
-    "#mobile-menu a:not(.mobile-dropdown-btn)",
+    "#mobile-menu a:not(.mobile-dropdown-btn).nav-mobile-link",
     function (e) {
       const $link = $(this);
       const href = $link.attr("href");
-
       // إذا الرابط حقيقي (مش #) - خليه يشتغل طبيعي
       if (href && href !== "#" && !href.startsWith("javascript:")) {
         // إغلاق القائمة بعد تأخير قصير للسماح بالانتقال
@@ -371,7 +386,7 @@ $(document).ready(function () {
       // إذا الرابط فاضي (#) - منع العمل الافتراضي بس ما نسكر القائمة
       if (href === "#") {
         e.preventDefault();
-        console.log("Empty link clicked - no action taken");
+        // console.log("Empty link clicked - no action taken");
         return false;
       }
     }
@@ -389,6 +404,7 @@ $(document).ready(function () {
 
     // استدعاء toggleDirection (متوفرة الآن globally)
     toggleDirection(newDir);
+    toggleMobileMenu();
   });
 
   // ==================
@@ -403,14 +419,14 @@ $(document).ready(function () {
   // Close Mobile Menu on Outside Click
   // ==================
 
-  $(document).click(function (e) {
-    if (
-      isMobileMenuOpen &&
-      !$(e.target).closest("#mobile-menu, #mobile-menu-toggle").length
-    ) {
-      toggleMobileMenu();
-    }
-  });
+  // $(document).click(function (e) {
+  //   if (
+  //     isMobileMenuOpen &&
+  //     !$(e.target).closest("#mobile-menu, #mobile-menu-toggle").length
+  //   ) {
+  //     toggleMobileMenu();
+  //   }
+  // });
 
   // ==================
   // Close Mobile Menu on Window Resize
@@ -468,20 +484,25 @@ $(document).ready(function () {
   // Close Dropdowns on Outside Click (Header Only)
   // ==================
 
+  /*
   $(document).click(function (e) {
     // تحديد العناصر التي يجب تجاهلها
     const ignoreElements = [
       "header .nav-dropdown",
       "header .language-dropdown",
       "header .currency-dropdown",
+      "header .guest-auth",
       "header .user-menu",
+      "header .user-menu-mobile",
       ".jinn-hero-section",
       ".hero-dot",
       ".jinn-dot",
       ".jinn-nav-btn",
     ].join(", ");
-
-    if (!$(e.target).closest(ignoreElements).length) {
+    if (
+      !$(e.target).closest(ignoreElements).length &&
+      !$(e.target).closest("#mobile-menu").length // ✅ استثناء الموبايل كليًا
+    ) {      
       // Close only header dropdowns
       $('header div[class*="absolute"], nav div[class*="absolute"]').addClass(
         "opacity-0 invisible translate-y-2 translate-x-2"
@@ -491,7 +512,26 @@ $(document).ready(function () {
       );
     }
   });
-
+  */
+  $(document).on('click', function (e) {
+    // أي نقرة داخل الموبايل: لا تلمس شيئًا
+    if ($(e.target).closest('#mobile-menu, #mobile-menu-toggle').length) return;
+  
+    // أي نقرة داخل تراكيب الهيدر: اعتبرها “داخل” ولا تغلق
+    if ($(e.target).closest('header .nav-dropdown, header .language-dropdown, header .currency-dropdown, header .user-menu').length) return;
+  
+    // أغلق فقط الـ dropdowns المقصودة (بدون #mobile-menu)
+    $([
+      'header .language-dropdown > div[class*="absolute"]',
+      'header .currency-dropdown  > div[class*="absolute"]',
+      'header .user-menu        > div[class*="absolute"]',
+      'nav .nav-dropdown        > div[class*="absolute"]',
+      'nav .subcategory-item    > div[class*="absolute"]',
+    ].join(', ')).addClass('opacity-0 invisible translate-y-2 translate-x-2');
+  
+    $('header .fa-chevron-down, nav .fa-chevron-down').removeClass('rotate-180');
+  });
+  
   // ==================
   // Header Scroll Effect (sticky header)
   // ==================
@@ -644,7 +684,7 @@ $(document).ready(function () {
     startAutoplay();
   });
 
-  startAutoplay();
+  // startAutoplay();
 });
 
 // Courses Filtering
@@ -886,4 +926,29 @@ const swiper = new Swiper(".tutors-swiper", {
       spaceBetween: 30,
     },
   },
+});
+
+$(function() {
+  let $container = $("#filter-container");
+  let $left = $("#left-arrow");
+  let $right = $("#right-arrow");
+
+  function toggleArrows() {
+      let scrollLeft = $container.scrollLeft();
+      let maxScroll = $container[0].scrollWidth - $container.outerWidth();
+      let isRTL = $container.closest("[dir='rtl']").length > 0;
+
+      if (isRTL) {
+          // RTL: عكس الأسهم
+          $left.css("opacity", scrollLeft < maxScroll ? 1 : 0);
+          $right.css("opacity", scrollLeft > 0 ? 1 : 0);
+      } else {
+          // LTR
+          $left.css("opacity", scrollLeft > 0 ? 1 : 0);
+          $right.css("opacity", scrollLeft < maxScroll ? 1 : 0);
+      }
+  }
+
+  toggleArrows();
+  $container.on("scroll", toggleArrows);
 });

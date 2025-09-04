@@ -173,6 +173,12 @@ nav a:hover,
     height: calc(100vh - 400px);
   }
 }
+.hero-image-container
+{
+  @media (width < 900px) {
+    height: 30vh;
+  }
+}
 .h-shape1
 {
   height: calc(100vh - 65px);
@@ -182,6 +188,12 @@ nav a:hover,
   font-size: 45px;
   font-weight: 800;
   color: #000;
+}
+.h-section
+{
+  @media (width < 900px) {
+    font-size: 32px;
+  }
 }
 
 .pattern-skills-section
@@ -193,4 +205,18 @@ nav a:hover,
 {
   @apply px-4 mx-auto;
   max-width: 94%;
+}
+.lg\:container{
+  @media (width >= 64rem) {
+    @apply px-4 mx-auto;
+    max-width: 94%;
+  }
+}
+/* لو مش ضايف plugin */
+.scrollbar-hide::-webkit-scrollbar {
+  display: none;
+}
+.scrollbar-hide {
+  -ms-overflow-style: none;
+  scrollbar-width: none;
 }
