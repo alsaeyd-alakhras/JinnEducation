@@ -513,7 +513,7 @@ $(document).ready(function () {
   const $textSlides = $(".hero-slide");
   const $imgSlides = $(".hero-image");
   const totalSlides = $textSlides.length;
-  const autoplayTime = 20000;
+  const autoplayTime = 5000;
   let interval;
 
   function showSlide(index) {
@@ -644,7 +644,7 @@ $(document).ready(function () {
     startAutoplay();
   });
 
-  // startAutoplay();
+  startAutoplay();
 });
 
 // Courses Filtering

@@ -536,12 +536,12 @@
     <!-- Hero Section -->
     <section class="flex overflow-hidden relative items-center bg-white mt-[120px] min-h-screen-hero shadow-sm">
         <!-- Background Shape 1 - Bottom Left -->
-        <div class="absolute bottom-0 left-0 pointer-events-none animate-float" id="shape1">
+        <div class="absolute bottom-[-7px] left-0 pointer-events-none animate-float" id="shape1">
             <img src="./assets/imgs/hero/shape2.png" alt="">
         </div>
 
         <!-- Background Shape 2 - Top Right -->
-        <div class="absolute -top-[8px] right-0 w-auto pointer-none:nter-events-none h-shape1 animate-float-reverse"
+        <div class="absolute -top-[10px] right-0 w-auto pointer-none:nter-events-none h-shape1 animate-float-reverse"
             id="shape2">
             <img src="./assets/imgs/hero/shape1.png" alt="" class="h-full">
         </div>
@@ -559,7 +559,7 @@
                             data-slide="0">
                             <div
                                 class="slide-inner w-[75%] lg:w-full mx-auto lg:mx-0 text-center lg:text-left rtl:lg:text-right">
-                                <h1 class="mb-6 text-3xl font-black leading-tight text-gray-900 lg:text-5xl">
+                                <h1 class="mb-6 text-3xl font-black leading-[1.5] text-gray-900 lg:text-5xl">
                                     Learn better, faster, and smarter with us.
                                 </h1>
                                 <p class="mb-8 max-w-xl text-xl leading-relaxed text-gray-600 rtl:lg:text-right">
@@ -582,7 +582,7 @@
                             data-slide="1">
                             <div
                                 class="slide-inner w-[75%] lg:w-full mx-auto lg:mx-0 text-center lg:text-left rtl:lg:text-right">
-                                <h1 class="mb-6 text-3xl font-black leading-tight text-gray-900 lg:text-5xl">
+                                <h1 class="mb-6 text-3xl font-black leading-[1.5] text-gray-900 lg:text-5xl">
                                     Learn better, faster, and smarter with us.
                                 </h1>
                                 <p class="mb-8 max-w-xl text-xl leading-relaxed text-gray-600">
@@ -605,7 +605,7 @@
                             data-slide="2">
                             <div
                                 class="slide-inner w-[75%] lg:w-full mx-auto lg:mx-0 text-center lg:text-left rtl:lg:text-right">
-                                <h1 class="mb-6 text-3xl font-black leading-tight text-gray-900 lg:text-5xl">
+                                <h1 class="mb-6 text-3xl font-black leading-[1.5] text-gray-900 lg:text-5xl">
                                     Learn better, faster, and smarter with us.
                                 </h1>
                                 <p class="mb-8 max-w-xl text-xl leading-relaxed text-gray-600">
@@ -702,9 +702,6 @@
             <!-- Section Title -->
             <div class="mb-12 text-center">
                 <h2 class="mb-4 h-section">Our Numbers</h2>
-                <p class="mx-auto max-w-2xl text-xl text-gray-600">
-                    Statistics that confirm the quality and excellence of the JINN educational platform
-                </p>
             </div>
 
             <!-- Statistics Grid -->
@@ -723,7 +720,7 @@
                                 class="mb-2 text-3xl font-black text-blue-600 transition-colors duration-300 group-hover:text-blue-700">
                                 5
                             </div>
-                            <div class="text-[12px] font-medium tracking-wide text-blue-700 uppercase">
+                            <div class="text-[12px] font-medium tracking-wide text-black uppercase">
                                 <span class="rtl:hidden">EDUCATIONAL SERVICES</span>
                                 <span class="hidden rtl:block">الخدمات التعليمية</span>
                             </div>
@@ -744,7 +741,7 @@
                                 class="mb-2 text-3xl font-black text-purple-600 transition-colors duration-300 group-hover:text-purple-700">
                                 74
                             </div>
-                            <div class="text-sm font-medium tracking-wide text-purple-700 uppercase">
+                            <div class="text-sm font-medium tracking-wide text-black uppercase">
                                 <span class="rtl:hidden">STUDENTS COUNT</span>
                                 <span class="hidden rtl:block">عدد الطلاب</span>
                             </div>
@@ -765,7 +762,7 @@
                                 class="mb-2 text-3xl font-black transition-colors duration-300 text-slate-700 group-hover:text-slate-800">
                                 10
                             </div>
-                            <div class="text-sm font-medium tracking-wide uppercase text-slate-600">
+                            <div class="text-sm font-medium tracking-wide text-black uppercase">
                                 <span class="rtl:hidden">TUTORS COUNT</span>
                                 <span class="hidden rtl:block">عدد المدرسين</span>
                             </div>
@@ -786,7 +783,7 @@
                                 class="mb-2 text-3xl font-black text-[#EAC634] transition-colors duration-300 group-hover:text-amber-700">
                                 1
                             </div>
-                            <div class="text-sm font-medium tracking-wide text-amber-700 uppercase">
+                            <div class="text-sm font-medium tracking-wide text-black uppercase">
                                 <span class="rtl:hidden">COURSES COUNT</span>
                                 <span class="hidden rtl:block">عدد الدورات</span>
                             </div>
@@ -806,41 +803,41 @@
             <h2 class="mb-6 text-center h-section">Recent courses</h2>
 
             <!-- Category Filter -->
-            <div class="flex flex-wrap gap-6 justify-center mb-12">
+            <div class="flex flex-wrap gap-2 justify-center mb-12">
                 <button
-                    class="px-6 py-3 text-lg font-medium text-blue-600 transition-all duration-300 category-btn active hover:text-blue-600 hover:scale-105"
+                    class="px-5 py-3 font-medium text-blue-600 transition-all duration-300 text-md category-btn active hover:text-blue-600 hover:scale-105"
                     data-type="all">
                     All categories
                 </button>
                 <button
-                    class="px-6 py-3 text-lg font-medium text-black transition-all duration-300 category-btn hover:text-blue-600 hover:scale-105"
+                    class="px-5 py-3 font-medium text-black transition-all duration-300 text-md category-btn hover:text-blue-600 hover:scale-105"
                     data-type="AI">
                     Artificial Intelligence - AI
                 </button>
                 <button
-                    class="px-6 py-3 text-lg font-medium text-black transition-all duration-300 category-btn hover:text-blue-600 hover:scale-105"
+                    class="px-5 py-3 font-medium text-black transition-all duration-300 text-md category-btn hover:text-blue-600 hover:scale-105"
                     data-type="Business">
                     Business
                 </button>
                 <button
-                    class="px-6 py-3 text-lg font-medium text-black transition-all duration-300 category-btn hover:text-blue-600 hover:scale-105"
+                    class="px-5 py-3 font-medium text-black transition-all duration-300 text-md category-btn hover:text-blue-600 hover:scale-105"
                     data-type="Programming">
                     Programming
                 </button>
                 <button
-                    class="px-6 py-3 text-lg font-medium text-black transition-all duration-300 category-btn hover:text-blue-600 hover:scale-105"
+                    class="px-5 py-3 font-medium text-black transition-all duration-300 text-md category-btn hover:text-blue-600 hover:scale-105"
                     data-type="Design">
                     Design
                 </button>
                 <button
-                    class="px-6 py-3 text-lg font-medium text-black transition-all duration-300 category-btn hover:text-blue-600 hover:scale-105"
+                    class="px-5 py-3 font-medium text-black transition-all duration-300 text-md category-btn hover:text-blue-600 hover:scale-105"
                     data-type="Marketing">
                     Marketing
                 </button>
             </div>
 
             <!-- Courses Grid -->
-            <div class="grid grid-cols-1 gap-6 items-start mb-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
+            <div class="grid grid-cols-1 gap-6 mb-12 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4"
                 id="coursesGrid">
 
                 <!-- Course Card 1 - Design (Original - No Changes) -->
