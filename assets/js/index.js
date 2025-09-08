@@ -135,7 +135,7 @@ $(document).ready(function () {
     startAutoplay();
   });
 
-  startAutoplay();
+  // startAutoplay();
 });
 
 // Courses Filtering
@@ -378,28 +378,38 @@ const swiper = new Swiper(".tutors-swiper", {
     },
   },
 });
-
 $(function () {
   let $container = $("#filter-container");
   let $left = $("#left-arrow");
   let $right = $("#right-arrow");
-
+  
+  // دالة الأسهم (نفس الكود الأصلي)
   function toggleArrows() {
-    let scrollLeft = $container.scrollLeft();
-    let maxScroll = $container[0].scrollWidth - $container.outerWidth();
-    let isRTL = $container.closest("[dir='rtl']").length > 0;
-
-    if (isRTL) {
-      // RTL: عكس الأسهم
-      $left.css("opacity", scrollLeft < maxScroll ? 1 : 0);
-      $right.css("opacity", scrollLeft > 0 ? 1 : 0);
-    } else {
-      // LTR
-      $left.css("opacity", scrollLeft > 0 ? 1 : 0);
-      $right.css("opacity", scrollLeft < maxScroll ? 1 : 0);
-    }
+      let scrollLeft = $container.scrollLeft();
+      let maxScroll = $container[0].scrollWidth - $container.outerWidth();
+      let isRTL = $container.closest("[dir='rtl']").length > 0;
+      
+      if (isRTL) {
+          $left.css("opacity", scrollLeft < maxScroll ? 1 : 0);
+          $right.css("opacity", scrollLeft > 0 ? 1 : 0);
+      } else {
+          $left.css("opacity", scrollLeft > 0 ? 1 : 0);
+          $right.css("opacity", scrollLeft < maxScroll ? 1 : 0);
+      }
   }
-
+  
   toggleArrows();
   $container.on("scroll", toggleArrows);
+  
+  const container = $container[0];
+  
+  // السكرول بالعجلة (كما هو)
+  container.addEventListener('wheel', function(e) {
+      e.preventDefault();
+      container.scrollLeft += e.deltaY;
+  });
+  
+  $(window).on('resize', function() {
+      setTimeout(toggleArrows, 100);
+  });
 });

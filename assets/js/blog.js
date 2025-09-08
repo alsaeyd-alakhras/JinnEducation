@@ -142,3 +142,27 @@ $(document).ready(function () {
   });
   $("#all-blogs-btn").click();
 });
+$(function () {
+  let $container = $("#filter-container");
+  let $left = $("#left-arrow");
+  let $right = $("#right-arrow");
+
+  function toggleArrows() {
+    let scrollLeft = $container.scrollLeft();
+    let maxScroll = $container[0].scrollWidth - $container.outerWidth();
+    let isRTL = $container.closest("[dir='rtl']").length > 0;
+
+    if (isRTL) {
+      // RTL: عكس الأسهم
+      $left.css("opacity", scrollLeft < maxScroll ? 1 : 0);
+      $right.css("opacity", scrollLeft > 0 ? 1 : 0);
+    } else {
+      // LTR
+      $left.css("opacity", scrollLeft > 0 ? 1 : 0);
+      $right.css("opacity", scrollLeft < maxScroll ? 1 : 0);
+    }
+  }
+
+  toggleArrows();
+  $container.on("scroll", toggleArrows);
+});

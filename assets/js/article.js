@@ -42,4 +42,8 @@ $(document).ready(function () {
       showPage();
     });
     showPage();
+
+    $('#btn-share').on('click',function(){
+      $('#box-share').toggleClass('invisible opacity-0 translate-y-2 visible opacity-100 translate-y-0');
+    });
 });
