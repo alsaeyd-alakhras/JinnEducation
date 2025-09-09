@@ -85,15 +85,6 @@ body {
 /* *************************** home *************************** */
 /* Header Specific Styles - Add to input.css */
 
-/* Search Bar Enhanced Focus Effect */
-.group.focused input {
-  @apply border-transparent ring-2 ring-white shadow-lg scale-105;
-}
-
-.group.focused button {
-  @apply bg-primary-50 text-primary-600;
-}
-
 /* Dropdown Arrow Rotation */
 .rotate-180 {
   transform: rotate(180deg);

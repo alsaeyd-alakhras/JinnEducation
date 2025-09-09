@@ -33,17 +33,23 @@
             <div class="container px-4 py-2 mx-auto">
                 <div class="hidden justify-between items-center lg:flex">
                     <!-- Search Bar -->
-                    <div class="flex-1 max-w-[350px]">
+                     <div class="flex-1 max-w-[350px]">
                         <div class="relative group">
-                            <input type="text" placeholder="Search what you need"
-                                class="py-2 w-full text-gray-900 bg-white rounded-lg border border-gray-200 transition-all duration-300 transform ps-4 pe-12 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent focus:shadow-lg">
-                            <button
-                                class="absolute inset-y-0 px-4 border-l-2 border-[#727475] transition-colors duration-300 end-0 group-focus-within:bg-primary-50 rounded-e-lg">
-                                <i class="text-gray-600 fas fa-search group-focus-within:text-primary-600"></i>
-                            </button>
+                        <input type="text" placeholder="Search what you need"
+                            class="py-2 w-full text-gray-900 bg-white rounded-lg border border-gray-200 transition-all duration-300 transform ps-4 pe-12 focus:outline-none focus:ring-2 focus:ring-white focus:shadow-lg">
+                        <button
+                            class="flex absolute inset-y-0 items-center transition-colors duration-300 cursor-pointer end-0 pe-4 group-focus-within:bg-primary-50 rounded-e-lg">
+                            
+                            <!-- الخط الفاصل -->
+                            <span class="w-px h-2/3 bg-[#727475] me-2"></span>
+                            
+                            <!-- الأيقونة -->
+                            <i class="text-primary fas fa-search"></i>
+                        </button>
                         </div>
                     </div>
-
+                    
+  
                     <!-- Language & Currency Dropdowns -->
                     <div class="flex items-center">
 
@@ -121,11 +127,11 @@
                     </div>
 
                     <!-- Desktop Navigation -->
-                    <nav class="hidden gap-2 items-center lg:flex">
+                    <nav class="hidden items-center lg:flex text-[15px]">
 
                         <!-- Home Link -->
                         <a href="index.html"
-                            class="px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary-600 hover:bg-white hover:shadow-sm">
+                            class="px-3 py-2 font-medium font-semibold rounded-lg transition-all duration-300 text-primary-600 hover:text-primary-600 hover:bg-white hover:shadow-sm">
                             HOME
                         </a>
 
@@ -302,15 +308,15 @@
                     <div class="hidden gap-4 items-center lg:flex">
 
                         <!-- Guest User (Login/Signup) -->
-                        <div class="flex items-center guest-auth">
+                        <div class="flex items-center guest-auth text-[15px]">
                             <a href="#"
-                                class="overflow-hidden relative px-2 py-1 font-medium text-gray-700 transition-all duration-300 hover:text-primary-600 group rtl:border-black rtl:border-l-2">
+                                class="overflow-hidden relative px-2 py-0 font-medium text-gray-700 transition-all duration-300 hover:text-primary-600 group rtl:border-black rtl:border-l-2">
                                 <span class="relative z-10">Login</span>
                                 <span
                                     class="absolute bottom-0 w-0 h-0.5 transition-all duration-500 start-0 bg-primary-600 group-hover:w-full"></span>
                             </a>
                             <a href="#"
-                                class="overflow-hidden relative px-2 py-1 font-medium text-gray-700 transition-all duration-300 ltr:border-black ltr:border-l-2 hover:text-primary-600 group">
+                                class="overflow-hidden relative px-2 py-0 font-medium text-gray-700 transition-all duration-300 ltr:border-black ltr:border-l-2 hover:text-primary-600 group">
                                 <span class="relative z-10">Sign Up</span>
                                 <span
                                     class="absolute bottom-0 w-0 h-0.5 transition-all duration-500 start-0 bg-primary-600 group-hover:w-full"></span>
@@ -759,10 +765,10 @@
                         </div>
                         <div class="flex-1 text-left rtl:text-right">
                             <div
-                                class="mb-2 text-3xl font-black text-center text-blue-600 transition-colors duration-300 lg:text-left lg:rtl:text-right group-hover:text-blue-700">
+                                class="mb-2 text-3xl font-black text-center text-[#1B449C] transition-colors duration-300 lg:text-left lg:rtl:text-right">
                                 5
                             </div>
-                            <div class="text-[12px] font-medium tracking-wide text-black uppercase">
+                            <div class="text-sm font-medium tracking-wide text-black uppercase whitespace-nowrap">
                                 <span class="rtl:hidden">EDUCATIONAL SERVICES</span>
                                 <span class="hidden rtl:block">الخدمات التعليمية</span>
                             </div>
@@ -780,10 +786,10 @@
                         </div>
                         <div class="flex-1 text-left rtl:text-right">
                             <div
-                                class="mb-2 text-3xl font-black text-center text-purple-600 transition-colors duration-300 lg:text-left lg:rtl:text-right group-hover:text-purple-700">
+                                class="mb-2 text-3xl font-black text-center text-[#7242B8] transition-colors duration-300 lg:text-left lg:rtl:text-right">
                                 74
                             </div>
-                            <div class="text-sm font-medium tracking-wide text-black uppercase">
+                            <div class="text-sm font-medium tracking-wide text-black uppercase whitespace-nowrap">
                                 <span class="rtl:hidden">STUDENTS COUNT</span>
                                 <span class="hidden rtl:block">عدد الطلاب</span>
                             </div>
@@ -801,10 +807,10 @@
                         </div>
                         <div class="flex-1 text-left rtl:text-right">
                             <div
-                                class="mb-2 text-3xl font-black text-center transition-colors duration-300 lg:text-left lg:rtl:text-right text-slate-700 group-hover:text-slate-800">
+                                class="mb-2 text-3xl font-black text-center transition-colors duration-300 lg:text-left lg:rtl:text-right text-[#1C3C55]">
                                 10
                             </div>
-                            <div class="text-sm font-medium tracking-wide text-black uppercase">
+                            <div class="text-sm font-medium tracking-wide text-black uppercase whitespace-nowrap">
                                 <span class="rtl:hidden">TUTORS COUNT</span>
                                 <span class="hidden rtl:block">عدد المدرسين</span>
                             </div>
@@ -822,10 +828,10 @@
                         </div>
                         <div class="flex-1 text-left rtl:text-right">
                             <div
-                                class="text-center lg:text-left lg:rtl:text-right mb-2 text-3xl font-black text-[#EAC634] transition-colors duration-300 group-hover:text-amber-700">
+                                class="text-center lg:text-left lg:rtl:text-right mb-2 text-3xl font-black text-[#EAC634] transition-colors duration-300">
                                 1
                             </div>
-                            <div class="text-sm font-medium tracking-wide text-black uppercase">
+                            <div class="text-sm font-medium tracking-wide text-black uppercase whitespace-nowrap">
                                 <span class="rtl:hidden">COURSES COUNT</span>
                                 <span class="hidden rtl:block">عدد الدورات</span>
                             </div>
@@ -856,7 +862,7 @@
                 </div>
 
                 <div id="filter-container"
-                    class="flex overflow-x-auto scroll-smooth relative flex-nowrap gap-2 px-2 whitespace-nowrap md:px-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+                    class="flex md:justify-center overflow-x-auto scroll-smooth relative flex-nowrap gap-2 px-2 whitespace-nowrap md:px-8 [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
                     <button
                         class="px-2 py-3 font-medium text-blue-600 transition-all duration-300 lg:px-5 text-md category-btn active hover:text-blue-600 hover:scale-105"
                         data-type="all">
@@ -907,12 +913,12 @@
                 <!-- Course Card 1 - Design (Original - No Changes) -->
                 <div class="block overflow-hidden p-3 bg-white rounded-md shadow-sm transition-all duration-300 group course-card hover:shadow-lg hover:scale-105"
                     data-type="Design">
-                    <div class="overflow-hidden relative h-48 rounded-md">
+                    <div class="overflow-hidden relative h-48 rounded-sm">
                         <img src="https://images.unsplash.com/photo-1586717791821-3f44a563fa4c?w=400&h=250&fit=crop"
                             alt="Design Course" class="object-cover w-full h-full">
                     </div>
                     <div class="pt-4">
-                        <h3 class="mb-2 text-lg font-semibold text-[#AAAAAA] text-[18px]">Design</h3>
+                        <h3 class="mb-2 text-lg font-bold text-black text-[18px]">Design</h3>
                         <p class="mb-4 text-[13px] text-black">Lorem ipsum dolor sit amet,consectetur adipiscing elit.
                         </p>
                         <div class="pt-4 border-t border-[#E5E7EB]">
@@ -920,7 +926,7 @@
                                 class="flex justify-between items-center h-[45px] transition-all duration-300 group-hover:opacity-0 group-hover:hidden">
                                 <div class="flex gap-2 items-center">
                                     <i class="text-sm fas fa-clock text-[#1B449C]"></i>
-                                    <span class="text-sm text-gray-600">23 total hours</span>
+                                    <span class="text-sm text-black">23 total hours</span>
                                 </div>
                                 <span class="text-lg font-bold text-[#1B449C]">Free</span>
                             </div>
@@ -938,12 +944,12 @@
                 <!-- Course Card 2 - AI -->
                 <div class="overflow-hidden p-3 bg-white rounded-md shadow-sm transition-all duration-300 group course-card hover:shadow-lg hover:scale-105"
                     data-type="AI">
-                    <div class="overflow-hidden relative h-48 rounded-md">
+                    <div class="overflow-hidden relative h-48 rounded-sm">
                         <img src="https://images.unsplash.com/photo-1677442136019-21780ecad995?w=400&h=250&fit=crop"
                             alt="AI Course" class="object-cover w-full h-full">
                     </div>
                     <div class="pt-4">
-                        <h3 class="mb-2 text-lg font-semibold text-[#AAAAAA] text-[18px]">Development</h3>
+                        <h3 class="mb-2 text-lg font-bold text-black text-[18px]">Development</h3>
                         <p class="mb-4 text-[13px] text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <div class="pt-4 border-t border-[#E5E7EB]">
@@ -951,7 +957,7 @@
                                 class="flex justify-between items-center transition-all h-[45px] duration-300 group-hover:opacity-0 group-hover:hidden">
                                 <div class="flex gap-2 items-center">
                                     <i class="text-sm fas fa-clock text-[#1B449C]"></i>
-                                    <span class="text-sm text-gray-600">23 total hours</span>
+                                    <span class="text-sm text-black">23 total hours</span>
                                 </div>
                                 <span class="text-lg font-bold text-[#1B449C]">Free</span>
                             </div>
@@ -969,12 +975,12 @@
                 <!-- Course Card 3 - Marketing -->
                 <div class="overflow-hidden p-3 bg-white rounded-md shadow-sm transition-all duration-300 group course-card hover:shadow-lg hover:scale-105"
                     data-type="Marketing">
-                    <div class="overflow-hidden relative h-48 rounded-md">
+                    <div class="overflow-hidden relative h-48 rounded-sm">
                         <img src="https://images.unsplash.com/photo-1460925895917-afdab827c52f?w=400&h=250&fit=crop"
                             alt="Marketing Course" class="object-cover w-full h-full">
                     </div>
                     <div class="pt-4">
-                        <h3 class="mb-2 text-lg font-semibold text-[#AAAAAA] text-[18px]">Marketing</h3>
+                        <h3 class="mb-2 text-lg font-bold text-black text-[18px]">Marketing</h3>
                         <p class="mb-4 text-[13px] text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <div class="pt-4 border-t border-[#E5E7EB]">
@@ -982,7 +988,7 @@
                                 class="flex justify-between items-center transition-all h-[45px] duration-300 group-hover:opacity-0 group-hover:hidden">
                                 <div class="flex gap-2 items-center">
                                     <i class="text-sm fas fa-clock text-[#1B449C]"></i>
-                                    <span class="text-sm text-gray-600">23 total hours</span>
+                                    <span class="text-sm text-black">23 total hours</span>
                                 </div>
                                 <div class="flex flex-col items-end">
                                     <span class="text-sm line-through text-[#87CEEB]">$200</span>
@@ -1003,12 +1009,12 @@
                 <!-- Course Card 4 - Business -->
                 <div class="overflow-hidden p-3 bg-white rounded-md shadow-sm transition-all duration-300 group course-card hover:shadow-lg hover:scale-105"
                     data-type="Business">
-                    <div class="overflow-hidden relative h-48 rounded-md">
+                    <div class="overflow-hidden relative h-48 rounded-sm">
                         <img src="https://images.unsplash.com/photo-1454165804606-c3d57bc86b40?w=400&h=250&fit=crop"
                             alt="Business Course" class="object-cover w-full h-full">
                     </div>
                     <div class="pt-4">
-                        <h3 class="mb-2 text-lg font-semibold text-[#AAAAAA] text-[18px]">Business</h3>
+                        <h3 class="mb-2 text-lg font-bold text-black text-[18px]">Business</h3>
                         <p class="mb-4 text-[13px] text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <div class="pt-4 border-t border-[#E5E7EB]">
@@ -1016,7 +1022,7 @@
                                 class="flex justify-between items-center transition-all h-[45px] duration-300 group-hover:opacity-0 group-hover:hidden">
                                 <div class="flex gap-2 items-center">
                                     <i class="text-sm fas fa-clock text-[#1B449C]"></i>
-                                    <span class="text-sm text-gray-600">30 total hours</span>
+                                    <span class="text-sm text-black">30 total hours</span>
                                 </div>
                                 <span class="text-lg font-bold text-[#1B449C]">$99.99</span>
                             </div>
@@ -1035,12 +1041,12 @@
                 <!-- Course Card 5 - Programming -->
                 <div class="overflow-hidden p-3 bg-white rounded-md shadow-sm transition-all duration-300 group course-card hover:shadow-lg hover:scale-105"
                     data-type="Programming" style="display: none;">
-                    <div class="overflow-hidden relative h-48 rounded-md">
+                    <div class="overflow-hidden relative h-48 rounded-sm">
                         <img src="https://images.unsplash.com/photo-1517180102446-f3ece451e9d8?w=400&h=250&fit=crop"
                             alt="Programming Course" class="object-cover w-full h-full">
                     </div>
                     <div class="pt-4">
-                        <h3 class="mb-2 text-lg font-semibold text-[#AAAAAA] text-[18px]">Programming</h3>
+                        <h3 class="mb-2 text-lg font-bold text-black text-[18px]">Programming</h3>
                         <p class="mb-4 text-[13px] text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <div class="pt-4 border-t border-[#E5E7EB]">
@@ -1048,7 +1054,7 @@
                                 class="flex justify-between items-center transition-all h-[45px] duration-300 group-hover:opacity-0 group-hover:hidden">
                                 <div class="flex gap-2 items-center">
                                     <i class="text-sm fas fa-clock text-[#1B449C]"></i>
-                                    <span class="text-sm text-gray-600">23 total hours</span>
+                                    <span class="text-sm text-black">23 total hours</span>
                                 </div>
                                 <span class="text-lg font-bold text-[#1B449C]">Free</span>
                             </div>
@@ -1066,12 +1072,12 @@
                 <!-- Course Card 6 - Design -->
                 <div class="overflow-hidden p-3 bg-white rounded-md shadow-sm transition-all duration-300 group course-card hover:shadow-lg hover:scale-105"
                     data-type="Design" style="display: none;">
-                    <div class="overflow-hidden relative h-48 rounded-md">
+                    <div class="overflow-hidden relative h-48 rounded-sm">
                         <img src="https://images.unsplash.com/photo-1561070791-2526d30994b5?w=400&h=250&fit=crop"
                             alt="UX Design Course" class="object-cover w-full h-full">
                     </div>
                     <div class="p-4">
-                        <h3 class="mb-2 text-lg font-semibold text-[#AAAAAA] text-[18px]">UX Design</h3>
+                        <h3 class="mb-2 text-lg font-bold text-black text-[18px]">UX Design</h3>
                         <p class="mb-4 text-[13px] text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <div class="pt-4 border-t border-[#E5E7EB]">
@@ -1079,7 +1085,7 @@
                                 class="flex justify-between items-center transition-all h-[45px] duration-300 group-hover:opacity-0 group-hover:hidden">
                                 <div class="flex gap-2 items-center">
                                     <i class="text-sm fas fa-clock text-[#1B449C]"></i>
-                                    <span class="text-sm text-gray-600">35 total hours</span>
+                                    <span class="text-sm text-black">35 total hours</span>
                                 </div>
                                 <div class="flex flex-col items-end">
                                     <span class="text-sm line-through text-[#87CEEB]">$150</span>
@@ -1100,12 +1106,12 @@
                 <!-- Course Card 7 - AI -->
                 <div class="overflow-hidden p-3 bg-white rounded-md shadow-sm transition-all duration-300 group course-card hover:shadow-lg hover:scale-105"
                     data-type="AI" style="display: none;">
-                    <div class="overflow-hidden relative h-48 rounded-md">
+                    <div class="overflow-hidden relative h-48 rounded-sm">
                         <img src="https://images.unsplash.com/photo-1485827404703-89b55fcc595e?w=400&h=250&fit=crop"
                             alt="Machine Learning Course" class="object-cover w-full h-full">
                     </div>
                     <div class="p-4">
-                        <h3 class="mb-2 text-lg font-semibold text-[#AAAAAA] text-[18px]">Machine Learning</h3>
+                        <h3 class="mb-2 text-lg font-bold text-black text-[18px]">Machine Learning</h3>
                         <p class="mb-4 text-[13px] text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <div class="pt-4 border-t border-[#E5E7EB]">
@@ -1113,7 +1119,7 @@
                                 class="flex justify-between items-center transition-all h-[45px] duration-300 group-hover:opacity-0 group-hover:hidden">
                                 <div class="flex gap-2 items-center">
                                     <i class="text-sm fas fa-clock text-[#1B449C]"></i>
-                                    <span class="text-sm text-gray-600">42 total hours</span>
+                                    <span class="text-sm text-black">42 total hours</span>
                                 </div>
                                 <span class="text-lg font-bold text-[#1B449C]">Free</span>
                             </div>
@@ -1131,12 +1137,12 @@
                 <!-- Course Card 8 - Business -->
                 <div class="overflow-hidden p-3 bg-white rounded-md shadow-sm transition-all duration-300 group course-card hover:shadow-lg hover:scale-105"
                     data-type="Business" style="display: none;">
-                    <div class="overflow-hidden relative h-48 rounded-md">
+                    <div class="overflow-hidden relative h-48 rounded-sm">
                         <img src="https://images.unsplash.com/photo-1507003211169-0a1dd7228f2d?w=400&h=250&fit=crop"
                             alt="Leadership Course" class="object-cover w-full h-full">
                     </div>
                     <div class="p-4">
-                        <h3 class="mb-2 text-lg font-semibold text-[#AAAAAA] text-[18px]">Leadership</h3>
+                        <h3 class="mb-2 text-lg font-bold text-black text-[18px]">Leadership</h3>
                         <p class="mb-4 text-[13px] text-black">Lorem ipsum dolor sit amet, consectetur adipiscing elit.
                         </p>
                         <div class="pt-4 border-t border-[#E5E7EB]">
@@ -1144,7 +1150,7 @@
                                 class="flex justify-between items-center transition-all h-[45px] duration-300 group-hover:opacity-0 group-hover:hidden">
                                 <div class="flex gap-2 items-center">
                                     <i class="text-sm fas fa-clock text-[#1B449C]"></i>
-                                    <span class="text-sm text-gray-600">28 total hours</span>
+                                    <span class="text-sm text-black">28 total hours</span>
                                 </div>
                                 <span class="text-lg font-bold text-[#1B449C]">$149.99</span>
                             </div>
@@ -1180,13 +1186,13 @@
         <div class="container !p-0 mx-auto">
 
             <!-- Main Container with Shadow -->
-            <div class="overflow-hidden bg-white rounded-lg shadow-xl">
+            <div class="overflow-hidden bg-white rounded-md shadow-lg">
 
                 <!-- Content Grid -->
-                <div class="grid grid-cols-1 lg:grid-cols-3 min-h-[400px]">
+                <div class="grid grid-cols-1 lg:grid-cols-5 min-h-[400px]">
 
                     <!-- Text Section with Grid Background -->
-                    <div class="flex relative order-2 col-span-2 items-center p-8 lg:p-12 lg:order-1 rtl:order-3">
+                    <div class="flex relative order-2 col-span-3 items-center p-8 lg:p-12 lg:order-1 rtl:order-3">
                         <!-- Grid Pattern Background -->
                         <!-- Grid Lines Background -->
                         <div class="absolute inset-0 pattern-skills-section"></div>
@@ -1198,7 +1204,7 @@
                                 Free Courses
                             </h2>
 
-                            <p class="mb-8 text-lg leading-relaxed text-gray-600">
+                            <p class="mb-8 text-lg leading-relaxed text-black">
                                 Learn anytime, anywhere with expert-led courses designed for you.
                             </p>
 
@@ -1219,7 +1225,7 @@
                     </div>
 
                     <!-- Image Section -->
-                    <div class="overflow-hidden relative order-1 col-span-1 lg:order-2 rtl:order-1">
+                    <div class="overflow-hidden relative order-1 col-span-2 lg:order-2 rtl:order-1">
                         <img src="./assets/imgs/Skills/Rectangle 19041.png" alt="Student learning online"
                             class="w-full h-full object-cover min-h-[300px] lg:min-h-[400px]">
 
@@ -1242,18 +1248,18 @@
 
                 <!-- Section Title -->
                 <div class="flex items-center mb-8">
-                    <i class="mr-3 text-xl text-blue-600 fas fa-search rtl:mr-0 rtl:ml-3"></i>
+                    <i class="mr-3 text-xl text-primary fas fa-search rtl:mr-0 rtl:ml-3"></i>
                     <h2 class="text-2xl font-bold text-gray-900">Find a Tutor</h2>
                 </div>
                 <div class="grid grid-cols-2 gap-6 mb-6 md:grid-cols-3 lg:grid-cols-5">
 
                     <!-- What to Learn -->
                     <div class="flex flex-col">
-                        <label class="mb-3 text-sm font-medium tracking-wide text-blue-600 uppercase">What to
+                        <label class="mb-2 text-[15px] tracking-wide text-primary uppercase">What to
                             Learn?</label>
                         <div class="relative">
                             <select
-                                class="px-4 py-3 w-full text-gray-700 bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
+                                class="px-4 py-3 w-full text-black bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
                                 <option>Subject</option>
                                 <option>Mathematics</option>
                                 <option>English</option>
@@ -1268,11 +1274,11 @@
 
                     <!-- Price Range -->
                     <div class="flex flex-col">
-                        <label class="mb-3 text-sm font-medium tracking-wide text-blue-600 uppercase">Price
+                        <label class="mb-2 text-[15px] tracking-wide text-primary uppercase">Price
                             Range</label>
                         <div class="relative">
                             <select
-                                class="px-4 py-3 w-full text-gray-700 bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
+                                class="px-4 py-3 w-full text-black bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
                                 <option>5 USD - 50 USD</option>
                                 <option>Under 10 USD</option>
                                 <option>10 USD - 25 USD</option>
@@ -1287,11 +1293,11 @@
 
                     <!-- Native Language -->
                     <div class="flex flex-col">
-                        <label class="mb-3 text-sm font-medium tracking-wide text-blue-600 uppercase">Native
+                        <label class="mb-2 text-[15px] tracking-wide text-primary uppercase">Native
                             Language</label>
                         <div class="relative">
                             <select
-                                class="px-4 py-3 w-full text-gray-700 bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
+                                class="px-4 py-3 w-full text-black bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
                                 <option>Native Language</option>
                                 <option>English</option>
                                 <option>Spanish</option>
@@ -1307,11 +1313,11 @@
 
                     <!-- Availability Time -->
                     <div class="flex flex-col">
-                        <label class="mb-3 text-sm font-medium tracking-wide text-blue-600 uppercase">Availability
+                        <label class="mb-2 text-[15px] tracking-wide text-primary uppercase">Availability
                             Time</label>
                         <div class="relative">
                             <select
-                                class="px-4 py-3 w-full text-gray-700 bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
+                                class="px-4 py-3 w-full text-black bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
                                 <option>Any Time</option>
                                 <option>Morning (6AM - 12PM)</option>
                                 <option>Afternoon (12PM - 6PM)</option>
@@ -1325,10 +1331,10 @@
                     </div>
                     <!-- Specializations -->
                     <div class="flex flex-col">
-                        <label class="mb-3 text-sm font-medium tracking-wide text-blue-600 uppercase">Specializations</label>
+                        <label class="mb-2 text-[15px] tracking-wide text-primary uppercase">Specializations</label>
                         <div class="relative">
                             <select
-                                class="px-4 py-3 w-full text-gray-700 bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
+                                class="px-4 py-3 w-full text-black bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
                                 <option>Specializations</option>
                                 <option>Test Preparation</option>
                                 <option>Academic Support</option>
@@ -1343,10 +1349,10 @@
 
                     <!-- Country -->
                     <div class="flex flex-col">
-                        <label class="mb-3 text-sm font-medium tracking-wide text-blue-600 uppercase">Country</label>
+                        <label class="mb-2 text-[15px] tracking-wide text-primary uppercase">Country</label>
                         <div class="relative">
                             <select
-                                class="px-4 py-3 w-full text-gray-700 bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
+                                class="px-4 py-3 w-full text-black bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
                                 <option>Country</option>
                                 <option>United States</option>
                                 <option>United Kingdom</option>
@@ -1363,10 +1369,10 @@
 
                     <!-- Also Speaks -->
                     <div class="flex flex-col">
-                        <label class="mb-3 text-sm font-medium tracking-wide text-blue-600 uppercase">Also Speaks</label>
+                        <label class="mb-2 text-[15px] tracking-wide text-primary uppercase">Also Speaks</label>
                         <div class="relative">
                             <select
-                                class="px-4 py-3 w-full text-gray-700 bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
+                                class="px-4 py-3 w-full text-black bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
                                 <option>Also Speaks</option>
                                 <option>English</option>
                                 <option>Spanish</option>
@@ -1383,10 +1389,10 @@
 
                     <!-- Sort By -->
                     <div class="flex flex-col">
-                        <label class="mb-3 text-sm font-medium tracking-wide text-blue-600 uppercase">Sort By</label>
+                        <label class="mb-2 text-[15px] tracking-wide text-primary uppercase">Sort By</label>
                         <div class="relative">
                             <select
-                                class="px-4 py-3 w-full text-gray-700 bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
+                                class="px-4 py-3 w-full text-black bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
                                 <option>Sort By</option>
                                 <option>Price: Low to High</option>
                                 <option>Price: High to Low</option>
@@ -1401,9 +1407,9 @@
                     </div>
 
                     <div class="flex flex-col">
-                        <label class="mb-3 text-sm font-medium tracking-wide text-blue-600 uppercase">Tutor full name</label>
+                        <label class="mb-2 text-[15px] tracking-wide text-primary uppercase">Tutor full name</label>
                         <div class="relative">
-                            <input type="text" class="px-4 py-3 w-full text-gray-700 bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
+                            <input type="text" class="px-4 py-3 w-full text-black bg-white rounded-lg border border-gray-300 transition-all duration-300 appearance-none focus:border-blue-500 focus:ring-2 focus:ring-blue-200 focus:outline-none">
                         </div>
                     </div>
 
@@ -1412,7 +1418,7 @@
                 <!-- Search Button -->
                 <div class="flex justify-center mt-8">
                     <button id="search-button"
-                        class="inline-flex items-center px-8 py-4 bg-blue-600 text-white font-semibold rounded-xl hover:bg-blue-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 min-w-[200px] justify-center">
+                        class="inline-flex items-center px-8 py-4 bg-primary text-white font-semibold rounded-xl hover:bg-primary-700 transition-all duration-300 shadow-md hover:shadow-lg transform hover:scale-105 min-w-[200px] justify-center">
                         <i class="mr-2 fas fa-search rtl:mr-0 rtl:ml-2"></i>
                         Search Tutors
                     </button>
@@ -1428,7 +1434,7 @@
         <h2 class="mb-12 text-center h-section">Popular Tutors</h2>
         <div class="bg-[#1B449C08] overflow-hidden relative px-4">
             <!-- Background Shape 1 - Bottom Left -->
-            <div class="absolute top-0 left-0 pointer-events-none animate-float rotate-x-[180deg]" id="shape1">
+            <div class="absolute -top-2 left-0 pointer-events-none animate-float rotate-x-[180deg]" id="shape1">
                 <img src="./assets/imgs/hero/shape2.png" alt="">
             </div>
 
@@ -1439,9 +1445,9 @@
             </div>
             <div class="container relative z-10 py-16 mx-auto">
                 <!-- Section Header -->
-                <div class="flex justify-end items-center mb-2">
+                <div class="flex justify-end items-center pr-3 mb-2">
                     <a href="#"
-                        class="text-lg font-medium text-blue-700 underline transition-colors duration-300 hover:text-blue-600 hover:scale-105">
+                        class="text-lg font-medium text-blue-700 underline transition-all duration-300 hover:text-blue-600 hover:scale-105">
                         Load More
                     </a>
                 </div>
@@ -1815,7 +1821,7 @@
 
 
     <!-- Three Steps Section -->
-    <section class="py-6 w-full bg-white">
+    <section class="py-6 pb-24 w-full bg-white">
 
         <!-- First Image Container -->
         <div class="w-full">
@@ -1825,7 +1831,7 @@
 
         <!-- Blue Message Container -->
         <div class="py-8 w-full text-center" style="background-color: #1B449C;">
-            <h2 class="font-bold text-white text-md lg:text-3xl">
+            <h2 class="font-bold text-white text-md lg:text-[25px]">
                 3 Simple Steps To Start Learning With JINNEDU
             </h2>
         </div>
@@ -1851,7 +1857,7 @@
                     <div class="flex justify-center mb-4 lg:justify-start">
                         <img src="./assets/imgs/logo-white.png" alt="Jinn Education Logo" class="w-32">
                     </div>
-                    <p class="text-sm leading-relaxed text-gray-300 md:text-base">
+                    <p class="text-sm leading-relaxed text-gray-300 md:text-[13px]">
                         Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
                         labore et dolore magna aliqua. Ut enim ad minim veniam.
                     </p>
@@ -1860,10 +1866,10 @@
                 <!-- العمود الثاني: قوائم الروابط -->
                 <div class="grid grid-cols-2 gap-6 md:col-span-2 lg:grid-cols-3 md:grid-cols-2">
                     <div>
-                        <ul class="space-y-3">
+                        <ul class="space-y-2">
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Home
@@ -1871,7 +1877,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     About Us
@@ -1879,7 +1885,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     How JINN Works
@@ -1887,7 +1893,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Live Private Classes
@@ -1895,7 +1901,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Live Group Classes
@@ -1903,7 +1909,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Categories
@@ -1911,7 +1917,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     K-12
@@ -1919,7 +1925,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Contact Us
@@ -1928,10 +1934,10 @@
                         </ul>
                     </div>
                     <div>
-                        <ul class="space-y-3">
+                        <ul class="space-y-2">
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Help For Student
@@ -1939,7 +1945,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Help For Tutor
@@ -1947,7 +1953,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Student Guide
@@ -1955,7 +1961,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Tutor Guide
@@ -1963,7 +1969,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Help Center
@@ -1971,7 +1977,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Technical Support
@@ -1979,7 +1985,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Free Courses
@@ -1989,10 +1995,10 @@
                         </ul>
                     </div>
                     <div>
-                        <ul class="space-y-3">
+                        <ul class="space-y-2">
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Terms and Conditions
@@ -2000,7 +2006,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Privacy and Usage Policy
@@ -2008,7 +2014,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Intellectual Property and Copyrights
@@ -2016,7 +2022,7 @@
                             </li>
                             <li>
                                 <a href="#"
-                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-base group">
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-blue-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
                                     <span
                                         class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-blue-400"></span>
                                     Refund Policy
@@ -2033,11 +2039,11 @@
                         Subscribe to our newsletter Updated digest of what's new and exciting from JINN EDU.
                     </p>
                     <!-- نموذج الاشتراك -->
-                    <div class="flex flex-wrap gap-3 mx-auto max-w-md md:mx-0">
+                    <div class="flex flex-wrap gap-3 mx-auto max-w-md md:flex-nowrap md:mx-0">
                         <input type="email" placeholder="Enter your email"
-                            class="flex-1 px-4 py-3 placeholder-gray-400 text-black bg-white rounded-lg border border-gray-500 transition-all duration-300 focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50" />
+                            class="flex-1 px-4 py-3 placeholder-gray-400 text-black bg-white rounded-lg border border-gray-500 transition-all duration-300 md:flex-auto md:w-full focus:border-blue-400 focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50" />
                         <button
-                            class="px-6 py-3 font-medium text-white bg-blue-600 rounded-lg transition-all duration-300 transform hover:bg-blue-700 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50">
+                            class="px-6 py-3 font-medium text-white rounded-lg transition-all duration-300 transform bg-primary hover:bg-primary-700 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-blue-400 focus:ring-opacity-50">
                             Subscribe
                         </button>
                     </div>
@@ -2060,32 +2066,32 @@
                 <!-- أيقونات السوشال ميديا -->
                 <div class="flex space-x-4 rtl:space-x-reverse">
                     <a href="#"
-                        class="flex justify-center items-center w-10 h-10 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-blue-600 hover:scale-110 group">
-                        <i class="text-xl fab fa-facebook-f group-hover:text-white"></i>
+                        class="flex justify-center items-center w-7 h-7 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-blue-600 hover:scale-110 group">
+                        <i class="text-md fab fa-facebook-f group-hover:text-white"></i>
                     </a>
                     <a href="#"
-                        class="flex justify-center items-center w-10 h-10 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-pink-600 hover:scale-110 group">
-                        <i class="text-xl fab fa-instagram group-hover:text-white"></i>
+                        class="flex justify-center items-center w-7 h-7 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-pink-600 hover:scale-110 group">
+                        <i class="text-md fab fa-instagram group-hover:text-white"></i>
                     </a>
                     <a href="#"
-                        class="flex justify-center items-center w-10 h-10 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-gray-800 hover:scale-110 group">
-                        <i class="text-xl fab fa-x-twitter group-hover:text-white"></i>
+                        class="flex justify-center items-center w-7 h-7 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-gray-800 hover:scale-110 group">
+                        <i class="text-md fab fa-x-twitter group-hover:text-white"></i>
                     </a>
                     <a href="#"
-                        class="flex justify-center items-center w-10 h-10 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-blue-700 hover:scale-110 group">
-                        <i class="text-xl fab fa-linkedin-in group-hover:text-white"></i>
+                        class="flex justify-center items-center w-7 h-7 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-blue-700 hover:scale-110 group">
+                        <i class="text-md fab fa-linkedin-in group-hover:text-white"></i>
                     </a>
                     <a href="#"
-                        class="flex justify-center items-center w-10 h-10 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-red-600 hover:scale-110 group">
-                        <i class="text-xl fab fa-youtube group-hover:text-white"></i>
+                        class="flex justify-center items-center w-7 h-7 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-red-600 hover:scale-110 group">
+                        <i class="text-md fab fa-youtube group-hover:text-white"></i>
                     </a>
                     <a href="#"
-                        class="flex justify-center items-center w-10 h-10 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-purple-600 hover:scale-110 group">
-                        <i class="text-xl fab fa-discord group-hover:text-white"></i>
+                        class="flex justify-center items-center w-7 h-7 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-purple-600 hover:scale-110 group">
+                        <i class="text-md fab fa-discord group-hover:text-white"></i>
                     </a>
                     <a href="#"
-                        class="flex justify-center items-center w-10 h-10 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-blue-900 hover:scale-110 group">
-                        <i class="text-xl fab fa-telegram-plane group-hover:text-white"></i>
+                        class="flex justify-center items-center w-7 h-7 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-blue-900 hover:scale-110 group">
+                        <i class="text-md fab fa-telegram-plane group-hover:text-white"></i>
                     </a>
                 </div>
             </div>
