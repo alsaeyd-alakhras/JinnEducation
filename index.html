@@ -36,7 +36,7 @@
                      <div class="flex-1 max-w-[350px]">
                         <div class="relative group">
                         <input type="text" placeholder="Search what you need"
-                            class="py-2 w-full text-gray-900 bg-white rounded-lg border border-gray-200 transition-all duration-300 transform ps-4 pe-12 focus:outline-none focus:ring-2 focus:ring-white focus:shadow-lg">
+                            class="py-2 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 transition-all duration-300 transform placeholder:text-secondary ps-4 pe-12 focus:outline-none focus:ring-2 focus:ring-white focus:shadow-lg">
                         <button
                             class="flex absolute inset-y-0 items-center transition-colors duration-300 cursor-pointer end-0 pe-4 group-focus-within:bg-primary-50 rounded-e-lg">
                             
@@ -1744,13 +1744,13 @@
             <div class="overflow-hidden p-4 bg-white rounded-lg shadow-md">
 
                 <!-- Content Grid -->
-                <div class="grid grid-cols-1 lg:grid-cols-2">
+                <div class="grid grid-cols-1 lg:grid-cols-2 lg:h-[427px]">
 
                     <!-- Image Section -->
                     <div class="overflow-hidden relative order-1 rounded-lg lg:order-1 rtl:order-2">
                         <!-- Main Image -->
                         <img src="./assets/imgs/become_tutor/imgs.png" alt="Professional tutor working"
-                            class="w-full h-full object-cover min-h-[400px] lg:min-h-[500px]">
+                            class="h-full object-cover min-h-[400px] lg:min-h-auto">
 
                         <!-- Gradient Overlay for depth -->
                         <div
@@ -1759,7 +1759,7 @@
                     </div>
 
                     <!-- Text Section with Gradient Overlay -->
-                    <div class="flex relative order-2 items-center mt-6 lg:p-12 lg:order-2 rtl:order-1 lg:mt-0">
+                    <div class="flex relative order-2 items-center mt-6 lg:p-5 lg:order-2 rtl:order-1 lg:mt-0">
 
                         <!-- Subtle gradient overlay extending from image -->
                         <div
@@ -1791,13 +1791,13 @@
 
                                 <!-- Feature 2 -->
                                 <div class="flex items-start md:items-center">
-                                    <i class="mr-2 text-sm text-purple-600 fas fa-chart-line rtl:mr-0 rtl:ml-4"></i>
+                                    <i class="mr-2 text-sm text-purple-600 fa-regular fa-calendar rtl:mr-0 rtl:ml-4"></i>
                                     <span class="font-bold text-gray-900 text-md lg:font-medium">Grow your business</span>
                                 </div>
 
                                 <!-- Feature 3 -->
                                 <div class="flex items-start md:items-center">
-                                    <i class="mr-2 text-sm text-blue-600 fas fa-dollar-sign rtl:mr-0 rtl:ml-4"></i>
+                                    <i class="mr-2 text-sm text-blue-600 fa-solid fa-money-bills rtl:mr-0 rtl:ml-4"></i>
                                     <span class="font-bold text-gray-900 text-md lg:font-medium">Get paid securely</span>
                                 </div>
 
@@ -1805,7 +1805,7 @@
 
                             <!-- Call to Action Button -->
                             <button
-                                class="px-14 py-3 w-full font-bold text-white bg-[#1B449C] rounded-md shadow-md transition-all duration-300 transform lg:w-auto hover:bg-blue-700 hover:shadow-lg hover:scale-105">
+                                class="px-14 py-3 w-full text-2xl font-bold text-white rounded-md shadow-md transition-all duration-300 transform bg-primary lg:w-auto hover:bg-primary-700 hover:shadow-lg hover:scale-105">
                                 Get Started
                             </button>
 
@@ -1850,10 +1850,10 @@
     <footer class="bg-[#374151] text-white">
         <!-- المحتوى الرئيسي للفوتر -->
         <div class="container px-6 pt-12 pb-6 mx-auto">
-            <div class="grid grid-cols-1 gap-8 md:grid-cols-4 lg:gap-12">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-7 lg:gap-12">
 
                 <!-- العمود الأول: الشعار والوصف -->
-                <div class="text-center md:text-left rtl:md:text-right md:col-span-1">
+                <div class="col-span-2 text-center md:text-left rtl:md:text-right">
                     <div class="flex justify-center mb-4 lg:justify-start">
                         <img src="./assets/imgs/logo-white.png" alt="Jinn Education Logo" class="w-32">
                     </div>
@@ -1864,7 +1864,7 @@
                 </div>
 
                 <!-- العمود الثاني: قوائم الروابط -->
-                <div class="grid grid-cols-2 gap-6 md:col-span-2 lg:grid-cols-3 md:grid-cols-2">
+                <div class="grid grid-cols-2 col-span-3 gap-2 lg:grid-cols-3 md:grid-cols-2">
                     <div>
                         <ul class="space-y-2">
                             <li>
@@ -2034,7 +2034,7 @@
                 </div>
 
                 <!-- العمود الثالث: النشرة الإخبارية -->
-                <div class="text-center md:text-left rtl:md:text-right md:col-span-1">
+                <div class="col-span-2 text-center md:text-left rtl:md:text-right">
                     <p class="mb-6 text-sm text-gray-300 md:text-base">
                         Subscribe to our newsletter Updated digest of what's new and exciting from JINN EDU.
                     </p>

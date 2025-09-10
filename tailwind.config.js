@@ -18,10 +18,9 @@ module.exports = {
                     900: "#091633", // أغمق درجة
                     DEFAULT: "#1B449C", // لما تكتب bg-primary
                 },
-                "jinn-blue": "#2563eb",
-                "jinn-dark": "#1e293b",
-                "jinn-gray": "#64748b",
-                "jinn-light": "#f8fafc",
+                secondary: {
+                    DEFAULT: "#AAAAAA",
+                },
             },
 
             // الخط
