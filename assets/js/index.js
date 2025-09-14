@@ -75,11 +75,11 @@ $(document).ready(function () {
     $(".hero-dot").each(function (i) {
       if (i === index) {
         $(this)
-          .addClass("bg-blue-600")
+          .addClass("bg-primary")
           .removeClass("bg-gray-300 hover:bg-gray-400");
       } else {
         $(this)
-          .removeClass("bg-blue-600")
+          .removeClass("bg-primary")
           .addClass("bg-gray-300 hover:bg-gray-400");
       }
     });
@@ -150,12 +150,14 @@ $(document).ready(function () {
     // Update active button
     $(".category-btn")
       .removeClass("active")
-      .removeClass("text-blue-600")
+      .removeClass("text-primary")
+      .removeClass("font-bold")
       .addClass("text-black");
     $(this)
       .addClass("active")
       .removeClass("text-black")
-      .addClass("text-blue-600");
+      .addClass("text-primary")
+      .addClass("font-bold");
 
     // إخفاء سريع للكروت القديمة
     $(".course-card:visible").fadeOut(100);
@@ -358,6 +360,9 @@ const swiper = new Swiper(".tutors-swiper", {
     el: ".swiper-pagination",
     clickable: true,
     dynamicBullets: true,
+    renderBullet: function (index, className) {
+      return `<button class="!w-2 !h-2 !scale-100 rounded-full ${className}" data-slide="${index}"></button>`;
+    },
   },
   navigation: {
     nextEl: ".swiper-button-next-custom",

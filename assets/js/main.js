@@ -168,12 +168,12 @@ $(document).ready(function () {
     function () {
       $(this)
         .find('div[class*="absolute"]')
-        .removeClass("opacity-0 invisible translate-y-2");
+        .removeClass("opacity-0 invisible");
     },
     function () {
       $(this)
         .find('div[class*="absolute"]')
-        .addClass("opacity-0 invisible translate-y-2");
+        .addClass("opacity-0 invisible");
     }
   );
 
@@ -445,10 +445,10 @@ $(document).ready(function () {
   // Navigation links hover effects
   $("header nav a, header .nav-dropdown button").hover(
     function () {
-      $(this).addClass("transform -translate-y-0.5");
+      $(this).addClass("transform");
     },
     function () {
-      $(this).removeClass("transform -translate-y-0.5");
+      $(this).removeClass("transform");
     }
   );
 
