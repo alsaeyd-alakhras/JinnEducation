@@ -350,12 +350,12 @@ $(document).ready(function () {
 // Initialize Swiper
 const swiper = new Swiper(".tutors-swiper", {
   slidesPerView: 1,
-  spaceBetween: 20,
+  spaceBetween: 10,
   loop: true,
-  autoplay: {
-    delay: 4000,
-    disableOnInteraction: false,
-  },
+  // autoplay: {
+  //   delay: 4000,
+  //   disableOnInteraction: false,
+  // },
   pagination: {
     el: ".swiper-pagination",
     clickable: true,
@@ -371,15 +371,15 @@ const swiper = new Swiper(".tutors-swiper", {
   breakpoints: {
     640: {
       slidesPerView: 2,
-      spaceBetween: 20,
+      spaceBetween: 10,
     },
     768: {
       slidesPerView: 3,
-      spaceBetween: 30,
+      spaceBetween: 10,
     },
     1024: {
       slidesPerView: 4,
-      spaceBetween: 30,
+      spaceBetween: 10,
     },
   },
 });

@@ -19,7 +19,7 @@ module.exports = {
                     DEFAULT: "#1B449C", // لما تكتب bg-primary
                 },
                 secondary: {
-                    DEFAULT: "#AAAAAA",
+                    DEFAULT: "#1B449C",
                 },
             },
 
