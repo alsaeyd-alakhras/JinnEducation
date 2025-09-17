@@ -133,20 +133,30 @@ nav a:hover,
 }
 .hero-image-container
 {
-  @media (width >= 64rem) {
+  @media (width > 64rem) {
     height: calc(100vh - 165px);
   }
 }
 .hero-image-container
 {
-  @media (width < 64rem) {
-    height: calc(100vh - 400px);
+  @media (width <= 64rem) {
+    height: auto;
   }
 }
 .hero-image-container
 {
   @media (width < 900px) {
     height: 30vh;
+  }
+}
+.hero-main-container {
+  @media (width > 64rem) {
+    grid-template-columns: repeat(2, minmax(0, 1fr));
+  }
+}
+.hero-main-container {
+  @media (width <= 64rem) {
+    grid-template-columns: repeat(1, minmax(0, 1fr));
   }
 }
 .h-shape1

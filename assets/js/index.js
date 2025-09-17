@@ -72,7 +72,15 @@ $(document).ready(function () {
     }
 
     // تحديث Dots Indicators
-    $(".hero-dot").each(function (i) {
+    // حدّث كل مجموعات الـ dots (desktop + mobile)
+    $(".dots-container").each(function () {
+      updateDots(index, $(this));
+    });
+    
+    currentSlide = index;
+  }
+  function updateDots(index, $container) {
+    $container.find(".hero-dot").each(function (i) {
       if (i === index) {
         $(this)
           .addClass("bg-primary")
@@ -83,9 +91,8 @@ $(document).ready(function () {
           .addClass("bg-gray-300 hover:bg-gray-400");
       }
     });
-
-    currentSlide = index;
   }
+  
 
   $(".hero-dot").on("click", function () {
     stopAutoplay();
@@ -370,14 +377,18 @@ const swiper = new Swiper(".tutors-swiper", {
   },
   breakpoints: {
     640: {
-      slidesPerView: 2,
+      slidesPerView: 1,
       spaceBetween: 10,
     },
     768: {
-      slidesPerView: 3,
+      slidesPerView: 2,
       spaceBetween: 10,
     },
     1024: {
+      slidesPerView: 3,
+      spaceBetween: 10,
+    },
+    1200: {
       slidesPerView: 4,
       spaceBetween: 10,
     },
