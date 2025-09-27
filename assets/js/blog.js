@@ -4,7 +4,6 @@ $(document).ready(function () {
   let perPage = 6; // أو القيمة اللي بتجي من select
   let selectedType = "all";
 
-
   // Category Filter Function
   $(".category-blogs-btn").on("click", function () {
     selectedType = $(this).data("type");
@@ -63,7 +62,9 @@ $(document).ready(function () {
           });
       } else {
         // عرض الكورسات المفلترة (أول 4)
-        let filteredCards = $('.course-blogs-card[data-type="' + selectedType + '"]');
+        let filteredCards = $(
+          '.course-blogs-card[data-type="' + selectedType + '"]'
+        );
         filteredCards.slice(0, 6).each(function (index) {
           $(this)
             .delay(index * 50)
@@ -101,32 +102,38 @@ $(document).ready(function () {
   function renderPagination(totalItems) {
     let totalPages = Math.ceil(totalItems / perPage);
     let container = $("#pagesNumbers").empty();
-  
+
     for (let i = 1; i <= totalPages; i++) {
       container.append(
-        `<button class="min-w-8 h-8 px-2 flex items-center justify-center text-sm font-medium rounded-full transition-all duration-200 cursor-pointer ${i===currentPage ? 'bg-primary text-white shadow-sm' : 'text-primary hover:text-white hover:bg-primary'}" data-page="${i}">${i}</button>`      
+        `<button class="min-w-8 h-8 px-2 flex items-center justify-center text-sm font-medium rounded-full transition-all duration-200 cursor-pointer ${
+          i === currentPage
+            ? "bg-primary text-white shadow-sm"
+            : "text-primary hover:text-white hover:bg-primary"
+        }" data-page="${i}">${i}</button>`
       );
     }
   }
-  
+
   function showPage() {
-    let cards = selectedType === "all" 
-      ? $(".course-blogs-card") 
-      : $('.course-blogs-card[data-type="'+selectedType+'"]');
-  
+    let cards =
+      selectedType === "all"
+        ? $(".course-blogs-card")
+        : $('.course-blogs-card[data-type="' + selectedType + '"]');
+
     cards.hide();
     let start = (currentPage - 1) * perPage;
     let end = start + perPage;
-  
+
     cards.slice(start, end).fadeIn(200);
     renderPagination(cards.length);
   }
-  
-  $(document).on("click", "#paginationBlogs button", function() {
+
+  $(document).on("click", "#paginationBlogs button", function () {
     let page = $(this).data("page");
-    let cards = selectedType === "all" 
-    ? $(".course-blogs-card") 
-    : $('.course-blogs-card[data-type="'+selectedType+'"]');
+    let cards =
+      selectedType === "all"
+        ? $(".course-blogs-card")
+        : $('.course-blogs-card[data-type="' + selectedType + '"]');
 
     let totalPages = Math.ceil(cards.length / perPage);
     if (page === "prev" && currentPage > 1) currentPage--;
@@ -134,8 +141,8 @@ $(document).ready(function () {
     else if (!isNaN(page)) currentPage = page;
     showPage();
   });
-  
-  $("#perPageSelect").on("change", function(){
+
+  $("#perPageSelect").on("change", function () {
     perPage = parseInt($(this).val());
     currentPage = 1;
     showPage();
@@ -153,11 +160,9 @@ $(function () {
     let isRTL = $container.closest("[dir='rtl']").length > 0;
 
     if (isRTL) {
-      // RTL: عكس الأسهم
       $left.css("opacity", scrollLeft < maxScroll ? 1 : 0);
       $right.css("opacity", scrollLeft > 0 ? 1 : 0);
     } else {
-      // LTR
       $left.css("opacity", scrollLeft > 0 ? 1 : 0);
       $right.css("opacity", scrollLeft < maxScroll ? 1 : 0);
     }
@@ -165,4 +170,47 @@ $(function () {
 
   toggleArrows();
   $container.on("scroll", toggleArrows);
+
+  // ✅ drag بالماوس فقط لغير الجوال
+  if (!("ontouchstart" in window)) {
+    let isDown = false;
+    let startX;
+    let scrollLeftStart;
+
+    $container.on("mousedown", function (e) {
+      // ✅ ابدأ drag فقط إذا الضغط مش على زر (مثلاً فاضي)
+      if (!$(e.target).is("button")) {
+        return; // تجاهل الضغط إذا مش على الفاضي
+      }
+
+      isDown = true;
+      $container.addClass("cursor-grabbing");
+      startX = e.pageX - $container.offset().left;
+      scrollLeftStart = $container.scrollLeft();
+    });
+
+    $(document).on("mouseup", function () {
+      isDown = false;
+      $container.removeClass("cursor-grabbing");
+    });
+
+    $container.on("mouseleave", function () {
+      isDown = false;
+      $container.removeClass("cursor-grabbing");
+    });
+
+    $container.on("mousemove", function (e) {
+      if (!isDown) return;
+      e.preventDefault();
+      const x = e.pageX - $container.offset().left;
+      const walk = (x - startX) * 1.5; // سرعة السحب
+      $container.scrollLeft(scrollLeftStart - walk);
+    });
+    // منع العجلة إنها تعمل scroll يمين/شمال
+    $container.on("wheel", function (e) {
+      if (Math.abs(e.originalEvent.deltaX) > Math.abs(e.originalEvent.deltaY)) {
+        e.preventDefault(); // يمنع الحركة الأفقية
+      }
+    });
+  }
 });
