@@ -108,7 +108,7 @@ $(document).ready(function () {
         `<button class="min-w-8 h-8 px-2 flex items-center justify-center text-sm font-medium rounded-full transition-all duration-200 cursor-pointer ${
           i === currentPage
             ? "bg-primary text-white shadow-sm"
-            : "text-primary hover:text-white hover:bg-primary"
+            : "text-black hover:text-white hover:bg-primary"
         }" data-page="${i}">${i}</button>`
       );
     }

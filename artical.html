@@ -33,16 +33,22 @@
             <div class="container px-4 py-2 mx-auto">
                 <div class="hidden justify-between items-center lg:flex">
                     <!-- Search Bar -->
-                    <div class="flex-1 max-w-[350px]">
+                    <div class="flex-1 max-w-[285px]">
                         <div class="relative group">
-                            <input type="text" placeholder="Search what you need"
-                                class="py-2 w-full text-gray-900 bg-white rounded-lg border border-gray-200 transition-all duration-300 transform ps-4 pe-12 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent focus:shadow-lg">
+                            <input type="text" placeholder="search what you need"
+                                class="py-2 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 transition-all duration-300 transform placeholder:text-secondary placeholder:text-[12px] placeholder:font-light ps-4 pe-12 focus:outline-none focus:ring-2 focus:ring-white focus:shadow-lg">
                             <button
-                                class="absolute inset-y-0 px-4 border-l-2 border-[#727475] transition-colors duration-300 end-0 group-focus-within:bg-primary-50 rounded-e-lg">
-                                <i class="text-gray-600 fas fa-search group-focus-within:text-primary-600"></i>
+                                class="flex absolute inset-y-0 items-center transition-colors duration-300 cursor-pointer end-0 pe-4 group-focus-within:bg-primary-50 rounded-e-lg">
+
+                                <!-- الخط الفاصل -->
+                                <span class="w-px h-3/4 bg-[#72747561] me-2"></span>
+
+                                <!-- الأيقونة -->
+                                <i class="text-primary fas fa-search"></i>
                             </button>
                         </div>
                     </div>
+
 
                     <!-- Language & Currency Dropdowns -->
                     <div class="flex items-center">
@@ -122,71 +128,68 @@
                     </div>
 
                     <!-- Desktop Navigation -->
-                    <nav class="hidden gap-2 items-center lg:flex">
-
+                    <nav class="hidden items-center lg:flex text-[15px]">
                         <!-- Home Link -->
                         <a href="index.html"
-                            class="px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary-600 hover:bg-white hover:shadow-sm">
+                            class="px-3 py-2 font-bold rounded-lg transition-all duration-300 text-primary-600 hover:text-primary-600 hover:bg-white hover:shadow-sm">
                             HOME
                         </a>
 
                         <!-- Categories Dropdown -->
                         <div class="relative nav-dropdown">
                             <button
-                                class="flex gap-1 items-center px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary-600 hover:bg-white hover:shadow-sm group">
+                                class="flex gap-1 items-center px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm group">
                                 <span>Categories</span>
                                 <i
                                     class="text-xs transition-transform duration-300 transform fas fa-chevron-down group-hover:rotate-180"></i>
                             </button>
                             <div
                                 class="absolute top-full invisible z-50 mt-2 w-64 bg-white rounded-xl border border-gray-100 shadow-lg opacity-0 transition-all duration-300 transform translate-y-2 start-0">
-                                <div class="py-3">
+                                <div>
 
                                     <!-- Programming with Subcategory -->
-                                    <div class="relative subcategory-item group/sub">
+                                    <div class="relative border-b border-gray-100 subcategory-item group/sub">
                                         <a href="#"
-                                            class="flex justify-between items-center px-4 py-3 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">
+                                            class="flex justify-between items-center px-4 py-3 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:font-bold hover:ps-6 group hover:rounded-xl">
                                             <div class="flex gap-3 items-center">
-                                                <i class="fas fa-code text-primary-600"></i>
                                                 <span>Programming</span>
                                             </div>
-                                            <i class="text-xs fas fa-chevron-right"></i>
+                                            <i class="text-xs fas fa-chevron-right group-hover:text-white"></i>
                                         </a>
                                         <!-- Subcategory -->
                                         <div
                                             class="absolute top-0 invisible w-48 bg-white rounded-xl border border-gray-100 shadow-lg opacity-0 transition-all duration-300 transform translate-x-2 start-full ms-2">
                                             <div class="py-2">
                                                 <a href="#"
-                                                    class="block px-4 py-2 text-gray-600 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">Web
+                                                    class="block px-4 py-2 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6">Web
                                                     Development</a>
                                                 <a href="#"
-                                                    class="block px-4 py-2 text-gray-600 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">Mobile
+                                                    class="block px-4 py-2 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6">Mobile
                                                     Apps</a>
                                                 <a href="#"
-                                                    class="block px-4 py-2 text-gray-600 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">Data
+                                                    class="block px-4 py-2 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6">Data
                                                     Science</a>
                                             </div>
                                         </div>
                                     </div>
 
                                     <!-- Design with Subcategory -->
-                                    <div class="relative subcategory-item group/sub">
+                                    <div class="relative border-b border-gray-100 subcategory-item group/sub">
                                         <a href="#"
-                                            class="flex justify-between items-center px-4 py-3 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">
+                                            class="flex justify-between items-center px-4 py-3 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6 group hover:rounded-xl">
                                             <div class="flex gap-3 items-center">
-                                                <i class="fas fa-palette text-primary-600"></i>
                                                 <span>Design</span>
                                             </div>
-                                            <i class="text-xs fas fa-chevron-right"></i>
+                                            <i class="text-xs fas fa-chevron-right group-hover:text-white"></i>
                                         </a>
                                         <div
                                             class="absolute top-0 invisible w-48 bg-white rounded-xl border border-gray-100 shadow-lg opacity-0 transition-all duration-300 transform translate-x-2 start-full ms-2">
                                             <div class="py-2">
                                                 <a href="#"
-                                                    class="block px-4 py-2 text-gray-600 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">UI/UX
+                                                    class="block px-4 py-2 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6">UI/UX
                                                     Design</a>
                                                 <a href="#"
-                                                    class="block px-4 py-2 text-gray-600 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">Graphic
+                                                    class="block px-4 py-2 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6">Graphic
                                                     Design</a>
                                             </div>
                                         </div>
@@ -194,15 +197,13 @@
 
                                     <!-- Business -->
                                     <a href="#"
-                                        class="flex gap-3 items-center px-4 py-3 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">
-                                        <i class="fas fa-chart-line text-primary-600"></i>
+                                        class="flex gap-3 items-center px-4 py-3 text-black border-b border-gray-100 transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6 hover:rounded-md">
                                         <span>Business</span>
                                     </a>
 
                                     <!-- Languages -->
                                     <a href="#"
-                                        class="flex gap-3 items-center px-4 py-3 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">
-                                        <i class="fas fa-language text-primary-600"></i>
+                                        class="flex gap-3 items-center px-4 py-3 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6 hover:rounded-md">
                                         <span>Languages</span>
                                     </a>
                                 </div>
@@ -210,21 +211,21 @@
                         </div>
 
                         <!-- K-12 Link -->
-                        <a href="#"
-                            class="px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary-600 hover:bg-white hover:shadow-sm">
+                        <a href="k-12.html"
+                            class="px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm">
                             K-12
                         </a>
 
                         <!-- Blog Link -->
                         <a href="blog.html"
-                            class="px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary-600 hover:bg-white hover:shadow-sm">
+                            class="px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm">
                             Blog
                         </a>
 
                         <!-- Classes Dropdown -->
                         <div class="relative nav-dropdown">
                             <button
-                                class="flex gap-1 items-center px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary-600 hover:bg-white hover:shadow-sm group">
+                                class="flex gap-1 items-center px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm group">
                                 <span>Classes</span>
                                 <i
                                     class="text-xs transition-transform duration-300 transform fas fa-chevron-down group-hover:rotate-180"></i>
@@ -247,14 +248,14 @@
 
                         <!-- Events Link -->
                         <a href="#"
-                            class="px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary-600 hover:bg-white hover:shadow-sm">
+                            class="px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm">
                             events
                         </a>
 
                         <!-- Help Dropdown -->
                         <div class="relative nav-dropdown">
                             <button
-                                class="flex gap-1 items-center px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary-600 hover:bg-white hover:shadow-sm group">
+                                class="flex gap-1 items-center px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm group">
                                 <span>Help</span>
                                 <i
                                     class="text-xs transition-transform duration-300 transform fas fa-chevron-down group-hover:rotate-180"></i>
@@ -277,7 +278,7 @@
                         <!-- About Dropdown -->
                         <div class="relative nav-dropdown">
                             <button
-                                class="flex gap-1 items-center px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary-600 hover:bg-white hover:shadow-sm group">
+                                class="flex gap-1 items-center px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm group">
                                 <span>About</span>
                                 <i
                                     class="text-xs transition-transform duration-300 transform fas fa-chevron-down group-hover:rotate-180"></i>
@@ -285,13 +286,13 @@
                             <div
                                 class="absolute top-full invisible z-50 mt-2 w-48 bg-white rounded-xl border border-gray-100 shadow-lg opacity-0 transition-all duration-300 transform translate-y-2 start-0">
                                 <div class="py-3">
-                                    <a href="#"
+                                    <a href="about.html"
                                         class="block px-4 py-3 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">About
                                         Us</a>
-                                    <a href="#"
+                                    <a href="our-team.html"
                                         class="block px-4 py-3 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">Our
                                         Team</a>
-                                    <a href="#"
+                                    <a href="careers.html"
                                         class="block px-4 py-3 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">Careers</a>
                                 </div>
                             </div>
@@ -303,15 +304,15 @@
                     <div class="hidden gap-4 items-center lg:flex">
 
                         <!-- Guest User (Login/Signup) -->
-                        <div class="flex items-center guest-auth">
+                        <div class="flex items-center guest-auth text-[15px]">
                             <a href="#"
-                                class="overflow-hidden relative px-2 py-1 font-medium text-gray-700 transition-all duration-300 hover:text-primary-600 group">
+                                class="overflow-hidden relative px-2 py-0 font-medium text-gray-700 transition-all duration-300 hover:text-primary-600 group rtl:border-black rtl:border-l-2">
                                 <span class="relative z-10">Login</span>
                                 <span
                                     class="absolute bottom-0 w-0 h-0.5 transition-all duration-500 start-0 bg-primary-600 group-hover:w-full"></span>
                             </a>
                             <a href="#"
-                                class="overflow-hidden relative px-2 py-1 font-medium text-gray-700 border-l-2 border-black transition-all duration-300 hover:text-primary-600 group">
+                                class="overflow-hidden relative px-2 py-0 font-medium text-gray-700 transition-all duration-300 ltr:border-black ltr:border-l-2 hover:text-primary-600 group">
                                 <span class="relative z-10">Sign Up</span>
                                 <span
                                     class="absolute bottom-0 w-0 h-0.5 transition-all duration-500 start-0 bg-primary-600 group-hover:w-full"></span>
@@ -574,22 +575,21 @@
             </div>
         </div>
     </header>
-
+    
     <!-- Hero Section -->
     <section class="flex overflow-hidden relative items-center bg-white mt-[120px] py-5 md:py-10">
         <!-- Main Container -->
         <div class="container z-10 px-4 mx-auto w-full">
-
             <!-- Breadcrumb -->
-            <nav aria-label="Breadcrumb" class="mb-6">
-                <ul class="flex flex-wrap items-center space-x-2 text-sm lg:flex-nowrap">
+            <nav aria-label="Breadcrumb" class="mb-14">
+                <ul class="flex items-center space-x-1 text-sm font-light">
                     <!-- Home -->
                     <li>
                         <a href="index.html" class="transition-colors text-primary-600 hover:text-primary-700">Home</a>
                     </li>
                     <li>
                         <span class="text-gray-400">
-                            <i class="fas fa-chevron-right"></i>
+                            <i class="font-light fas fa-chevron-right"></i>
                         </span>
                     </li>
                     <li>
@@ -597,12 +597,12 @@
                     </li>
                     <li>
                         <span class="text-gray-400">
-                            <i class="fas fa-chevron-right"></i>
+                            <i class="font-light fas fa-chevron-right"></i>
                         </span>
                     </li>
                     <!-- Current Page -->
                     <li>
-                        <span class="font-semibold text-gray-900">Lorem ipsum dolor sit amet, consectetur adipiscing
+                        <span class="text-gray-900">Lorem ipsum dolor sit amet, consectetur adipiscing
                             elit.</span>
                     </li>
                 </ul>
@@ -1218,14 +1218,14 @@
                     <!-- نموذج الاشتراك -->
                     <div class="flex gap-3 mx-auto max-w-md md:mx-0">
                         <input type="email" placeholder="Enter your email"
-                            class="flex-1 px-4 py-3 min-w-0 placeholder-gray-400 text-black bg-white rounded-lg border border-gray-500 transition-all duration-300 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-opacity-50" />
-
+                          class="flex-1 px-4 py-3 min-w-0 placeholder-gray-400 text-black bg-white rounded-lg border border-gray-500 transition-all duration-300 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-opacity-50" />
+                        
                         <button
-                            class="px-6 py-3 font-medium text-white rounded-lg transition-all duration-300 transform bg-primary hover:bg-primary-700 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-opacity-50">
-                            Subscribe
+                          class="px-6 py-3 font-medium text-white rounded-lg transition-all duration-300 transform bg-primary hover:bg-primary-700 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-opacity-50">
+                          Subscribe
                         </button>
-                    </div>
-
+                      </div>
+                      
                 </div>
             </div>
         </div>
@@ -1276,7 +1276,6 @@
             </div>
         </div>
     </footer>
-
 
     <!-- زر المشاركة العائم -->
     <div class="fixed right-6 z-50 top-50 group rtl:left-6 rtl:right-auto">
@@ -1347,6 +1346,7 @@
             </div>
         </div>
     </div>
+
     <!-- زر واتساب عائم -->
     <div class="fixed right-6 bottom-6 z-50 rtl:left-6 rtl:right-auto group">
         <a href="https://wa.me/1234567890?text=مرحبا، أحتاج مساعدة" target="_blank"
@@ -1373,6 +1373,7 @@
             <span>RTL</span>
         </button>
     </div>
+
 
     <script src="./assets/js/jquery-3.6.0.min.js"></script>
     <script src="./assets/js/main.js"></script>
