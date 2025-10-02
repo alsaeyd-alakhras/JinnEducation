@@ -142,7 +142,7 @@ $(document).ready(function () {
     startAutoplay();
   });
 
-  // startAutoplay();
+  startAutoplay();
 });
 
 // Courses Filtering
