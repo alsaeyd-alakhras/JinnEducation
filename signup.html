@@ -1,0 +1,1277 @@
+<!DOCTYPE html>
+<html lang="ar" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Create Account - JINN EDU</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
+</head>
+
+<body class="bg-gray-50 font-sans">
+    <div class="flex min-h-screen flex-col md:flex-row">
+        <!-- Sidebar Desktop -->
+        <aside
+            class="hidden md:block w-100 bg-primary text-white p-10 sticky top-0 h-screen overflow-y-auto  scroll-smooth [&::-webkit-scrollbar]:hidden [-ms-overflow-style:none] [scrollbar-width:none]">
+            <!-- Logo -->
+            <div>
+                <div class="my-12 flex justify-center items-center">
+                    <img src="./assets/imgs/logo-white.png" alt="" width="45%">
+                </div>
+                <div class="flex justify-center items-center gap-4 text-sm mb-12">
+                    <a href="index.html" class="hover:underline">Home</a>
+                    <span>|</span>
+                    <a href="index.html" class="hover:underline">Login</a>
+                    <span>|</span>
+                    <a href="contact.html" class="hover:underline">Contact Us</a>
+                </div>
+            </div>
+
+            <!-- Steps Navigation -->
+            <div class="relative space-y-6">
+                <!-- Connector Line 1-2 -->
+                <div class="absolute left-5 top-10 w-0.5 h-[90%] bg-gradient-to-b from-gray-400 to-transparent"
+                    style="background: repeating-linear-gradient(to bottom, #94A3B8 0px, #94A3B8 4px, transparent 4px, transparent 8px);">
+                </div>
+
+                <!-- Step 1 -->
+                <div class="step-item" data-step="1">
+                    <div class="step-circle active" data-circle="1">1</div>
+                    <div class="flex-1 pt-2">
+                        <h3 class="font-semibold text-base">Account Type</h3>
+                    </div>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="step-item" data-step="2">
+                    <div class="step-circle" data-circle="2">2</div>
+                    <div class="flex-1 pt-2">
+                        <h3 class="font-semibold text-base">Account Information</h3>
+                    </div>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="step-item" data-step="3">
+                    <div class="step-circle" data-circle="3">3</div>
+                    <div class="flex-1 pt-2">
+                        <h3 class="font-semibold text-base">Personal Information</h3>
+                    </div>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="step-item" data-step="4">
+                    <div class="step-circle" data-circle="4">4</div>
+                    <div class="flex-1 pt-2">
+                        <h3 class="font-semibold text-base">Tutor's Biography</h3>
+                    </div>
+                </div>
+
+                <!-- Step 5 -->
+                <div class="step-item" data-step="5">
+                    <div class="step-circle" data-circle="5">5</div>
+                    <div class="flex-1 pt-2">
+                        <h3 class="font-semibold text-base">Tutor's Availability</h3>
+                    </div>
+                </div>
+
+                <!-- Step 6 -->
+                <div class="step-item" data-step="6">
+                    <div class="step-circle" data-circle="6">6</div>
+                    <div class="flex-1 pt-2">
+                        <h3 class="font-semibold text-base">Tutor's Hourly Rate</h3>
+                    </div>
+                </div>
+
+                <!-- Step 7 -->
+                <div class="step-item" data-step="7">
+                    <div class="step-circle" data-circle="7">7</div>
+                    <div class="flex-1 pt-2">
+                        <h3 class="font-semibold text-base">Tutor's Qualifications & Certificates</h3>
+                    </div>
+                </div>
+
+                <!-- Step 8 -->
+                <div class="step-item" data-step="8">
+                    <div class="step-circle" data-circle="8">8</div>
+                    <div class="flex-1 pt-2">
+                        <h3 class="font-semibold text-base">Tutor Profile Video</h3>
+                    </div>
+                </div>
+            </div>
+
+            <!-- Footer -->
+            <div class="mt-12 text-xs text-white/70">
+                <p>© 2024 - 2025 JINNEDU. All rights reserved.</p>
+                <a href="#" class="underline hover:text-white">Privacy Policies</a>
+            </div>
+        </aside>
+
+        <!-- Mobile Sidebar -->
+        <div class="md:hidden w-full bg-primary text-white p-4">
+            <details class="bg-primary" open>
+                <summary class="cursor-pointer font-semibold text-lg list-none">
+                    <div class="flex items-center justify-between">
+                        <span>Navigation Steps</span>
+                        <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                            <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M19 9l-7 7-7-7" />
+                        </svg>
+                    </div>
+                </summary>
+                <div class="mt-4 space-y-3 text-sm">
+                    <div class="step-item-mobile cursor-pointer hover:underline" data-step="1">1. Account Type</div>
+                    <div class="step-item-mobile cursor-pointer hover:underline" data-step="2">2. Account Information
+                    </div>
+                    <div class="step-item-mobile cursor-pointer hover:underline" data-step="3">3. Personal Information
+                    </div>
+                    <div class="step-item-mobile cursor-pointer hover:underline" data-step="4">4. Tutor's Biography
+                    </div>
+                    <div class="step-item-mobile cursor-pointer hover:underline" data-step="5">5. Tutor's Availability
+                    </div>
+                    <div class="step-item-mobile cursor-pointer hover:underline" data-step="6">6. Tutor's Hourly Rate
+                    </div>
+                    <div class="step-item-mobile cursor-pointer hover:underline" data-step="7">7. Qualifications</div>
+                    <div class="step-item-mobile cursor-pointer hover:underline" data-step="8">8. Profile Video</div>
+                </div>
+            </details>
+        </div>
+
+        <!-- Main Content -->
+        <main class="flex-1 p-6 md:p-8 overflow-y-auto mt-12">
+            <form method="post" action="#">
+                <!-- Step 1: Account Type -->
+                <div class="pane block opacity-100" data-step="1">
+                    <div class="mx-auto">
+                        <div class="text-center">
+                            <h1 class="text-3xl font-bold text-gray-900 mb-2">Create A New Account</h1>
+                            <p class="text-gray-600 mb-8">Choose the type of account you want to create to continue.</p>
+                            <!-- Error Message -->
+                            <p id="account-type-error"
+                                class="hidden text-sm text-red-500 mt-2 opacity-0 transition-all duration-300">
+                                Please Choose Account Type
+                            </p>
+                        </div>
+
+                        <div class="grid md:grid-cols-2 gap-6 mb-8">
+                            <input type="hidden" name="account-type" id="account-type">
+                            <!-- Student Card -->
+                            <div class="account-card bg-white rounded-2xl p-8 text-center border-2 border-gray-200 cursor-pointer transition-all hover:border-primary hover:shadow-lg"
+                                data-account="student">
+                                <div class="flex justify-center">
+                                    <svg width="105" height="57" viewBox="0 0 105 57" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M39.9345 20.2304V14.5809C39.9345 11.5181 41.2281 8.63847 43.5769 6.47276C45.9256 4.30705 49.0486 3.11426 52.3703 3.11426C55.692 3.11426 58.8149 4.30705 61.1637 6.47276C63.5124 8.63847 64.806 11.5181 64.806 14.5809V20.2304C64.806 23.2932 63.5124 26.1727 61.1637 28.3385C58.8149 30.5043 55.692 31.697 52.3703 31.697C49.0486 31.697 45.9256 30.5043 43.5769 28.3385C41.2281 26.1728 39.9345 23.2932 39.9345 20.2304ZM76.3083 52.3492C75.5566 53.5217 74.3582 54.3677 72.934 54.7317C66.2847 56.4314 58.0813 56.7882 52.3703 56.7882C46.6593 56.7882 38.4559 56.4313 31.8065 54.7317C30.3823 54.3677 29.1841 53.5217 28.4324 52.3492C27.6807 51.1767 27.4545 49.801 27.7956 48.4755L29.7404 40.9216C30.2018 39.1298 31.4827 37.6162 33.2549 36.7687L44.2201 31.5238C46.6139 32.9992 49.4261 33.7916 52.3704 33.7916C55.3148 33.7916 58.1271 32.9992 60.5209 31.5237L71.4859 36.7688C73.2579 37.6163 74.5389 39.1299 75.0002 40.9217L76.945 48.4756C77.2862 49.8009 77.06 51.1766 76.3083 52.3492Z"
+                                            fill="#1B449C" />
+                                        <path
+                                            d="M28.4816 2.85351C26.4859 1.01332 23.833 0 21.0103 0C18.1877 0 15.5348 1.01332 13.5391 2.85351C11.5446 4.69258 10.4456 7.13987 10.4456 9.74144V14.5417C10.4456 17.1432 11.5446 19.5894 13.5391 21.4296C15.5348 23.2698 18.1877 24.2831 21.0103 24.2831C23.833 24.2831 26.4859 23.2698 28.4816 21.4296C30.4773 19.5894 31.5763 17.1432 31.5763 14.5417V9.74144C31.5763 7.13987 30.4773 4.69258 28.4816 2.85351ZM37.2504 28.5917L27.9351 24.1355C25.9009 25.3897 23.5116 26.0623 21.0103 26.0623C18.5091 26.0623 16.1198 25.3897 14.0855 24.1366L4.77022 28.5917C3.26441 29.312 2.17628 30.5983 1.78388 32.12L0.131222 38.5384C-0.157663 39.6639 0.0337231 40.8326 0.672879 41.8292C1.31204 42.8248 2.32915 43.544 3.54005 43.8537C9.18894 45.2976 16.1583 45.6006 21.0103 45.6006C22.6148 45.6006 24.4517 45.5673 26.3956 45.4707L27.6414 40.6306C28.2637 38.2099 29.9946 36.1655 32.3887 35.0201L39.9864 31.3864C39.4736 30.1888 38.5071 29.1933 37.2504 28.5917Z"
+                                            fill="#1B449C" />
+                                        <path
+                                            d="M73.1679 9.74144V14.5417C73.1679 17.1432 74.2669 19.5894 76.2626 21.4296C78.2583 23.2698 80.9112 24.2831 83.7339 24.2831C86.5565 24.2831 89.2094 23.2698 91.2051 21.4296C93.1997 19.5894 94.2986 17.1432 94.2986 14.5417V9.74144C94.2986 7.13987 93.1997 4.69258 91.2051 2.85351C89.2094 1.01332 86.5565 0 83.7339 0C80.9112 0 78.2583 1.01332 76.2626 2.85351C74.2669 4.69258 73.1679 7.13987 73.1679 9.74144ZM64.7578 31.3865L72.3555 35.0202C74.7496 36.1656 76.4805 38.21 77.1028 40.6307L78.3486 45.4709C80.2926 45.5674 82.1294 45.6007 83.7339 45.6007C88.5859 45.6007 95.5553 45.2977 101.204 43.8538C102.415 43.5441 103.432 42.8249 104.071 41.8293C104.71 40.8327 104.902 39.664 104.613 38.5385L102.96 32.1201C102.568 30.5984 101.48 29.3121 99.974 28.5918L90.6587 24.1367C88.6245 25.3898 86.2351 26.0624 83.7339 26.0624C81.2326 26.0624 78.8433 25.3898 76.8091 24.1356L67.4938 28.5918C66.2371 29.1933 65.2706 30.1888 64.7578 31.3865Z"
+                                            fill="#1B449C" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 my-6">Student Account Card</h3>
+                                <p class="text-gray-600 text-sm">Create a student account to access lessons and learning
+                                    resources.</p>
+                            </div>
+
+                            <!-- Tutor Card -->
+                            <div class="account-card bg-white rounded-2xl p-8 text-center border-2 border-gray-200 cursor-pointer transition-all hover:border-primary hover:shadow-lg"
+                                data-account="tutor">
+                                <div class="flex justify-center">
+                                    <svg width="52" height="57" viewBox="0 0 52 57" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M45.6621 36.6406C47.2758 37.4202 48.4154 38.7977 48.8232 40.3975L50.8682 48.4189C51.1576 49.5547 50.9685 50.7333 50.3232 51.75C49.6761 52.7695 48.6348 53.5212 47.3701 53.8477C40.5064 55.6199 31.9854 56 26 56C20.2017 56 12.024 55.6432 5.27832 54.0098L4.62988 53.8477C3.36517 53.5212 2.32389 52.7696 1.67676 51.75C1.03153 50.7334 0.842383 49.555 1.13184 48.4189L3.17676 40.3975C3.58457 38.7977 4.72404 37.4202 6.33789 36.6406L17.3809 31.3047C19.9527 32.7882 22.9155 33.5781 26 33.5781C29.0842 33.5781 32.0466 32.7879 34.6182 31.3047L45.6621 36.6406ZM26 1C29.2491 1.00002 32.2862 2.17784 34.5635 4.29883C36.8381 6.41747 38.0741 9.21348 38.0742 12.1768V18.1768C38.0742 21.1403 36.8384 23.9368 34.5635 26.0557C32.2862 28.1766 29.2491 29.3545 26 29.3545C22.7509 29.3545 19.7138 28.1766 17.4365 26.0557C15.1616 23.9369 13.9258 21.1403 13.9258 18.1768V12.1768C13.9259 9.21345 15.1618 6.41747 17.4365 4.29883C19.7138 2.17782 22.7509 1 26 1Z"
+                                            stroke="#1B449C" stroke-width="2" />
+                                    </svg>
+                                </div>
+                                <h3 class="text-xl font-bold text-gray-900 my-6">Tutor Account</h3>
+                                <p class="text-gray-600 text-sm">Create a tutor account to share your expertise with
+                                    students.</p>
+                            </div>
+                        </div>
+
+                        <div class="flex justify-center">
+                            <button type="button" id="continue-step-1"
+                                class="cursor-pointer btn-continue bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
+                                Continue →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 2: Account Information -->
+                <div class="pane hidden" data-step="2">
+                    <div class="mx-auto" id="account-info">
+                        <div class="text-center">
+                            <h1 class="text-3xl font-bold text-gray-900 mb-2">Account Information</h1>
+                            <p class="text-gray-600 mb-8">Set up your account basic information</p>
+                        </div>
+
+                        <!-- Profile Picture -->
+                        <div class="flex justify-center mb-8">
+                            <div class="relative">
+                                <!-- Avatar Circle -->
+                                <div id="avatarPreview"
+                                    class="w-43 h-43 rounded-full shadow-lg bg-gray-200 flex items-center justify-center overflow-hidden">
+                                    <svg id="avatarIcon" class="w-20 h-20 text-gray-400" fill="currentColor"
+                                        viewBox="0 0 24 24">
+                                        <path
+                                            d="M12 12c2.21 0 4-1.79 4-4s-1.79-4-4-4-4 1.79-4 4 1.79 4 4 4zm0 2c-2.67 0-8 1.34-8 4v2h16v-2c0-2.66-5.33-4-8-4z" />
+                                    </svg>
+                                    <!-- image preview -->
+                                    <img id="avatarImage" src="" alt="Preview"
+                                        class="hidden object-cover w-full h-full rounded-full" />
+                                </div>
+
+                                <!-- Edit Button -->
+                                <button type="button" id="btnUpload"
+                                    class="absolute top-0 right-0 bg-primary border-4 border-[#F5F5F5] text-white p-2 rounded-full shadow-lg hover:bg-primary-dark transition-colors">
+                                    <svg class="w-5 h-5" viewBox="0 0 16 16" fill="none"
+                                        xmlns="http://www.w3.org/2000/svg">
+                                        <path
+                                            d="M11.183 3.1978L13.689 5.7038C13.7395 5.75474 13.7678 5.82357 13.7678 5.8953C13.7678 5.96703 13.7395 6.03586 13.689 6.0868L7.622 12.1538L5.044 12.4398C4.96288 12.4495 4.88063 12.4406 4.80345 12.4138C4.72626 12.3871 4.65615 12.3432 4.59838 12.2854C4.54062 12.2277 4.49672 12.1575 4.46997 12.0804C4.44323 12.0032 4.43435 11.9209 4.444 11.8398L4.73 9.2618L10.8 3.1978C10.8509 3.1473 10.9198 3.11897 10.9915 3.11897C11.0632 3.11897 11.1321 3.1473 11.183 3.1978ZM15.683 2.5618L14.328 1.2068C14.1245 1.004 13.8488 0.890137 13.5615 0.890137C13.2742 0.890137 12.9985 1.004 12.795 1.2068L11.812 2.1898C11.7615 2.24074 11.7332 2.30957 11.7332 2.3813C11.7332 2.45303 11.7615 2.52186 11.812 2.5728L14.317 5.0828C14.3679 5.13331 14.4368 5.16164 14.5085 5.16164C14.5802 5.16164 14.6491 5.13331 14.7 5.0828L15.683 4.0998C15.8858 3.89626 15.9997 3.62063 15.9997 3.3333C15.9997 3.04597 15.8858 2.77035 15.683 2.5668V2.5618ZM10.667 10.5038V13.3318H1.778V4.4428H8.161C8.24966 4.44132 8.33427 4.40547 8.397 4.3428L9.508 3.2338C9.55479 3.18723 9.58667 3.1278 9.59961 3.06306C9.61255 2.99833 9.60595 2.9312 9.58066 2.87022C9.55537 2.80924 9.51252 2.75716 9.45756 2.72058C9.40261 2.68401 9.33802 2.66459 9.272 2.6648H1.333C0.979548 2.66507 0.640648 2.80559 0.390719 3.05552C0.140791 3.30545 0.000264858 3.64435 0 3.9978L0 13.7758C0.000264858 14.1293 0.140791 14.4682 0.390719 14.7181C0.640648 14.968 0.979548 15.1085 1.333 15.1088H11.111C11.4645 15.1085 11.8034 14.968 12.0533 14.7181C12.3032 14.4682 12.4437 14.1293 12.444 13.7758V9.3928C12.4437 9.327 12.424 9.26274 12.3874 9.20809C12.3507 9.15344 12.2987 9.11084 12.238 9.08563C12.1772 9.06042 12.1103 9.05372 12.0457 9.06638C11.9812 9.07905 11.9218 9.1105 11.875 9.1568L10.764 10.2678C10.7024 10.331 10.6677 10.4156 10.667 10.5038Z"
+                                            fill="white" />
+                                    </svg>
+                                </button>
+
+                                <!-- Hidden File Input -->
+                                <input type="file" id="avatarInput" name="avatar" accept="image/*" class="hidden" />
+                            </div>
+                        </div>
+
+                        <!-- Form Fields -->
+                        <div class="mb-6">
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-900 mb-2">First Name</label>
+                                    <input type="text" placeholder="First Name"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-900 mb-2">Last Name</label>
+                                    <input type="text" placeholder="Last Name"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                </div>
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="block text-sm font-semibold text-gray-900 mb-2">Email</label>
+                                <div class="relative">
+                                    <input id="email" type="email" placeholder="example@gmail.com"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                </div>
+
+                                <!-- Email Validation Message -->
+                                <p id="email-msg"
+                                    class="text-xs text-gray-500 mt-1 opacity-0 transition-all duration-300">
+                                    Please enter a valid email address
+                                </p>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-900 mb-2">Country</label>
+                                    <input type="text" placeholder="egypt (+20)"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-900 mb-2">Contact number</label>
+                                    <input type="tel" placeholder="Phone"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                </div>
+                            </div>
+
+                            <!-- Password Fields -->
+                            <div class="grid md:grid-cols-2 gap-6 mb-6">
+                                <!-- Password -->
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-900 mb-2">Password</label>
+                                    <div class="relative">
+                                        <input id="password" type="password" placeholder="Password"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg pr-12 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                        <button type="button"
+                                            class="toggle-password absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <!-- Strength Bars -->
+                                    <div class="flex items-center gap-2 mt-2 w-2/3" id="password-strength">
+                                        <div class="h-1 flex-1 rounded-full bg-gray-200 transition-all"></div>
+                                        <div class="h-1 flex-1 rounded-full bg-gray-200 transition-all"></div>
+                                        <div class="h-1 flex-1 rounded-full bg-gray-200 transition-all"></div>
+                                    </div>
+
+                                    <p class="text-xs text-gray-500 mt-1">
+                                        Please enter a password containing 8 letters, numbers and symbols
+                                    </p>
+                                </div>
+
+                                <!-- Confirm Password -->
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-900 mb-2">Confirm
+                                        password</label>
+                                    <div class="relative">
+                                        <input id="confirm-password" type="password" placeholder="Confirm password"
+                                            class="w-full px-4 py-3 border border-gray-300 rounded-lg pr-12 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                        <button type="button"
+                                            class="toggle-password absolute right-3 top-1/2 -translate-y-1/2 text-gray-400 hover:text-gray-600 transition">
+                                            <svg class="w-5 h-5" fill="none" stroke="currentColor" viewBox="0 0 24 24">
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M15 12a3 3 0 11-6 0 3 3 0 016 0z" />
+                                                <path stroke-linecap="round" stroke-linejoin="round" stroke-width="2"
+                                                    d="M2.458 12C3.732 7.943 7.523 5 12 5c4.478 0 8.268 2.943 9.542 7-1.274 4.057-5.064 7-9.542 7-4.477 0-8.268-2.943-9.542-7z" />
+                                            </svg>
+                                        </button>
+                                    </div>
+
+                                    <!-- Error Message -->
+                                    <p id="match-error"
+                                        class="hidden text-sm text-red-500 mt-2 opacity-0 transition-all duration-300">
+                                        Passwords do not match
+                                    </p>
+                                </div>
+                            </div>
+
+                            <div class="flex items-start gap-2 mb-6">
+                                <input type="checkbox" id="terms"
+                                    class="mt-1 w-4 h-4 accent-primary rounded border-gray-300">
+                                <label for="terms" class="text-sm text-gray-600">
+                                    Agree Terms <a href="#" class="text-primary hover:underline">Terms And
+                                        Conditions</a>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <button type="button"
+                                class="cursor-pointer btn-back px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                                ← Back
+                            </button>
+                            <button type="button"
+                                class="cursor-pointer btn-google flex items-center justify-center gap-2 px-6 py-3 border-2 border-gray-300 rounded-lg font-semibold hover:bg-gray-50 transition-colors">
+                                <svg class="w-5 h-5" viewBox="0 0 24 24">
+                                    <path fill="#4285F4"
+                                        d="M22.56 12.25c0-.78-.07-1.53-.2-2.25H12v4.26h5.92c-.26 1.37-1.04 2.53-2.21 3.31v2.77h3.57c2.08-1.92 3.28-4.74 3.28-8.09z" />
+                                    <path fill="#34A853"
+                                        d="M12 23c2.97 0 5.46-.98 7.28-2.66l-3.57-2.77c-.98.66-2.23 1.06-3.71 1.06-2.86 0-5.29-1.93-6.16-4.53H2.18v2.84C3.99 20.53 7.7 23 12 23z" />
+                                    <path fill="#FBBC05"
+                                        d="M5.84 14.09c-.22-.66-.35-1.36-.35-2.09s.13-1.43.35-2.09V7.07H2.18C1.43 8.55 1 10.22 1 12s.43 3.45 1.18 4.93l2.85-2.22.81-.62z" />
+                                    <path fill="#EA4335"
+                                        d="M12 5.38c1.62 0 3.06.56 4.21 1.64l3.15-3.15C17.45 2.09 14.97 1 12 1 7.7 1 3.99 3.47 2.18 7.07l3.66 2.84c.87-2.6 3.3-4.53 6.16-4.53z" />
+                                </svg>
+                                Google
+                            </button>
+                            <button type="button"
+                                class="cursor-pointer hidden btn-continue bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
+                                Continue →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 3: Personal Information -->
+                <div class="pane hidden" data-step="3">
+                    <div class="mx-auto">
+                        <div class="text-center">
+                            <h1 class="text-3xl font-bold text-gray-900 mb-2">Personal Information</h1>
+                            <p class="text-gray-600 mb-8">Set up your account basic information</p>
+                        </div>
+
+                        <div class="mb-6">
+                            <!-- Date of Birth -->
+                            <div class="mb-2 relative font-inter">
+                                <label class="block text-sm font-semibold text-gray-900 mb-2">Date of birth</label>
+
+                                <div class="relative">
+                                    <!-- Input -->
+                                    <input id="dob-input" type="text" readonly
+                                        placeholder="Date of birth (yyyy / MMM / DD)"
+                                        class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-800 placeholder-gray-400 focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all pr-12 cursor-pointer shadow-sm">
+
+                                    <!-- Icon -->
+                                    <div id="dob-icon"
+                                        class="absolute right-4 top-1/2 -translate-y-1/2 text-gray-400 hover:text-primary transition cursor-pointer">
+                                        <svg width="22" height="22" viewBox="0 0 24 24" fill="none"
+                                            xmlns="http://www.w3.org/2000/svg">
+                                            <path
+                                                d="M8 14.5C8.55228 14.5 9 14.0523 9 13.5C9 12.9477 8.55228 12.5 8 12.5C7.44772 12.5 7 12.9477 7 13.5C7 14.0523 7.44772 14.5 8 14.5Z"
+                                                fill="#AAAAAA" />
+                                            <path
+                                                d="M8 18.5C8.55228 18.5 9 18.0523 9 17.5C9 16.9477 8.55228 16.5 8 16.5C7.44772 16.5 7 16.9477 7 17.5C7 18.0523 7.44772 18.5 8 18.5Z"
+                                                fill="#AAAAAA" />
+                                            <path
+                                                d="M12 14.5C12.5523 14.5 13 14.0523 13 13.5C13 12.9477 12.5523 12.5 12 12.5C11.4477 12.5 11 12.9477 11 13.5C11 14.0523 11.4477 14.5 12 14.5Z"
+                                                fill="#AAAAAA" />
+                                            <path
+                                                d="M12 18.5C12.5523 18.5 13 18.0523 13 17.5C13 16.9477 12.5523 16.5 12 16.5C11.4477 16.5 11 16.9477 11 17.5C11 18.0523 11.4477 18.5 12 18.5Z"
+                                                fill="#AAAAAA" />
+                                            <path
+                                                d="M16 14.5C16.5523 14.5 17 14.0523 17 13.5C17 12.9477 16.5523 12.5 16 12.5C15.4477 12.5 15 12.9477 15 13.5C15 14.0523 15.4477 14.5 16 14.5Z"
+                                                fill="#AAAAAA" />
+                                            <path
+                                                d="M16 18.5C16.5523 18.5 17 18.0523 17 17.5C17 16.9477 16.5523 16.5 16 16.5C15.4477 16.5 15 16.9477 15 17.5C15 18.0523 15.4477 18.5 16 18.5Z"
+                                                fill="#AAAAAA" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M22.75 6.5V19.5C22.75 20.495 22.355 21.448 21.652 22.152C20.948 22.855 19.995 23.25 19 23.25H5C4.005 23.25 3.052 22.855 2.348 22.152C1.645 21.448 1.25 20.495 1.25 19.5V6.5C1.25 5.505 1.645 4.552 2.348 3.848C3.052 3.145 4.005 2.75 5 2.75H19C19.995 2.75 20.948 3.145 21.652 3.848C22.355 4.552 22.75 5.505 22.75 6.5ZM21.25 6.5C21.25 5.903 21.013 5.331 20.591 4.909C20.169 4.487 19.597 4.25 19 4.25H5C4.403 4.25 3.831 4.487 3.409 4.909C2.987 5.331 2.75 5.903 2.75 6.5V19.5C2.75 20.097 2.987 20.669 3.409 21.091C3.831 21.513 4.403 21.75 5 21.75H19C19.597 21.75 20.169 21.513 20.591 21.091C21.013 20.669 21.25 20.097 21.25 19.5V6.5Z"
+                                                fill="#AAAAAA" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M22 8.25C22.414 8.25 22.75 8.586 22.75 9C22.75 9.414 22.414 9.75 22 9.75H2C1.586 9.75 1.25 9.414 1.25 9C1.25 8.586 1.586 8.25 2 8.25H22Z"
+                                                fill="#AAAAAA" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M15.25 1.5C15.25 1.086 15.586 0.75 16 0.75C16.414 0.75 16.75 1.086 16.75 1.5V5.5C16.75 5.914 16.414 6.25 16 6.25C15.586 6.25 15.25 5.914 15.25 5.5V1.5Z"
+                                                fill="#AAAAAA" />
+                                            <path fill-rule="evenodd" clip-rule="evenodd"
+                                                d="M7.25 1.5C7.25 1.086 7.586 0.75 8 0.75C8.414 0.75 8.75 1.086 8.75 1.5V5.5C8.75 5.914 8.414 6.25 8 6.25C7.586 6.25 7.25 5.914 7.25 5.5V1.5Z"
+                                                fill="#AAAAAA" />
+                                        </svg>
+                                    </div>
+                                </div>
+
+                                <!-- Date Dropdown -->
+                                <div id="dob-dropdown"
+                                    class="hidden absolute top-full left-0 w-1/3 bg-white border border-gray-200 rounded-xl shadow-lg mt-2 z-50 p-4 transition-all duration-200">
+                                    <div class="flex items-center justify-between mb-3">
+                                        <button type="button" id="prevMonth"
+                                            class="text-gray-500 hover:text-primary transition px-2 py-1 rounded-lg">&lt;</button>
+                                        <h3 id="monthLabel" class="font-semibold text-gray-800 text-sm"></h3>
+                                        <button type="button" id="nextMonth"
+                                            class="text-gray-500 hover:text-primary transition px-2 py-1 rounded-lg">&gt;</button>
+                                    </div>
+                                    <div id="calendarGrid"
+                                        class="grid grid-cols-7 text-center text-sm text-gray-700 select-none">
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6 mb-2">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-900 mb-2">Country</label>
+                                    <select
+                                        class="text-[#AAAAAA] w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                        <option>Country</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-900 mb-2">Native
+                                        Language</label>
+                                    <select
+                                        class="text-[#AAAAAA] w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                        <option>Native Language</option>
+                                    </select>
+                                </div>
+                            </div>
+
+                            <div class="grid md:grid-cols-2 gap-6 mb-2">
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-900 mb-2">Teaching
+                                        Subject</label>
+                                    <select
+                                        class="text-[#AAAAAA] w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                        <option>Teaching Subject</option>
+                                    </select>
+                                </div>
+                                <div>
+                                    <label class="block text-sm font-semibold text-gray-900 mb-2">Teaching
+                                        Experience</label>
+                                    <select
+                                        class="text-[#AAAAAA] w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                        <option>Teaching Experience</option>
+                                    </select>
+                                    <p class="text-[#AAAAAA]">e.g., 1–2 years, 3–5 years, 5–7 years…</p>
+                                </div>
+                            </div>
+
+                            <div class="mb-2">
+                                <label class="block text-sm font-semibold text-gray-900 mb-2">Situation</label>
+                                <select
+                                    class="text-[#AAAAAA] w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 transition-all">
+                                    <option>Situation</option>
+                                </select>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <button type="button"
+                                class="cursor-pointer btn-back px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                                ← Back
+                            </button>
+                            <button type="button"
+                                class="cursor-pointer btn-continue bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
+                                Continue →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 4: Tutor's Biography -->
+                <div class="pane hidden" data-step="4">
+                    <div class="mx-auto">
+                        <div class="text-center">
+                            <h1 class="text-3xl font-bold text-gray-900 mb-2">Biography Information</h1>
+                            <p class="text-gray-600 mb-8">Set up your account basic information</p>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="mb-6">
+                                <label class="block text-sm font-semibold text-gray-900 mb-2">Headline</label>
+                                <textarea rows="3"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 focus:bg-[#F3F5FA] transition-all"></textarea>
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="block text-sm font-semibold text-gray-900 mb-2">Interests</label>
+                                <textarea rows="3"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 focus:bg-[#F3F5FA] transition-all"></textarea>
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="block text-sm font-semibold text-gray-900 mb-2">Motivation</label>
+                                <textarea rows="3"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 focus:bg-[#F3F5FA] transition-all"></textarea>
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="block text-sm font-semibold text-gray-900 mb-2">Specializations</label>
+                                <select
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 focus:bg-[#F3F5FA] transition-all">
+                                    <option></option>
+                                </select>
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="block text-sm font-semibold text-gray-900 mb-2">Experience</label>
+                                <textarea rows="3"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 focus:bg-[#F3F5FA] transition-all"></textarea>
+                            </div>
+
+                            <div class="mb-6">
+                                <label class="block text-sm font-semibold text-gray-900 mb-2">Methodology</label>
+                                <textarea rows="3"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:ring-2 focus:ring-primary/20 focus:bg-[#F3F5FA] transition-all"></textarea>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row justify-between gap-4">
+                            <button type="button"
+                                class="cursor-pointer btn-back px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                                ← Back
+                            </button>
+                            <button type="button"
+                                class="cursor-pointer btn-continue bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
+                                Continue →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 5: Tutor's Availability -->
+                <div class="pane hidden" data-step="5">
+                    <div class="mx-auto">
+                        <div class="text-center">
+                            <h1 class="text-3xl font-bold text-gray-900 mb-2">Daily Availability Time</h1>
+                            <p class="text-gray-600 mb-8">Set up your daily time availability</p>
+                        </div>
+                        <div class="mx-auto">
+                            <!-- ========== DAY CARD (REUSABLE) ========== -->
+                            <!-- Sunday (ON + sample ranges) -->
+                            <section class="day-card bg-white border border-gray-200 rounded-2xl p-5 shadow-card mb-5"
+                                data-day="sunday">
+                                <header class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <h3 class="text-[18px] font-semibold text-gray-900">Sunday</h3>
+                                        <span
+                                            class="badge inline-flex items-center px-2.5 py-1 rounded-full text-[12px] font-medium bg-blue-100 text-primary">Available</span>
+                                    </div>
+
+                                    <!-- toggle -->
+                                    <button type="button"
+                                        class="toggle relative w-[46px] h-[26px] rounded-full bg-primary"
+                                        aria-pressed="true">
+                                        <span
+                                            class="knob absolute w-[20px] h-[20px] bg-white rounded-full top-[3px] right-[3px] transition-all"></span>
+                                    </button>
+                                </header>
+
+                                <div class="ranges space-y-4 w-3/4">
+                                    <!-- range row -->
+                                    <div class="range-row grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-4 items-end">
+                                        <!-- From -->
+                                        <div>
+                                            <label class="block text-[13px] text-gray-800 mb-1">From</label>
+                                            <div class="relative">
+                                                <input type="time" value="09:00"
+                                                    class="hide-date-icon bg-[#F3F5FA] time-input w-full text-[16px] px-4 py-3 pl-11 rounded-lg border border-primary/35 bg-soft text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary/15 focus:border-primary">
+                                                <span
+                                                    class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                                                    <!-- ساعة (SVG) -->
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.5 19C4.26 19 0 14.739 0 9.5S4.26 0 9.5 0 19 4.261 19 9.5 14.738 19 9.5 19Zm0-17.48A7.98 7.98 0 1 0 17.48 9.5 7.99 7.99 0 0 0 9.5 1.52Zm-.061 8.679H4.56a.78.78 0 0 1 0-1.56h4.119V3.04a.78.78 0 1 1 1.56 0V9.44a.78.78 0 0 1-.78.76Z"
+                                                            fill="#1B449C" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- To -->
+                                        <div>
+                                            <label class="block text-[13px] text-gray-800 mb-1">To</label>
+                                            <div class="relative">
+                                                <input type="time" value="19:00"
+                                                    class="hide-date-icon bg-[#F3F5FA] time-input w-full text-[16px] px-4 py-3 pl-11 rounded-lg border border-primary/35 bg-soft text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary/15 focus:border-primary">
+                                                <span
+                                                    class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.5 19C4.26 19 0 14.739 0 9.5S4.26 0 9.5 0 19 4.261 19 9.5 14.738 19 9.5 19Zm0-17.48A7.98 7.98 0 1 0 17.48 9.5 7.99 7.99 0 0 0 9.5 1.52Zm-.061 8.679H4.56a.78.78 0 0 1 0-1.56h4.119V3.04a.78.78 0 1 1 1.56 0V9.44a.78.78 0 0 1-.78.76Z"
+                                                            fill="#1B449C" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <!-- Delete -->
+                                        <div class="flex md:justify-center">
+                                            <button type="button"
+                                                class="btn-remove w-11 h-11 rounded-lg border border-gray-200 hover:bg-gray-50 grid place-items-center">
+                                                <svg width="22" height="30" viewBox="0 0 22 30" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M5.17099 25.1213L3.74128 14.3343C3.58992 13.1914 4.90475 12.4222 5.82678 13.1284C5.9631 13.2324 6.07752 13.3624 6.16347 13.5108C6.24943 13.6592 6.30523 13.8232 6.32767 13.9932L7.75738 24.7802C7.77989 24.9497 7.76871 25.122 7.72446 25.2872C7.68022 25.4525 7.60379 25.6073 7.49955 25.7429C6.79181 26.6669 5.32272 26.2665 5.17099 25.1213ZM4.5306 14.2314L5.96022 25.0183C5.9789 25.1513 6.04945 25.2716 6.15647 25.3527C6.26348 25.4339 6.39827 25.4695 6.5314 25.4516C6.66452 25.4337 6.78518 25.3639 6.86701 25.2574C6.94884 25.1509 6.9852 25.0163 6.96816 24.8831L5.53863 14.0961C5.52069 13.9624 5.45039 13.8414 5.34319 13.7595C5.23598 13.6777 5.10066 13.6418 4.96699 13.6597C4.83332 13.6777 4.71224 13.748 4.6304 13.8552C4.54856 13.9624 4.51266 14.0977 4.5306 14.2314ZM15.0172 25.0183L16.4468 14.2314C16.4647 14.0977 16.4288 13.9624 16.347 13.8552C16.2652 13.748 16.1441 13.6777 16.0104 13.6597C15.8767 13.6418 15.7414 13.6777 15.6342 13.7595C15.527 13.8414 15.4567 13.9624 15.4388 14.0961L14.0092 24.8831C13.9922 25.0163 14.0286 25.1509 14.1104 25.2574C14.1922 25.3639 14.3129 25.4337 14.446 25.4516C14.5791 25.4695 14.7139 25.4339 14.8209 25.3527C14.928 25.2716 14.9985 25.1513 15.0172 25.0183ZM17.236 14.3343L15.8064 25.1213C15.7839 25.2926 15.7276 25.4578 15.6407 25.6071C15.5538 25.7565 15.4381 25.8872 15.3003 25.9914C15.1625 26.0957 15.0054 26.1716 14.838 26.2147C14.6707 26.2578 14.4964 26.2671 14.3254 26.2423C14.1544 26.2174 13.99 26.1589 13.8418 26.07C13.6936 25.9811 13.5646 25.8636 13.4621 25.7244C13.3597 25.5852 13.286 25.4271 13.2452 25.2592C13.2044 25.0912 13.1974 24.9169 13.2245 24.7462L14.6499 13.9932C14.8017 12.8475 16.2713 12.4483 16.9784 13.3715C17.0826 13.5071 17.1591 13.662 17.2033 13.8272C17.2476 13.9924 17.2588 14.1647 17.2363 14.3343H17.236ZM20.1269 9.91273H0.850995L3.28041 28.2438C3.31414 28.5098 3.44426 28.7543 3.64613 28.9308C3.848 29.1074 4.10761 29.2038 4.37579 29.2018H16.6012C16.8694 29.2038 17.129 29.1074 17.3309 28.9308C17.5328 28.7543 17.6629 28.5098 17.6966 28.2438L20.1269 9.91273ZM20.5812 9.11418L0.396635 9.11518C0.340126 9.1155 0.284327 9.12779 0.232915 9.15124C0.181503 9.1747 0.135646 9.20879 0.0983686 9.25126C0.0610906 9.29373 0.0332378 9.34362 0.0166466 9.39763C5.53788e-05 9.45165 -0.0048984 9.50858 0.00211344 9.56465L2.49163 28.3463C2.55084 28.804 2.77486 29.2245 3.12176 29.5289C3.46866 29.8333 3.91464 30.0008 4.37616 30H16.6012C17.0628 30.0008 17.5089 29.8334 17.8558 29.529C18.2028 29.2246 18.4269 28.8041 18.4861 28.3463L20.9709 9.5986C20.9838 9.54027 20.9835 9.47978 20.9699 9.4216C20.9563 9.36341 20.9298 9.30904 20.8923 9.26249C20.8548 9.21594 20.8074 9.17842 20.7535 9.1527C20.6995 9.12698 20.6405 9.11372 20.5808 9.11391L20.5812 9.11418ZM11.0016 24.9971C11.0016 25.666 9.98473 25.6671 9.98419 24.9986L9.97559 14.1171C9.97559 13.4483 10.9925 13.4472 10.993 14.1158L11.0021 24.9972L11.0016 24.9971ZM11.7885 14.1157L11.797 24.9971C11.7984 26.7146 9.1898 26.7162 9.18872 24.9986L9.18021 14.1171C9.17885 12.3996 11.7885 12.3982 11.7885 14.1158V14.1157ZM1.57278 2.50401L20.2989 7.52188L20.5578 6.55559C20.6262 6.2993 20.5901 6.02635 20.4575 5.79659C20.325 5.56684 20.1067 5.39905 19.8506 5.33002L3.05762 0.830324C2.80133 0.761899 2.52836 0.797916 2.29859 0.930476C2.06882 1.06304 1.90101 1.28132 1.83196 1.53744L1.57296 2.50419L1.57278 2.50401ZM13.5267 2.80972L9.75615 1.79943L9.9057 1.31411C9.94184 1.17882 10.0295 1.06304 10.1498 0.991501C10.2702 0.919962 10.4138 0.898343 10.5499 0.931263L13.311 1.67115C13.441 1.70332 13.5532 1.78503 13.6238 1.89883C13.6943 2.01263 13.7176 2.1495 13.6886 2.28022L13.5265 2.80972H13.5267ZM8.98657 1.5932L9.14454 1.08009C9.24191 0.748085 9.46424 0.466777 9.76476 0.295327C10.0653 0.123877 10.4206 0.0756463 10.7559 0.160779L13.517 0.900755C14.2313 1.10399 14.6603 1.82722 14.4457 2.53026L14.2961 3.01558L20.0562 4.55899C20.5159 4.68394 20.9076 4.98558 21.1459 5.39816C21.3842 5.81073 21.4497 6.30077 21.3282 6.76145L20.9661 8.11303C20.9387 8.21519 20.872 8.30231 20.7804 8.35526C20.6889 8.40821 20.5801 8.42264 20.4779 8.39539L0.981446 3.1712C0.930835 3.15773 0.883376 3.13441 0.841788 3.10257C0.8002 3.07074 0.765297 3.03101 0.739079 2.98567C0.712861 2.94034 0.695842 2.89027 0.688996 2.83835C0.682149 2.78642 0.685609 2.73366 0.699179 2.68307L1.06129 1.3314C1.18628 0.87177 1.48787 0.480176 1.90034 0.24196C2.31281 0.00374348 2.80272 -0.0617837 3.2633 0.0596593L8.98657 1.5932Z"
+                                                        fill="#AAAAAA" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="empty-state hidden">
+                                    <div
+                                        class="inline-flex items-center px-4 py-3 rounded-lg border border-dashed border-gray-300 text-gray-400 text-[15px]">
+                                        No ranges yet
+                                    </div>
+                                </div>
+
+                                <!-- Add Range -->
+                                <div class="mt-4">
+                                    <button type="button"
+                                        class="btn-add inline-flex items-center gap-2 text-[15px] text-gray-800 border border-gray-200 rounded-lg px-4 py-2 hover:bg-gray-50">
+                                        <span class="text-xl">+</span> Add time range
+                                    </button>
+                                </div>
+                            </section>
+
+                            <!-- Monday (ON + sample ranges) -->
+                            <section class="day-card bg-white border border-gray-200 rounded-2xl p-5 shadow-card mb-5"
+                                data-day="monday">
+                                <header class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <h3 class="text-[18px] font-semibold text-gray-900">Monday</h3>
+                                        <span
+                                            class="badge inline-flex items-center px-2.5 py-1 rounded-full text-[12px] font-medium bg-blue-100 text-primary">Available</span>
+                                    </div>
+                                    <button type="button"
+                                        class="toggle relative w-[46px] h-[26px] rounded-full bg-primary"
+                                        aria-pressed="true">
+                                        <span
+                                            class="knob absolute w-[20px] h-[20px] bg-white rounded-full top-[3px] right-[3px] transition-all"></span>
+                                    </button>
+                                </header>
+
+                                <div class="ranges space-y-4 w-3/4">
+                                    <div class="range-row grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-4 items-end">
+                                        <div>
+                                            <label class="block text-[13px] text-gray-800 mb-1">From</label>
+                                            <div class="relative">
+                                                <input type="time" value="09:00"
+                                                    class="hide-date-icon bg-[#F3F5FA] time-input w-full text-[16px] px-4 py-3 pl-11 rounded-lg border border-primary/35 bg-soft text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary/15 focus:border-primary">
+                                                <span
+                                                    class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.5 19C4.26 19 0 14.739 0 9.5S4.26 0 9.5 0 19 4.261 19 9.5 14.738 19 9.5 19Zm0-17.48A7.98 7.98 0 1 0 17.48 9.5 7.99 7.99 0 0 0 9.5 1.52Zm-.061 8.679H4.56a.78.78 0 0 1 0-1.56h4.119V3.04a.78.78 0 1 1 1.56 0V9.44a.78.78 0 0 1-.78.76Z"
+                                                            fill="#1B449C" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="block text-[13px] text-gray-800 mb-1">To</label>
+                                            <div class="relative">
+                                                <input type="time" value="19:00"
+                                                    class="hide-date-icon bg-[#F3F5FA] time-input w-full text-[16px] px-4 py-3 pl-11 rounded-lg border border-primary/35 bg-soft text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary/15 focus:border-primary">
+                                                <span
+                                                    class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.5 19C4.26 19 0 14.739 0 9.5S4.26 0 9.5 0 19 4.261 19 9.5 14.738 19 9.5 19Zm0-17.48A7.98 7.98 0 1 0 17.48 9.5 7.99 7.99 0 0 0 9.5 1.52Zm-.061 8.679H4.56a.78.78 0 0 1 0-1.56h4.119V3.04a.78.78 0 1 1 1.56 0V9.44a.78.78 0 0 1-.78.76Z"
+                                                            fill="#1B449C" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex md:justify-center">
+                                            <button type="button"
+                                                class="btn-remove w-11 h-11 rounded-lg border border-gray-200 hover:bg-gray-50 grid place-items-center">
+                                                <svg width="22" height="30" viewBox="0 0 22 30" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M5.17099 25.1213L3.74128 14.3343C3.58992 13.1914 4.90475 12.4222 5.82678 13.1284C5.9631 13.2324 6.07752 13.3624 6.16347 13.5108C6.24943 13.6592 6.30523 13.8232 6.32767 13.9932L7.75738 24.7802C7.77989 24.9497 7.76871 25.122 7.72446 25.2872C7.68022 25.4525 7.60379 25.6073 7.49955 25.7429C6.79181 26.6669 5.32272 26.2665 5.17099 25.1213ZM4.5306 14.2314L5.96022 25.0183C5.9789 25.1513 6.04945 25.2716 6.15647 25.3527C6.26348 25.4339 6.39827 25.4695 6.5314 25.4516C6.66452 25.4337 6.78518 25.3639 6.86701 25.2574C6.94884 25.1509 6.9852 25.0163 6.96816 24.8831L5.53863 14.0961C5.52069 13.9624 5.45039 13.8414 5.34319 13.7595C5.23598 13.6777 5.10066 13.6418 4.96699 13.6597C4.83332 13.6777 4.71224 13.748 4.6304 13.8552C4.54856 13.9624 4.51266 14.0977 4.5306 14.2314ZM15.0172 25.0183L16.4468 14.2314C16.4647 14.0977 16.4288 13.9624 16.347 13.8552C16.2652 13.748 16.1441 13.6777 16.0104 13.6597C15.8767 13.6418 15.7414 13.6777 15.6342 13.7595C15.527 13.8414 15.4567 13.9624 15.4388 14.0961L14.0092 24.8831C13.9922 25.0163 14.0286 25.1509 14.1104 25.2574C14.1922 25.3639 14.3129 25.4337 14.446 25.4516C14.5791 25.4695 14.7139 25.4339 14.8209 25.3527C14.928 25.2716 14.9985 25.1513 15.0172 25.0183ZM17.236 14.3343L15.8064 25.1213C15.7839 25.2926 15.7276 25.4578 15.6407 25.6071C15.5538 25.7565 15.4381 25.8872 15.3003 25.9914C15.1625 26.0957 15.0054 26.1716 14.838 26.2147C14.6707 26.2578 14.4964 26.2671 14.3254 26.2423C14.1544 26.2174 13.99 26.1589 13.8418 26.07C13.6936 25.9811 13.5646 25.8636 13.4621 25.7244C13.3597 25.5852 13.286 25.4271 13.2452 25.2592C13.2044 25.0912 13.1974 24.9169 13.2245 24.7462L14.6499 13.9932C14.8017 12.8475 16.2713 12.4483 16.9784 13.3715C17.0826 13.5071 17.1591 13.662 17.2033 13.8272C17.2476 13.9924 17.2588 14.1647 17.2363 14.3343H17.236ZM20.1269 9.91273H0.850995L3.28041 28.2438C3.31414 28.5098 3.44426 28.7543 3.64613 28.9308C3.848 29.1074 4.10761 29.2038 4.37579 29.2018H16.6012C16.8694 29.2038 17.129 29.1074 17.3309 28.9308C17.5328 28.7543 17.6629 28.5098 17.6966 28.2438L20.1269 9.91273ZM20.5812 9.11418L0.396635 9.11518C0.340126 9.1155 0.284327 9.12779 0.232915 9.15124C0.181503 9.1747 0.135646 9.20879 0.0983686 9.25126C0.0610906 9.29373 0.0332378 9.34362 0.0166466 9.39763C5.53788e-05 9.45165 -0.0048984 9.50858 0.00211344 9.56465L2.49163 28.3463C2.55084 28.804 2.77486 29.2245 3.12176 29.5289C3.46866 29.8333 3.91464 30.0008 4.37616 30H16.6012C17.0628 30.0008 17.5089 29.8334 17.8558 29.529C18.2028 29.2246 18.4269 28.8041 18.4861 28.3463L20.9709 9.5986C20.9838 9.54027 20.9835 9.47978 20.9699 9.4216C20.9563 9.36341 20.9298 9.30904 20.8923 9.26249C20.8548 9.21594 20.8074 9.17842 20.7535 9.1527C20.6995 9.12698 20.6405 9.11372 20.5808 9.11391L20.5812 9.11418ZM11.0016 24.9971C11.0016 25.666 9.98473 25.6671 9.98419 24.9986L9.97559 14.1171C9.97559 13.4483 10.9925 13.4472 10.993 14.1158L11.0021 24.9972L11.0016 24.9971ZM11.7885 14.1157L11.797 24.9971C11.7984 26.7146 9.1898 26.7162 9.18872 24.9986L9.18021 14.1171C9.17885 12.3996 11.7885 12.3982 11.7885 14.1158V14.1157ZM1.57278 2.50401L20.2989 7.52188L20.5578 6.55559C20.6262 6.2993 20.5901 6.02635 20.4575 5.79659C20.325 5.56684 20.1067 5.39905 19.8506 5.33002L3.05762 0.830324C2.80133 0.761899 2.52836 0.797916 2.29859 0.930476C2.06882 1.06304 1.90101 1.28132 1.83196 1.53744L1.57296 2.50419L1.57278 2.50401ZM13.5267 2.80972L9.75615 1.79943L9.9057 1.31411C9.94184 1.17882 10.0295 1.06304 10.1498 0.991501C10.2702 0.919962 10.4138 0.898343 10.5499 0.931263L13.311 1.67115C13.441 1.70332 13.5532 1.78503 13.6238 1.89883C13.6943 2.01263 13.7176 2.1495 13.6886 2.28022L13.5265 2.80972H13.5267ZM8.98657 1.5932L9.14454 1.08009C9.24191 0.748085 9.46424 0.466777 9.76476 0.295327C10.0653 0.123877 10.4206 0.0756463 10.7559 0.160779L13.517 0.900755C14.2313 1.10399 14.6603 1.82722 14.4457 2.53026L14.2961 3.01558L20.0562 4.55899C20.5159 4.68394 20.9076 4.98558 21.1459 5.39816C21.3842 5.81073 21.4497 6.30077 21.3282 6.76145L20.9661 8.11303C20.9387 8.21519 20.872 8.30231 20.7804 8.35526C20.6889 8.40821 20.5801 8.42264 20.4779 8.39539L0.981446 3.1712C0.930835 3.15773 0.883376 3.13441 0.841788 3.10257C0.8002 3.07074 0.765297 3.03101 0.739079 2.98567C0.712861 2.94034 0.695842 2.89027 0.688996 2.83835C0.682149 2.78642 0.685609 2.73366 0.699179 2.68307L1.06129 1.3314C1.18628 0.87177 1.48787 0.480176 1.90034 0.24196C2.31281 0.00374348 2.80272 -0.0617837 3.2633 0.0596593L8.98657 1.5932Z"
+                                                        fill="#AAAAAA" />
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="empty-state hidden">
+                                    <div
+                                        class="inline-flex items-center px-4 py-3 rounded-lg border border-dashed border-gray-300 text-gray-400 text-[15px]">
+                                        No ranges yet
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <button type="button"
+                                        class="btn-add inline-flex items-center gap-2 text-[15px] text-gray-800 border border-gray-200 rounded-lg px-4 py-2 hover:bg-gray-50">
+                                        <span class="text-xl">+</span> Add time range
+                                    </button>
+                                </div>
+                            </section>
+
+                            <!-- Tuesday (OFF / empty) -->
+                            <section class="day-card bg-white border border-gray-200 rounded-2xl p-5 shadow-card mb-5"
+                                data-day="tuesday">
+                                <header class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <h3 class="text-[18px] font-semibold text-gray-900">Tuesday</h3>
+                                        <span
+                                            class="badge inline-flex items-center px-2.5 py-1 rounded-full text-[12px] font-medium bg-gray-100 text-gray-500">Unavailable</span>
+                                    </div>
+                                    <button type="button"
+                                        class="toggle relative w-[46px] h-[26px] rounded-full bg-gray-300"
+                                        aria-pressed="false">
+                                        <span
+                                            class="knob absolute w-[20px] h-[20px] bg-white rounded-full top-[3px] left-[3px] transition-all"></span>
+                                    </button>
+                                </header>
+
+                                <div class="ranges space-y-4 w-3/4 hidden"></div>
+
+                                <div class="empty-state">
+                                    <div
+                                        class="inline-flex items-center px-4 py-3 rounded-lg border border-dashed border-gray-300 text-gray-400 text-[15px]">
+                                        No ranges yet
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <button type="button"
+                                        class="btn-add inline-flex items-center gap-2 text-[15px] text-gray-400 border border-gray-200 rounded-lg px-4 py-2 cursor-not-allowed"
+                                        disabled>
+                                        <span class="text-xl">+</span> Add time range
+                                    </button>
+                                </div>
+                            </section>
+
+                            <!-- Wednesday (ON) -->
+                            <section class="day-card bg-white border border-gray-200 rounded-2xl p-5 shadow-card mb-5"
+                                data-day="wednesday">
+                                <header class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <h3 class="text-[18px] font-semibold text-gray-900">Wednesday</h3>
+                                        <span
+                                            class="badge inline-flex items-center px-2.5 py-1 rounded-full text-[12px] font-medium bg-blue-100 text-primary">Available</span>
+                                    </div>
+                                    <button type="button"
+                                        class="toggle relative w-[46px] h-[26px] rounded-full bg-primary"
+                                        aria-pressed="true">
+                                        <span
+                                            class="knob absolute w-[20px] h-[20px] bg-white rounded-full top-[3px] right-[3px] transition-all"></span>
+                                    </button>
+                                </header>
+
+                                <div class="ranges space-y-4 w-3/4">
+                                    <div class="range-row grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-4 items-end">
+                                        <div>
+                                            <label class="block text-[13px] text-gray-800 mb-1">From</label>
+                                            <div class="relative">
+                                                <input type="time" value="09:00"
+                                                    class="hide-date-icon bg-[#F3F5FA] time-input w-full text-[16px] px-4 py-3 pl-11 rounded-lg border border-primary/35 bg-soft text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary/15 focus:border-primary">
+                                                <span
+                                                    class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.5 19C4.26 19 0 14.739 0 9.5S4.26 0 9.5 0 19 4.261 19 9.5 14.738 19 9.5 19Zm0-17.48A7.98 7.98 0 1 0 17.48 9.5 7.99 7.99 0 0 0 9.5 1.52Zm-.061 8.679H4.56a.78.78 0 0 1 0-1.56h4.119V3.04a.78.78 0 1 1 1.56 0V9.44a.78.78 0 0 1-.78.76Z"
+                                                            fill="#1B449C" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="block text-[13px] text-gray-800 mb-1">To</label>
+                                            <div class="relative">
+                                                <input type="time" value="19:00"
+                                                    class="hide-date-icon bg-[#F3F5FA] time-input w-full text-[16px] px-4 py-3 pl-11 rounded-lg border border-primary/35 bg-soft text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary/15 focus:border-primary">
+                                                <span
+                                                    class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.5 19C4.26 19 0 14.739 0 9.5S4.26 0 9.5 0 19 4.261 19 9.5 14.738 19 9.5 19Zm0-17.48A7.98 7.98 0 1 0 17.48 9.5 7.99 7.99 0 0 0 9.5 1.52Zm-.061 8.679H4.56a.78.78 0 0 1 0-1.56h4.119V3.04a.78.78 0 1 1 1.56 0V9.44a.78.78 0 0 1-.78.76Z"
+                                                            fill="#1B449C" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex md:justify-center">
+                                            <button type="button"
+                                                class="btn-remove w-11 h-11 rounded-lg border border-gray-200 hover:bg-gray-50 grid place-items-center">
+                                                <svg width="22" height="30" viewBox="0 0 22 30" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M5.17099 25.1213L3.74128 14.3343C3.58992 13.1914 4.90475 12.4222 5.82678 13.1284C5.9631 13.2324 6.07752 13.3624 6.16347 13.5108C6.24943 13.6592 6.30523 13.8232 6.32767 13.9932L7.75738 24.7802C7.77989 24.9497 7.76871 25.122 7.72446 25.2872C7.68022 25.4525 7.60379 25.6073 7.49955 25.7429C6.79181 26.6669 5.32272 26.2665 5.17099 25.1213ZM20.1269 9.91273H0.850995L3.28041 28.2438C3.31414 28.5098 3.44426 28.7543 3.64613 28.9308C3.848 29.1074 4.10761 29.2038 4.37579 29.2018H16.6012C16.8694 29.2038 17.129 29.1074 17.3309 28.9308C17.5328 28.7543 17.6629 28.5098 17.6966 28.2438L20.1269 9.91273Z"
+                                                        fill="#AAAAAA" />
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="empty-state hidden">
+                                    <div
+                                        class="inline-flex items-center px-4 py-3 rounded-lg border border-dashed border-gray-300 text-gray-400 text-[15px]">
+                                        No ranges yet
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <button type="button"
+                                        class="btn-add inline-flex items-center gap-2 text-[15px] text-gray-800 border border-gray-200 rounded-lg px-4 py-2 hover:bg-gray-50">
+                                        <span class="text-xl">+</span> Add time range
+                                    </button>
+                                </div>
+                            </section>
+
+                            <!-- Thursday (ON + two ranges) -->
+                            <section class="day-card bg-white border border-gray-200 rounded-2xl p-5 shadow-card mb-5"
+                                data-day="thursday">
+                                <header class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <h3 class="text-[18px] font-semibold text-gray-900">Thursday</h3>
+                                        <span
+                                            class="badge inline-flex items-center px-2.5 py-1 rounded-full text-[12px] font-medium bg-blue-100 text-primary">Available</span>
+                                    </div>
+                                    <button type="button"
+                                        class="toggle relative w-[46px] h-[26px] rounded-full bg-primary"
+                                        aria-pressed="true">
+                                        <span
+                                            class="knob absolute w-[20px] h-[20px] bg-white rounded-full top-[3px] right-[3px] transition-all"></span>
+                                    </button>
+                                </header>
+
+                                <div class="ranges space-y-4 w-3/4">
+                                    <!-- row 1 -->
+                                    <div class="range-row grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-4 items-end">
+                                        <div>
+                                            <label class="block text-[13px] text-gray-800 mb-1">From</label>
+                                            <div class="relative">
+                                                <input type="time" value="09:00"
+                                                    class="hide-date-icon bg-[#F3F5FA] time-input w-full text-[16px] px-4 py-3 pl-11 rounded-lg border border-primary/35 bg-soft text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary/15 focus:border-primary">
+                                                <span
+                                                    class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.5 19C4.26 19 0 14.739 0 9.5S4.26 0 9.5 0 19 4.261 19 9.5 14.738 19 9.5 19Zm0-17.48A7.98 7.98 0 1 0 17.48 9.5 7.99 7.99 0 0 0 9.5 1.52Zm-.061 8.679H4.56a.78.78 0 0 1 0-1.56h4.119V3.04a.78.78 0 1 1 1.56 0V9.44a.78.78 0 0 1-.78.76Z"
+                                                            fill="#1B449C" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="block text-[13px] text-gray-800 mb-1">To</label>
+                                            <div class="relative">
+                                                <input type="time" value="19:00"
+                                                    class="hide-date-icon bg-[#F3F5FA] time-input w-full text-[16px] px-4 py-3 pl-11 rounded-lg border border-primary/35 bg-soft text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary/15 focus:border-primary">
+                                                <span
+                                                    class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.5 19C4.26 19 0 14.739 0 9.5S4.26 0 9.5 0 19 4.261 19 9.5 14.738 19 9.5 19Zm0-17.48A7.98 7.98 0 1 0 17.48 9.5 7.99 7.99 0 0 0 9.5 1.52Zm-.061 8.679H4.56a.78.78 0 0 1 0-1.56h4.119V3.04a.78.78 0 1 1 1.56 0V9.44a.78.78 0 0 1-.78.76Z"
+                                                            fill="#1B449C" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex md:justify-center">
+                                            <button type="button"
+                                                class="btn-remove w-11 h-11 rounded-lg border border-gray-200 hover:bg-gray-50 grid place-items-center">
+                                                <svg width="22" height="30" viewBox="0 0 22 30" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M5.17099 25.1213L3.74128 14.3343C3.58992 13.1914 4.90475 12.4222 5.82678 13.1284C5.9631 13.2324 6.07752 13.3624 6.16347 13.5108C6.24943 13.6592 6.30523 13.8232 6.32767 13.9932L7.75738 24.7802C7.77989 24.9497 7.76871 25.122 7.72446 25.2872C7.68022 25.4525 7.60379 25.6073 7.49955 25.7429C6.79181 26.6669 5.32272 26.2665 5.17099 25.1213ZM4.5306 14.2314L5.96022 25.0183C5.9789 25.1513 6.04945 25.2716 6.15647 25.3527C6.26348 25.4339 6.39827 25.4695 6.5314 25.4516C6.66452 25.4337 6.78518 25.3639 6.86701 25.2574C6.94884 25.1509 6.9852 25.0163 6.96816 24.8831L5.53863 14.0961C5.52069 13.9624 5.45039 13.8414 5.34319 13.7595C5.23598 13.6777 5.10066 13.6418 4.96699 13.6597C4.83332 13.6777 4.71224 13.748 4.6304 13.8552C4.54856 13.9624 4.51266 14.0977 4.5306 14.2314ZM15.0172 25.0183L16.4468 14.2314C16.4647 14.0977 16.4288 13.9624 16.347 13.8552C16.2652 13.748 16.1441 13.6777 16.0104 13.6597C15.8767 13.6418 15.7414 13.6777 15.6342 13.7595C15.527 13.8414 15.4567 13.9624 15.4388 14.0961L14.0092 24.8831C13.9922 25.0163 14.0286 25.1509 14.1104 25.2574C14.1922 25.3639 14.3129 25.4337 14.446 25.4516C14.5791 25.4695 14.7139 25.4339 14.8209 25.3527C14.928 25.2716 14.9985 25.1513 15.0172 25.0183ZM17.236 14.3343L15.8064 25.1213C15.7839 25.2926 15.7276 25.4578 15.6407 25.6071C15.5538 25.7565 15.4381 25.8872 15.3003 25.9914C15.1625 26.0957 15.0054 26.1716 14.838 26.2147C14.6707 26.2578 14.4964 26.2671 14.3254 26.2423C14.1544 26.2174 13.99 26.1589 13.8418 26.07C13.6936 25.9811 13.5646 25.8636 13.4621 25.7244C13.3597 25.5852 13.286 25.4271 13.2452 25.2592C13.2044 25.0912 13.1974 24.9169 13.2245 24.7462L14.6499 13.9932C14.8017 12.8475 16.2713 12.4483 16.9784 13.3715C17.0826 13.5071 17.1591 13.662 17.2033 13.8272C17.2476 13.9924 17.2588 14.1647 17.2363 14.3343H17.236ZM20.1269 9.91273H0.850995L3.28041 28.2438C3.31414 28.5098 3.44426 28.7543 3.64613 28.9308C3.848 29.1074 4.10761 29.2038 4.37579 29.2018H16.6012C16.8694 29.2038 17.129 29.1074 17.3309 28.9308C17.5328 28.7543 17.6629 28.5098 17.6966 28.2438L20.1269 9.91273ZM20.5812 9.11418L0.396635 9.11518C0.340126 9.1155 0.284327 9.12779 0.232915 9.15124C0.181503 9.1747 0.135646 9.20879 0.0983686 9.25126C0.0610906 9.29373 0.0332378 9.34362 0.0166466 9.39763C5.53788e-05 9.45165 -0.0048984 9.50858 0.00211344 9.56465L2.49163 28.3463C2.55084 28.804 2.77486 29.2245 3.12176 29.5289C3.46866 29.8333 3.91464 30.0008 4.37616 30H16.6012C17.0628 30.0008 17.5089 29.8334 17.8558 29.529C18.2028 29.2246 18.4269 28.8041 18.4861 28.3463L20.9709 9.5986C20.9838 9.54027 20.9835 9.47978 20.9699 9.4216C20.9563 9.36341 20.9298 9.30904 20.8923 9.26249C20.8548 9.21594 20.8074 9.17842 20.7535 9.1527C20.6995 9.12698 20.6405 9.11372 20.5808 9.11391L20.5812 9.11418ZM11.0016 24.9971C11.0016 25.666 9.98473 25.6671 9.98419 24.9986L9.97559 14.1171C9.97559 13.4483 10.9925 13.4472 10.993 14.1158L11.0021 24.9972L11.0016 24.9971ZM11.7885 14.1157L11.797 24.9971C11.7984 26.7146 9.1898 26.7162 9.18872 24.9986L9.18021 14.1171C9.17885 12.3996 11.7885 12.3982 11.7885 14.1158V14.1157ZM1.57278 2.50401L20.2989 7.52188L20.5578 6.55559C20.6262 6.2993 20.5901 6.02635 20.4575 5.79659C20.325 5.56684 20.1067 5.39905 19.8506 5.33002L3.05762 0.830324C2.80133 0.761899 2.52836 0.797916 2.29859 0.930476C2.06882 1.06304 1.90101 1.28132 1.83196 1.53744L1.57296 2.50419L1.57278 2.50401ZM13.5267 2.80972L9.75615 1.79943L9.9057 1.31411C9.94184 1.17882 10.0295 1.06304 10.1498 0.991501C10.2702 0.919962 10.4138 0.898343 10.5499 0.931263L13.311 1.67115C13.441 1.70332 13.5532 1.78503 13.6238 1.89883C13.6943 2.01263 13.7176 2.1495 13.6886 2.28022L13.5265 2.80972H13.5267ZM8.98657 1.5932L9.14454 1.08009C9.24191 0.748085 9.46424 0.466777 9.76476 0.295327C10.0653 0.123877 10.4206 0.0756463 10.7559 0.160779L13.517 0.900755C14.2313 1.10399 14.6603 1.82722 14.4457 2.53026L14.2961 3.01558L20.0562 4.55899C20.5159 4.68394 20.9076 4.98558 21.1459 5.39816C21.3842 5.81073 21.4497 6.30077 21.3282 6.76145L20.9661 8.11303C20.9387 8.21519 20.872 8.30231 20.7804 8.35526C20.6889 8.40821 20.5801 8.42264 20.4779 8.39539L0.981446 3.1712C0.930835 3.15773 0.883376 3.13441 0.841788 3.10257C0.8002 3.07074 0.765297 3.03101 0.739079 2.98567C0.712861 2.94034 0.695842 2.89027 0.688996 2.83835C0.682149 2.78642 0.685609 2.73366 0.699179 2.68307L1.06129 1.3314C1.18628 0.87177 1.48787 0.480176 1.90034 0.24196C2.31281 0.00374348 2.80272 -0.0617837 3.2633 0.0596593L8.98657 1.5932Z"
+                                                        fill="#AAAAAA" />
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+
+                                    <!-- row 2 -->
+                                    <div class="range-row grid grid-cols-1 md:grid-cols-[1fr_1fr_auto] gap-4 items-end">
+                                        <div>
+                                            <label class="block text-[13px] text-gray-800 mb-1">From</label>
+                                            <div class="relative">
+                                                <input type="time" value="09:00"
+                                                    class="hide-date-icon bg-[#F3F5FA] time-input w-full text-[16px] px-4 py-3 pl-11 rounded-lg border border-primary/35 bg-soft text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary/15 focus:border-primary">
+                                                <span
+                                                    class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.5 19C4.26 19 0 14.739 0 9.5S4.26 0 9.5 0 19 4.261 19 9.5 14.738 19 9.5 19Zm0-17.48A7.98 7.98 0 1 0 17.48 9.5 7.99 7.99 0 0 0 9.5 1.52Zm-.061 8.679H4.56a.78.78 0 0 1 0-1.56h4.119V3.04a.78.78 0 1 1 1.56 0V9.44a.78.78 0 0 1-.78.76Z"
+                                                            fill="#1B449C" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div>
+                                            <label class="block text-[13px] text-gray-800 mb-1">To</label>
+                                            <div class="relative">
+                                                <input type="time" value="19:00"
+                                                    class="hide-date-icon bg-[#F3F5FA] time-input w-full text-[16px] px-4 py-3 pl-11 rounded-lg border border-primary/35 bg-soft text-gray-800 focus:outline-none focus:ring-2 focus:ring-primary/15 focus:border-primary">
+                                                <span
+                                                    class="absolute left-3 top-1/2 -translate-y-1/2 pointer-events-none">
+                                                    <svg width="19" height="19" viewBox="0 0 19 19" fill="none"
+                                                        xmlns="http://www.w3.org/2000/svg">
+                                                        <path
+                                                            d="M9.5 19C4.26 19 0 14.739 0 9.5S4.26 0 9.5 0 19 4.261 19 9.5 14.738 19 9.5 19Zm0-17.48A7.98 7.98 0 1 0 17.48 9.5 7.99 7.99 0 0 0 9.5 1.52Zm-.061 8.679H4.56a.78.78 0 0 1 0-1.56h4.119V3.04a.78.78 0 1 1 1.56 0V9.44a.78.78 0 0 1-.78.76Z"
+                                                            fill="#1B449C" />
+                                                    </svg>
+                                                </span>
+                                            </div>
+                                        </div>
+                                        <div class="flex md:justify-center">
+                                            <button type="button"
+                                                class="btn-remove w-11 h-11 rounded-lg border border-gray-200 hover:bg-gray-50 grid place-items-center">
+                                                <svg width="22" height="30" viewBox="0 0 22 30" fill="none"
+                                                    xmlns="http://www.w3.org/2000/svg">
+                                                    <path fill-rule="evenodd" clip-rule="evenodd"
+                                                        d="M5.17099 25.1213L3.74128 14.3343C3.58992 13.1914 4.90475 12.4222 5.82678 13.1284C5.9631 13.2324 6.07752 13.3624 6.16347 13.5108C6.24943 13.6592 6.30523 13.8232 6.32767 13.9932L7.75738 24.7802C7.77989 24.9497 7.76871 25.122 7.72446 25.2872C7.68022 25.4525 7.60379 25.6073 7.49955 25.7429C6.79181 26.6669 5.32272 26.2665 5.17099 25.1213ZM4.5306 14.2314L5.96022 25.0183C5.9789 25.1513 6.04945 25.2716 6.15647 25.3527C6.26348 25.4339 6.39827 25.4695 6.5314 25.4516C6.66452 25.4337 6.78518 25.3639 6.86701 25.2574C6.94884 25.1509 6.9852 25.0163 6.96816 24.8831L5.53863 14.0961C5.52069 13.9624 5.45039 13.8414 5.34319 13.7595C5.23598 13.6777 5.10066 13.6418 4.96699 13.6597C4.83332 13.6777 4.71224 13.748 4.6304 13.8552C4.54856 13.9624 4.51266 14.0977 4.5306 14.2314ZM15.0172 25.0183L16.4468 14.2314C16.4647 14.0977 16.4288 13.9624 16.347 13.8552C16.2652 13.748 16.1441 13.6777 16.0104 13.6597C15.8767 13.6418 15.7414 13.6777 15.6342 13.7595C15.527 13.8414 15.4567 13.9624 15.4388 14.0961L14.0092 24.8831C13.9922 25.0163 14.0286 25.1509 14.1104 25.2574C14.1922 25.3639 14.3129 25.4337 14.446 25.4516C14.5791 25.4695 14.7139 25.4339 14.8209 25.3527C14.928 25.2716 14.9985 25.1513 15.0172 25.0183ZM17.236 14.3343L15.8064 25.1213C15.7839 25.2926 15.7276 25.4578 15.6407 25.6071C15.5538 25.7565 15.4381 25.8872 15.3003 25.9914C15.1625 26.0957 15.0054 26.1716 14.838 26.2147C14.6707 26.2578 14.4964 26.2671 14.3254 26.2423C14.1544 26.2174 13.99 26.1589 13.8418 26.07C13.6936 25.9811 13.5646 25.8636 13.4621 25.7244C13.3597 25.5852 13.286 25.4271 13.2452 25.2592C13.2044 25.0912 13.1974 24.9169 13.2245 24.7462L14.6499 13.9932C14.8017 12.8475 16.2713 12.4483 16.9784 13.3715C17.0826 13.5071 17.1591 13.662 17.2033 13.8272C17.2476 13.9924 17.2588 14.1647 17.2363 14.3343H17.236ZM20.1269 9.91273H0.850995L3.28041 28.2438C3.31414 28.5098 3.44426 28.7543 3.64613 28.9308C3.848 29.1074 4.10761 29.2038 4.37579 29.2018H16.6012C16.8694 29.2038 17.129 29.1074 17.3309 28.9308C17.5328 28.7543 17.6629 28.5098 17.6966 28.2438L20.1269 9.91273ZM20.5812 9.11418L0.396635 9.11518C0.340126 9.1155 0.284327 9.12779 0.232915 9.15124C0.181503 9.1747 0.135646 9.20879 0.0983686 9.25126C0.0610906 9.29373 0.0332378 9.34362 0.0166466 9.39763C5.53788e-05 9.45165 -0.0048984 9.50858 0.00211344 9.56465L2.49163 28.3463C2.55084 28.804 2.77486 29.2245 3.12176 29.5289C3.46866 29.8333 3.91464 30.0008 4.37616 30H16.6012C17.0628 30.0008 17.5089 29.8334 17.8558 29.529C18.2028 29.2246 18.4269 28.8041 18.4861 28.3463L20.9709 9.5986C20.9838 9.54027 20.9835 9.47978 20.9699 9.4216C20.9563 9.36341 20.9298 9.30904 20.8923 9.26249C20.8548 9.21594 20.8074 9.17842 20.7535 9.1527C20.6995 9.12698 20.6405 9.11372 20.5808 9.11391L20.5812 9.11418ZM11.0016 24.9971C11.0016 25.666 9.98473 25.6671 9.98419 24.9986L9.97559 14.1171C9.97559 13.4483 10.9925 13.4472 10.993 14.1158L11.0021 24.9972L11.0016 24.9971ZM11.7885 14.1157L11.797 24.9971C11.7984 26.7146 9.1898 26.7162 9.18872 24.9986L9.18021 14.1171C9.17885 12.3996 11.7885 12.3982 11.7885 14.1158V14.1157ZM1.57278 2.50401L20.2989 7.52188L20.5578 6.55559C20.6262 6.2993 20.5901 6.02635 20.4575 5.79659C20.325 5.56684 20.1067 5.39905 19.8506 5.33002L3.05762 0.830324C2.80133 0.761899 2.52836 0.797916 2.29859 0.930476C2.06882 1.06304 1.90101 1.28132 1.83196 1.53744L1.57296 2.50419L1.57278 2.50401ZM13.5267 2.80972L9.75615 1.79943L9.9057 1.31411C9.94184 1.17882 10.0295 1.06304 10.1498 0.991501C10.2702 0.919962 10.4138 0.898343 10.5499 0.931263L13.311 1.67115C13.441 1.70332 13.5532 1.78503 13.6238 1.89883C13.6943 2.01263 13.7176 2.1495 13.6886 2.28022L13.5265 2.80972H13.5267ZM8.98657 1.5932L9.14454 1.08009C9.24191 0.748085 9.46424 0.466777 9.76476 0.295327C10.0653 0.123877 10.4206 0.0756463 10.7559 0.160779L13.517 0.900755C14.2313 1.10399 14.6603 1.82722 14.4457 2.53026L14.2961 3.01558L20.0562 4.55899C20.5159 4.68394 20.9076 4.98558 21.1459 5.39816C21.3842 5.81073 21.4497 6.30077 21.3282 6.76145L20.9661 8.11303C20.9387 8.21519 20.872 8.30231 20.7804 8.35526C20.6889 8.40821 20.5801 8.42264 20.4779 8.39539L0.981446 3.1712C0.930835 3.15773 0.883376 3.13441 0.841788 3.10257C0.8002 3.07074 0.765297 3.03101 0.739079 2.98567C0.712861 2.94034 0.695842 2.89027 0.688996 2.83835C0.682149 2.78642 0.685609 2.73366 0.699179 2.68307L1.06129 1.3314C1.18628 0.87177 1.48787 0.480176 1.90034 0.24196C2.31281 0.00374348 2.80272 -0.0617837 3.2633 0.0596593L8.98657 1.5932Z"
+                                                        fill="#AAAAAA" />
+                                                </svg>
+
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+
+                                <div class="empty-state hidden">
+                                    <div
+                                        class="inline-flex items-center px-4 py-3 rounded-lg border border-dashed border-gray-300 text-gray-400 text-[15px]">
+                                        No ranges yet
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <button type="button"
+                                        class="btn-add inline-flex items-center gap-2 text-[15px] text-gray-800 border border-gray-200 rounded-lg px-4 py-2 hover:bg-gray-50">
+                                        <span class="text-xl">+</span> Add time range
+                                    </button>
+                                </div>
+                            </section>
+
+                            <!-- Friday (OFF) -->
+                            <section class="day-card bg-white border border-gray-200 rounded-2xl p-5 shadow-card mb-5"
+                                data-day="friday">
+                                <header class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <h3 class="text-[18px] font-semibold text-gray-900">Friday</h3>
+                                        <span
+                                            class="badge inline-flex items-center px-2.5 py-1 rounded-full text-[12px] font-medium bg-gray-100 text-gray-500">Unavailable</span>
+                                    </div>
+                                    <button type="button"
+                                        class="toggle relative w-[46px] h-[26px] rounded-full bg-gray-300"
+                                        aria-pressed="false">
+                                        <span
+                                            class="knob absolute w-[20px] h-[20px] bg-white rounded-full top-[3px] left-[3px] transition-all"></span>
+                                    </button>
+                                </header>
+
+                                <div class="ranges space-y-4 w-3/4 hidden"></div>
+
+                                <div class="empty-state">
+                                    <div
+                                        class="inline-flex items-center px-4 py-3 rounded-lg border border-dashed border-gray-300 text-gray-400 text-[15px]">
+                                        No ranges yet
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <button type="button"
+                                        class="btn-add inline-flex items-center gap-2 text-[15px] text-gray-400 border border-gray-200 rounded-lg px-4 py-2 cursor-not-allowed"
+                                        disabled>
+                                        <span class="text-xl">+</span> Add time range
+                                    </button>
+                                </div>
+                            </section>
+
+                            <!-- Saturday (OFF) -->
+                            <section class="day-card bg-white border border-gray-200 rounded-2xl p-5 shadow-card"
+                                data-day="saturday">
+                                <header class="flex items-center justify-between mb-4">
+                                    <div class="flex items-center gap-3">
+                                        <h3 class="text-[18px] font-semibold text-gray-900">Saturday</h3>
+                                        <span
+                                            class="badge inline-flex items-center px-2.5 py-1 rounded-full text-[12px] font-medium bg-gray-100 text-gray-500">Unavailable</span>
+                                    </div>
+                                    <button type="button"
+                                        class="toggle relative w-[46px] h-[26px] rounded-full bg-gray-300"
+                                        aria-pressed="false">
+                                        <span
+                                            class="knob absolute w-[20px] h-[20px] bg-white rounded-full top-[3px] left-[3px] transition-all"></span>
+                                    </button>
+                                </header>
+
+                                <div class="ranges space-y-4 w-3/4 hidden"></div>
+
+                                <div class="empty-state">
+                                    <div
+                                        class="inline-flex items-center px-4 py-3 rounded-lg border border-dashed border-gray-300 text-gray-400 text-[15px]">
+                                        No ranges yet
+                                    </div>
+                                </div>
+
+                                <div class="mt-4">
+                                    <button type="button"
+                                        class="btn-add inline-flex items-center gap-2 text-[15px] text-gray-400 border border-gray-200 rounded-lg px-4 py-2 cursor-not-allowed"
+                                        disabled>
+                                        <span class="text-xl">+</span> Add time range
+                                    </button>
+                                </div>
+                            </section>
+                        </div>
+
+
+                        <div class="flex flex-col sm:flex-row justify-between gap-4">
+                            <button type="button"
+                                class="cursor-pointer btn-back px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                                ← Back
+                            </button>
+                            <button type="button"
+                                class="cursor-pointer btn-continue bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
+                                Continue →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 6: Tutor's Hourly Rate -->
+                <div class="pane hidden" data-step="6">
+                    <div class="mx-auto">
+                        <div class="text-center">
+                            <h1 class="text-3xl font-bold text-gray-900 mb-2">Price Information</h1>
+                            <p class="text-gray-600 mb-8">Set up your account basic information</p>
+                        </div>
+
+                        <div class="mb-6">
+                            <div class="mb-6">
+                                <!-- <label class="block text-sm font-semibold text-gray-900 mb-2">Hourly Rate</label> -->
+                                <input type="text" placeholder="Hourly Rate"
+                                    class="w-full px-4 py-8 border border-gray-300 rounded-lg focus:outline-none focus:border-primary focus:bg-[#F3F5FA] focus:ring-2 focus:ring-primary/20 transition-all">
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <button type="button"
+                                class="cursor-pointer btn-back px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                                ← Back
+                            </button>
+                            <button type="button"
+                                class="cursor-pointer btn-continue bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
+                                Continue →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 7: Tutor's Qualifications & Certificates -->
+                <div class="pane hidden" data-step="7">
+                    <div class="mx-auto">
+                        <div class="text-center">
+                            <h1 class="text-3xl font-bold text-gray-900 mb-2">Certification Information</h1>
+                            <p class="text-gray-600 mb-8">Set up your certification information</p>
+                        </div>
+                        <!-- Certification Form -->
+                        <div class="mb-6 space-y-6">
+                            <!-- Certification Subject -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-900 mb-2">Certification
+                                    Subject</label>
+                                <select
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all appearance-none bg-[url('data:image/svg+xml;utf8,<svg width=\'20\' height=\'40\' viewBox=\'0 0 20 40\' fill=\'none\' xmlns=\'http://www.w3.org/2000/svg\'><path d=\'M15.8327 27.0835L9.99935 32.9168L4.16602 27.0835\' stroke=\'%23AAAAAA\' stroke-width=\'1.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/><path d=\'M15.8327 12.9165L9.99935 7.08317L4.16602 12.9165\' stroke=\'%23AAAAAA\' stroke-width=\'1.5\' stroke-linecap=\'round\' stroke-linejoin=\'round\'/></svg>')] bg-[right_1rem_center] bg-no-repeat">
+                                    <option value="">Select a subject</option>
+                                </select>
+                            </div>
+
+                            <!-- Certification Name -->
+                            <div>
+                                <input type="text" placeholder="Certification Name"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                            </div>
+
+                            <!-- Certification Description -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-900 mb-2">Certification
+                                    Description</label>
+                                <textarea rows="3" placeholder="Up to 200 characters"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all resize-none"></textarea>
+                            </div>
+
+                            <!-- Certification Issued By -->
+                            <div>
+                                <input type="text" placeholder="Certification Issued By"
+                                    class="w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all">
+                            </div>
+
+                            <!-- Years -->
+                            <div class="grid grid-cols-1 sm:grid-cols-2 gap-4">
+                                <div class="relative">
+                                    <input type="number" id="yearFrom" placeholder="Certification Year From"
+                                        class="hide-number-spin w-full px-4 py-3 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all appearance-none">
+                                </div>
+                                <div class="relative">
+                                    <input type="number" id="yearTo" placeholder="Certification Year To"
+                                        class="hide-number-spin w-full px-4 py-3 pr-10 border border-gray-300 rounded-lg text-gray-700 focus:outline-none focus:ring-2 focus:ring-primary/20 focus:border-primary transition-all appearance-none">
+
+                                    <!-- Up/Down SVG Buttons -->
+                                    <div class="absolute inset-y-0 right-3 flex flex-col justify-center">
+                                        <button type="button" id="yearUp"
+                                            class="w-4 h-4 flex items-center justify-center hover:text-primary transition">
+                                            <svg width="20" height="20" viewBox="0 0 20 40" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.8327 12.9165L9.99935 7.08317L4.16602 12.9165"
+                                                    stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                        <button type="button" id="yearDown"
+                                            class="w-4 h-4 flex items-center justify-center hover:text-primary transition">
+                                            <svg width="20" height="20" viewBox="0 0 20 40" fill="none"
+                                                xmlns="http://www.w3.org/2000/svg">
+                                                <path d="M15.8327 27.0835L9.99935 32.9168L4.16602 27.0835"
+                                                    stroke="#AAAAAA" stroke-width="1.5" stroke-linecap="round"
+                                                    stroke-linejoin="round" />
+                                            </svg>
+                                        </button>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <!-- Certification File -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-900 mb-2">Certification File</label>
+                                <label
+                                    class="relative block w-full cursor-pointer border border-gray-300 rounded-lg overflow-hidden hover:border-primary transition">
+                                    <input type="file" id="certFile"
+                                        class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                                    <span id="fileName" class="block px-4 py-3 text-sm text-gray-500">Choose the
+                                        file</span>
+                                </label>
+                            </div>
+                        </div>
+
+
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
+                            <button type="button"
+                                class="cursor-pointer btn-back px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                                ← Back
+                            </button>
+                            <button type="button"
+                                class="cursor-pointer btn-continue bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
+                                Continue →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Step 8: Tutor Profile Video -->
+                <div class="pane hidden" data-step="8">
+                    <div class="mx-auto">
+                        <div class="text-center">
+                            <h1 class="text-3xl font-bold text-gray-900 mb-2">Tutor Video</h1>
+                            <p class="text-gray-600 mb-8">Upload a video that introduce you as a teacher. What can you
+                                offer, and why students should choose you as their teacher</p>
+                        </div>
+                        <div class="mb-6 space-y-6">
+                            <!-- Video File -->
+                            <div>
+                                <label class="block text-sm font-semibold text-gray-900 mb-2">Video File</label>
+                                <label
+                                    class="relative block w-full cursor-pointer border border-gray-300 rounded-lg overflow-hidden hover:border-primary transition">
+                                    <input type="file" accept="video/*" id="videoFile"
+                                        class="absolute inset-0 w-full h-full opacity-0 cursor-pointer">
+                                    <span id="videoFileName" class="block px-4 py-3 text-sm text-gray-500">Choose the
+                                        file</span>
+                                </label>
+                            </div>
+
+                            <!-- Terms & Conditions -->
+                            <div class="flex items-center gap-2">
+                                <input id="agreeTerms" type="checkbox"
+                                    class="w-4 h-4 rounded border-gray-300 text-primary focus:ring-primary/30">
+                                <label for="agreeTerms" class="text-sm text-gray-700">
+                                    Agree Terms <a href="#" class="text-primary hover:underline">Terms And
+                                        Conditions</a>
+                                </label>
+                            </div>
+                        </div>
+
+                        <div class="flex flex-col sm:flex-row justify-between gap-4">
+                            <button type="button"
+                                class="cursor-pointer btn-back px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
+                                ← Back
+                            </button>
+                            <button type="submit"
+                                class="cursor-pointer btn-continue bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
+                                Continue →
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </form>
+        </main>
+    </div>
+
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/signup.js"></script>
+</body>
+
+</html>
