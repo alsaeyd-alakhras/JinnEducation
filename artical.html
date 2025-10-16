@@ -582,48 +582,54 @@
         <div class="container z-10 px-4 mx-auto w-full">
             <!-- Breadcrumb -->
             <nav aria-label="Breadcrumb" class="mb-14">
-                <ul class="flex items-center space-x-1 text-sm font-light">
-                    <!-- Home -->
-                    <li>
-                        <a href="index.html" class="transition-colors text-primary-600 hover:text-primary-700">Home</a>
-                    </li>
-                    <li>
-                        <span class="text-gray-400">
-                            <i class="font-light fas fa-chevron-right"></i>
-                        </span>
-                    </li>
-                    <li>
-                        <a href="blog.html" class="transition-colors text-primary-600 hover:text-primary-700">Blog</a>
-                    </li>
-                    <li>
-                        <span class="text-gray-400">
-                            <i class="font-light fas fa-chevron-right"></i>
-                        </span>
-                    </li>
-                    <!-- Current Page -->
-                    <li>
-                        <span class="text-gray-900">Lorem ipsum dolor sit amet, consectetur adipiscing
-                            elit.</span>
-                    </li>
-                </ul>
+                <div class="text-sm font-light text-gray-600 leading-relaxed">
+                    <span>
+                        <a href="#" class="text-primary-600 hover:text-primary-700">Home</a>
+                    </span>
+                    <span class="mx-1 text-gray-400">
+                        <i class="fas fa-chevron-right text-[10px]"></i>
+                    </span>
+                    <span>
+                        <a href="#" class="text-primary-600 hover:text-primary-700">Blog</a>
+                    </span>
+                    <span class="mx-1 text-gray-400">
+                        <i class="fas fa-chevron-right text-[10px]"></i>
+                    </span>
+                    <span class="text-gray-900 break-words">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit.
+                    </span>
+                </div>
             </nav>
 
             <!-- Section Title -->
             <h2 class="mb-6 text-3xl font-bold">Lorem ipsum dolor sit amet, consectetur adipiscing elit. </h2>
 
             <div
-                class="flex flex-wrap lg:flex-nowrap relative gap-10 whitespace-nowrap py-4 mt-3 border-t border-[#E5E7EB]">
-                <div class="flex gap-1 items-center">
-                    <i class="text-lg fas fa-clock text-primary"></i>
+                class="flex flex-wrap lg:flex-nowrap relative gap-3 md:gap-10 whitespace-nowrap py-4 mt-3 border-t border-[#E5E7EB]">
+                <div class="flex gap-2 items-center">
+                    <i class="text-lg text-primary">
+                        <svg width="20" height="24" viewBox="0 0 20 24" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M10.4424 13.23L10.835 13.2398C12.7935 13.339 14.6516 14.1611 16.0449 15.5542C17.4381 16.9474 18.26 18.8057 18.3594 20.7642L18.3701 21.1577V21.6988C18.3694 22.1098 18.2056 22.5037 17.915 22.7945C17.624 23.0855 17.229 23.2491 16.8174 23.2495H3.18262C2.77103 23.249 2.376 23.0855 2.08496 22.7945C1.83049 22.5399 1.67338 22.2062 1.6377 21.8511L1.62988 21.6978V21.1577C1.63232 19.056 2.46795 17.0404 3.9541 15.5542C5.3473 14.161 7.20558 13.3391 9.16406 13.2398L9.55762 13.23H10.4424Z" stroke="#1B449C" stroke-width="1.5"/>
+                            <path d="M10.0002 0.75C12.502 0.750148 14.5295 2.77851 14.5295 5.28027C14.5294 7.78191 12.5019 9.80942 10.0002 9.80957C7.49849 9.80957 5.47012 7.782 5.46997 5.28027C5.46997 2.77842 7.49839 0.75 10.0002 0.75Z" stroke="#1B449C" stroke-width="1.5"/>
+                        </svg>
+                    </i>
+                    <span class="text-sm text-gray-400">Posted by : Demo Instructor</span>
+                </div>
+                <div class="flex gap-2 items-center">
+                    <i class="text-lg text-primary">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.50002 19C4.26134 19 0 14.7387 0 9.50002C0 4.26134 4.26134 0 9.50002 0C14.7387 0 19 4.26134 19 9.50002C19 14.7387 14.7379 19 9.50002 19ZM9.50002 1.52C5.0996 1.52 1.52 5.0996 1.52 9.50002C1.52 13.9004 5.0996 17.48 9.50002 17.48C13.9004 17.48 17.48 13.9004 17.48 9.50002C17.48 5.0996 13.8996 1.52 9.50002 1.52ZM9.4392 10.1992H4.56C4.35846 10.1992 4.16513 10.1191 4.0226 9.97659C3.88008 9.83407 3.80001 9.64079 3.80001 9.4392C3.80001 9.23765 3.88008 9.04433 4.0226 8.9018C4.16513 8.75927 4.35846 8.6792 4.56 8.6792H8.6792V3.04002C8.6792 2.83843 8.75927 2.64513 8.9018 2.5026C9.04433 2.36007 9.23765 2.28 9.4392 2.28C9.64079 2.28 9.83407 2.36007 9.97659 2.5026C10.1191 2.64513 10.1992 2.83843 10.1992 3.04002V9.4392C10.1992 9.64079 10.1191 9.83407 9.97659 9.97659C9.83407 10.1191 9.64079 10.1992 9.4392 10.1992Z" fill="#1B449C"/>
+                        </svg>
+                    </i>
                     <span class="text-sm text-gray-400">August 1, 2024</span>
                 </div>
-                <div class="flex gap-1 items-center">
-                    <i class="text-lg fas fa-clock text-primary"></i>
+                <div class="flex gap-2 items-center">
+                    <i class="text-lg text-primary">
+                        <svg width="19" height="19" viewBox="0 0 19 19" fill="none" xmlns="http://www.w3.org/2000/svg">
+                            <path d="M9.50002 19C4.26134 19 0 14.7387 0 9.50002C0 4.26134 4.26134 0 9.50002 0C14.7387 0 19 4.26134 19 9.50002C19 14.7387 14.7379 19 9.50002 19ZM9.50002 1.52C5.0996 1.52 1.52 5.0996 1.52 9.50002C1.52 13.9004 5.0996 17.48 9.50002 17.48C13.9004 17.48 17.48 13.9004 17.48 9.50002C17.48 5.0996 13.8996 1.52 9.50002 1.52ZM9.4392 10.1992H4.56C4.35846 10.1992 4.16513 10.1191 4.0226 9.97659C3.88008 9.83407 3.80001 9.64079 3.80001 9.4392C3.80001 9.23765 3.88008 9.04433 4.0226 8.9018C4.16513 8.75927 4.35846 8.6792 4.56 8.6792H8.6792V3.04002C8.6792 2.83843 8.75927 2.64513 8.9018 2.5026C9.04433 2.36007 9.23765 2.28 9.4392 2.28C9.64079 2.28 9.83407 2.36007 9.97659 2.5026C10.1191 2.64513 10.1992 2.83843 10.1992 3.04002V9.4392C10.1992 9.64079 10.1191 9.83407 9.97659 9.97659C9.83407 10.1191 9.64079 10.1992 9.4392 10.1992Z" fill="#1B449C"/>
+                        </svg>
+                    </i>                    
                     <span class="text-sm text-gray-400">Category : Technology</span>
-                </div>
-                <div class="flex gap-1 items-center">
-                    <i class="text-lg fas fa-user text-primary"></i>
-                    <span class="text-sm text-gray-400">Posted by : Demo Instructor</span>
                 </div>
             </div>
         </div>
