@@ -546,3 +546,68 @@ $(document).ready(function () {
   //   }
   // });
 });
+
+
+// Login Section
+$(function () {
+  function openModal(selector) {
+    const $m = $(selector);
+    $m.removeClass('hidden').addClass('flex opacity-100');
+    setTimeout(() => {
+      $m.find('.modal-panel')
+        .removeClass('scale-95 opacity-0')
+        .addClass('scale-100 opacity-100');
+    }, 10);
+  }
+
+  function closeModal($m) {
+    $m.find('.modal-panel')
+      .removeClass('scale-100 opacity-100')
+      .addClass('scale-95 opacity-0');
+    setTimeout(() => {
+      $m.addClass('hidden opacity-0').removeClass('flex');
+    }, 200);
+  }
+
+  // فتح أي مودال (مع إغلاق أي مودال آخر مفتوح)
+  $(document).on('click', '[data-open]', function () {
+    const target = $(this).data('open');
+    const $targetModal = $(target);
+    const $openModal = $('.modal-panel.scale-100').closest('[id^="loginModal"], [id^="forgotModal"]');
+
+    // إذا فيه مودال مفتوح حالياً، أغلقه أولاً
+    if ($openModal.length && !$openModal.is($targetModal)) {
+      closeModal($openModal);
+      setTimeout(() => openModal(target), 220); // ننتظر الإغلاق ثم نفتح الجديد
+    } else {
+      openModal(target);
+    }
+  });
+
+  // زر الإغلاق
+  $(document).on('click', '[data-close]', function () {
+    closeModal($(this).closest('[id^="loginModal"], [id^="forgotModal"]'));
+  });
+
+  // إغلاق عند الضغط على الخلفية
+  $(document).on('click', '#loginModal, #forgotModal', function (e) {
+    if (e.target === this) closeModal($(this));
+  });
+
+  // ESC
+  $(document).on('keydown', function (e) {
+    if (e.key === 'Escape') {
+      closeModal($('#loginModal'));
+      closeModal($('#forgotModal'));
+    }
+  });
+
+  // Toggle Password
+  $(document).on('click', '[data-toggle-password]', function () {
+    const target = $(this).data('toggle-password');
+    const $input = $(target);
+    const type = $input.attr('type') === 'password' ? 'text' : 'password';
+    $input.attr('type', type);
+    $(this).find('.eye, .eye-off').toggleClass('hidden');
+  });
+});

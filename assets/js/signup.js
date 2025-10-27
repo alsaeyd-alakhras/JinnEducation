@@ -88,6 +88,26 @@ $(function () {
         accountType = $(this).data('account');
         localStorage.setItem('accountType', accountType);
         $('#account-type').val(accountType)
+        if (accountType === 'student') {
+            // إخفاء الخطوات 1 و2 فقط
+            $('.step-item, .step-item-mobile').each(function () {
+                const step = $(this).data('step');
+                if ([1, 2].includes(step)) {
+                    $(this).removeClass('hidden');
+                } else {
+                    $(this).addClass('hidden');
+                    // $(this).hide();
+                }
+            });
+        }
+        if (accountType === 'tutor') {
+            $('.step-item, .step-item-mobile').each(function () {
+                const step = $(this).data('step');
+                // $(this).show();
+                $(this).removeClass('hidden');
+            });
+        }
+
     });
 });
 
@@ -121,6 +141,8 @@ $(function () {
 
     const $googleBtn = $("#account-info .btn-google");
     const $continueBtn = $("#account-info .btn-continue");
+    const $submitBtn = $("#account-info .btn-submit");
+    const account_type = localStorage.getItem('accountType');
 
     // اخفِ زر Continue بالبداية
     $continueBtn.hide();
@@ -192,7 +214,11 @@ $(function () {
         // لو كل الحقول مليانة (مش فارغة)
         if (filled && passwordsOK) {
             $googleBtn.fadeOut(200, function () {
-                $continueBtn.fadeIn(200);
+                if(account_type == 'student') {
+                    $submitBtn.fadeIn(200);
+                } else {
+                    $continueBtn.fadeIn(200);
+                }
             });
         } else {
             $continueBtn.fadeOut(200, function () {
@@ -438,6 +464,7 @@ $(function () {
     });
 });
 
+// Step 5
 $(function () {
     // التحكم في زيادة أو نقصان السنة
     $('#yearUp').on('click', function () {
@@ -457,6 +484,7 @@ $(function () {
     });
 });
 
+// Step 8
 $(function () {
     $('#videoFile').on('change', function () {
         let file = this.files[0];

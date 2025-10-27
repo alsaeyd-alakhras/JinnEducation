@@ -42,7 +42,7 @@
             <!-- Steps Navigation -->
             <div class="relative space-y-6">
                 <!-- Connector Line 1-2 -->
-                <div class="absolute left-5 top-10 w-0.5 h-[90%] bg-gradient-to-b from-gray-400 to-transparent"
+                <div class="absolute left-5 w-0.5 h-full bg-gradient-to-b from-gray-400 to-transparent"
                     style="background: repeating-linear-gradient(to bottom, #94A3B8 0px, #94A3B8 4px, transparent 4px, transparent 8px);">
                 </div>
 
@@ -63,7 +63,7 @@
                 </div>
 
                 <!-- Step 3 -->
-                <div class="step-item" data-step="3">
+                <div class="step-item hidden" data-step="3">
                     <div class="step-circle" data-circle="3">3</div>
                     <div class="flex-1 pt-2">
                         <h3 class="font-semibold text-base">Personal Information</h3>
@@ -71,7 +71,7 @@
                 </div>
 
                 <!-- Step 4 -->
-                <div class="step-item" data-step="4">
+                <div class="step-item hidden" data-step="4">
                     <div class="step-circle" data-circle="4">4</div>
                     <div class="flex-1 pt-2">
                         <h3 class="font-semibold text-base">Tutor's Biography</h3>
@@ -79,7 +79,7 @@
                 </div>
 
                 <!-- Step 5 -->
-                <div class="step-item" data-step="5">
+                <div class="step-item hidden" data-step="5">
                     <div class="step-circle" data-circle="5">5</div>
                     <div class="flex-1 pt-2">
                         <h3 class="font-semibold text-base">Tutor's Availability</h3>
@@ -87,7 +87,7 @@
                 </div>
 
                 <!-- Step 6 -->
-                <div class="step-item" data-step="6">
+                <div class="step-item hidden" data-step="6">
                     <div class="step-circle" data-circle="6">6</div>
                     <div class="flex-1 pt-2">
                         <h3 class="font-semibold text-base">Tutor's Hourly Rate</h3>
@@ -95,7 +95,7 @@
                 </div>
 
                 <!-- Step 7 -->
-                <div class="step-item" data-step="7">
+                <div class="step-item hidden" data-step="7">
                     <div class="step-circle" data-circle="7">7</div>
                     <div class="flex-1 pt-2">
                         <h3 class="font-semibold text-base">Tutor's Qualifications & Certificates</h3>
@@ -103,7 +103,7 @@
                 </div>
 
                 <!-- Step 8 -->
-                <div class="step-item" data-step="8">
+                <div class="step-item hidden" data-step="8">
                     <div class="step-circle" data-circle="8">8</div>
                     <div class="flex-1 pt-2">
                         <h3 class="font-semibold text-base">Tutor Profile Video</h3>
@@ -385,6 +385,10 @@
                                 class="cursor-pointer hidden btn-continue bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
                                 Continue →
                             </button>
+                            <button type="submit"
+                                class="cursor-pointer hidden btn-submit bg-primary text-white px-8 py-3 rounded-lg font-semibold hover:bg-primary-dark transition-colors">
+                                Submit 
+                            </button>
                         </div>
                     </div>
                 </div>
@@ -571,7 +575,7 @@
                             </div>
                         </div>
 
-                        <div class="flex flex-col sm:flex-row justify-between gap-4">
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
                             <button type="button"
                                 class="cursor-pointer btn-back px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
                                 ← Back
@@ -1079,7 +1083,7 @@
                         </div>
 
 
-                        <div class="flex flex-col sm:flex-row justify-between gap-4">
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
                             <button type="button"
                                 class="cursor-pointer btn-back px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
                                 ← Back
@@ -1253,7 +1257,7 @@
                             </div>
                         </div>
 
-                        <div class="flex flex-col sm:flex-row justify-between gap-4">
+                        <div class="flex flex-col sm:flex-row justify-center gap-4">
                             <button type="button"
                                 class="cursor-pointer btn-back px-8 py-3 border-2 border-primary text-primary rounded-lg font-semibold hover:bg-primary hover:text-white transition-colors">
                                 ← Back
