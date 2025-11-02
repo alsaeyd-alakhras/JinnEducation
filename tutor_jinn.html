@@ -1,0 +1,1307 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>How Jinn Edu Works? - JINN EDU</title>
+
+    <!-- Font -->
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link
+        href="https://fonts.googleapis.com/css2?family=Poppins:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap"
+        rel="stylesheet">
+
+
+    <!-- Swiper -->
+    <link rel="stylesheet" href="assets/css/swiper-bundle.min.css" />
+    <script src="assets/js/swiper-bundle.min.js"></script>
+
+    <!-- Font Awesome -->
+    <link rel="stylesheet" href="./assets/css/all.min.css">
+
+    <!-- Tailwind CSS -->
+    <link rel="stylesheet" href="./assets/css/tailwind.css">
+</head>
+
+<body class="bg-gray-50">
+
+    <!-- Universal RTL/LTR Header -->
+    <header class="fixed top-0 bottom-0 left-0 z-50 w-full bg-white shadow-sm h-[120px]">
+        <!-- Top Navigation Bar -->
+        <div class="text-white bg-primary">
+            <div class="container px-4 py-2 mx-auto">
+                <div class="hidden justify-between items-center lg:flex">
+                    <!-- Search Bar -->
+                    <div class="flex-1 max-w-[285px]">
+                        <div class="relative group">
+                            <input type="text" placeholder="search what you need"
+                                class="py-2 w-full text-sm text-gray-900 bg-white rounded-lg border border-gray-200 transition-all duration-300 transform placeholder:text-secondary placeholder:text-[12px] placeholder:font-light ps-4 pe-12 focus:outline-none focus:ring-2 focus:ring-white focus:shadow-lg">
+                            <button
+                                class="flex absolute inset-y-0 items-center transition-colors duration-300 cursor-pointer end-0 pe-4 group-focus-within:bg-primary-50 rounded-e-lg">
+
+                                <!-- الخط الفاصل -->
+                                <span class="w-px h-3/4 bg-[#72747561] me-2"></span>
+
+                                <!-- الأيقونة -->
+                                <i class="text-primary fas fa-search"></i>
+                            </button>
+                        </div>
+                    </div>
+
+
+                    <!-- Language & Currency Dropdowns -->
+                    <div class="flex items-center">
+
+                        <!-- Language Dropdown -->
+                        <div class="relative language-dropdown">
+                            <button
+                                class="flex gap-1 items-center px-2 py-1 rounded-md transition-colors duration-300 hover:bg-primary-700">
+                                <span class="text-sm font-medium">EN</span>
+                                <i class="text-xs transition-transform duration-300 transform fas fa-chevron-down"></i>
+                            </button>
+                            <div
+                                class="absolute top-full invisible z-50 mt-2 w-32 bg-white rounded-lg border border-gray-100 shadow-lg opacity-0 transition-all duration-300 transform translate-y-2 end-0">
+                                <div class="py-2">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">English</a>
+                                    <a href="#"
+                                        class="block px-4 py-2 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">العربية</a>
+                                    <a href="#"
+                                        class="block px-4 py-2 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">Français</a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Currency Dropdown -->
+                        <div class="relative currency-dropdown">
+                            <button
+                                class="flex gap-1 items-center px-2 py-1 rounded-md transition-colors duration-300 hover:bg-primary-700">
+                                <span class="text-sm font-medium">USD</span>
+                                <i class="text-xs transition-transform duration-300 transform fas fa-chevron-down"></i>
+                            </button>
+                            <div
+                                class="absolute top-full invisible z-50 mt-2 w-32 bg-white rounded-lg border border-gray-100 shadow-lg opacity-0 transition-all duration-300 transform translate-y-2 end-0">
+                                <div class="py-2">
+                                    <a href="#"
+                                        class="block px-4 py-2 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">USD
+                                        ($)</a>
+                                    <a href="#"
+                                        class="block px-4 py-2 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">EUR
+                                        (€)</a>
+                                    <a href="#"
+                                        class="block px-4 py-2 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">GBP
+                                        (£)</a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+                </div>
+                <div class="flex justify-start items-center lg:hidden">
+                    <button class="p-2 text-white rounded-lg transition-all duration-300 hover:bg-white hover:shadow-sm"
+                        id="mobile-search-bar-toggle">
+                        <i class="text-xl fas fa-search"></i>
+                    </button>
+                    <div class="hidden flex-1 max-w-full" id="mobile-search-bar">
+                        <div class="relative group">
+                            <input type="text" placeholder="Search what you need"
+                                class="py-2 w-full text-gray-900 bg-white rounded-lg border border-gray-200 transition-all duration-300 transform ps-4 pe-12 focus:outline-none focus:ring-2 focus:ring-white focus:border-transparent focus:shadow-lg">
+                            <button
+                                class="absolute inset-y-0 px-4 border-l-2 border-[#727475] transition-colors duration-300 end-0 group-focus-within:bg-primary-50 rounded-e-lg">
+                                <i class="text-gray-600 fas fa-search group-focus-within:text-primary-600"></i>
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <!-- Main Navigation -->
+        <div class="bg-gray-50">
+            <div class="container px-4 mx-auto">
+                <div class="flex justify-between items-center h-16">
+
+                    <!-- Logo -->
+                    <div class="flex-shrink-0">
+                        <img src="./assets/imgs/logo.png" alt="JINN Education" class="w-auto h-10">
+                    </div>
+
+                    <!-- Desktop Navigation -->
+                    <nav class="hidden items-center lg:flex text-[15px]">
+                        <!-- Home Link -->
+                        <a href="index.html"
+                            class="px-3 py-2 font-bold rounded-lg transition-all duration-300 text-primary-600 hover:text-primary-600 hover:bg-white hover:shadow-sm">
+                            HOME
+                        </a>
+
+                        <!-- Categories Dropdown -->
+                        <div class="relative nav-dropdown">
+                            <button
+                                class="flex gap-1 items-center px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm group">
+                                <span>Categories</span>
+                                <i
+                                    class="text-xs transition-transform duration-300 transform fas fa-chevron-down group-hover:rotate-180"></i>
+                            </button>
+                            <div
+                                class="absolute top-full invisible z-50 mt-2 w-64 bg-white rounded-xl border border-gray-100 shadow-lg opacity-0 transition-all duration-300 transform translate-y-2 start-0">
+                                <div>
+
+                                    <!-- Programming with Subcategory -->
+                                    <div class="relative border-b border-gray-100 subcategory-item group/sub">
+                                        <a href="#"
+                                            class="flex justify-between items-center px-4 py-3 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:font-bold hover:ps-6 group hover:rounded-xl">
+                                            <div class="flex gap-3 items-center">
+                                                <span>Programming</span>
+                                            </div>
+                                            <i class="text-xs fas fa-chevron-right group-hover:text-white"></i>
+                                        </a>
+                                        <!-- Subcategory -->
+                                        <div
+                                            class="absolute top-0 invisible w-48 bg-white rounded-xl border border-gray-100 shadow-lg opacity-0 transition-all duration-300 transform translate-x-2 start-full ms-2">
+                                            <div class="py-2">
+                                                <a href="#"
+                                                    class="block px-4 py-2 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6">Web
+                                                    Development</a>
+                                                <a href="#"
+                                                    class="block px-4 py-2 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6">Mobile
+                                                    Apps</a>
+                                                <a href="#"
+                                                    class="block px-4 py-2 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6">Data
+                                                    Science</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Design with Subcategory -->
+                                    <div class="relative border-b border-gray-100 subcategory-item group/sub">
+                                        <a href="#"
+                                            class="flex justify-between items-center px-4 py-3 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6 group hover:rounded-xl">
+                                            <div class="flex gap-3 items-center">
+                                                <span>Design</span>
+                                            </div>
+                                            <i class="text-xs fas fa-chevron-right group-hover:text-white"></i>
+                                        </a>
+                                        <div
+                                            class="absolute top-0 invisible w-48 bg-white rounded-xl border border-gray-100 shadow-lg opacity-0 transition-all duration-300 transform translate-x-2 start-full ms-2">
+                                            <div class="py-2">
+                                                <a href="#"
+                                                    class="block px-4 py-2 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6">UI/UX
+                                                    Design</a>
+                                                <a href="#"
+                                                    class="block px-4 py-2 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6">Graphic
+                                                    Design</a>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <!-- Business -->
+                                    <a href="#"
+                                        class="flex gap-3 items-center px-4 py-3 text-black border-b border-gray-100 transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6 hover:rounded-md">
+                                        <span>Business</span>
+                                    </a>
+
+                                    <!-- Languages -->
+                                    <a href="#"
+                                        class="flex gap-3 items-center px-4 py-3 text-black transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6 hover:rounded-md">
+                                        <span>Languages</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- K-12 Link -->
+                        <a href="k-12.html"
+                            class="px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm">
+                            K-12
+                        </a>
+
+                        <!-- Blog Link -->
+                        <a href="blog.html"
+                            class="px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm">
+                            Blog
+                        </a>
+
+                        <!-- Classes Dropdown -->
+                        <div class="relative nav-dropdown">
+                            <button
+                                class="flex gap-1 items-center px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm group">
+                                <span>Classes</span>
+                                <i
+                                    class="text-xs transition-transform duration-300 transform fas fa-chevron-down group-hover:rotate-180"></i>
+                            </button>
+                            <div
+                                class="absolute top-full invisible z-50 mt-2 w-48 bg-white rounded-xl border border-gray-100 shadow-lg opacity-0 transition-all duration-300 transform translate-y-2 start-0">
+                                <div class="py-3">
+                                    <a href="./online_group_classes.html"
+                                        class="flex gap-3 items-center px-4 py-3 text-black border-b border-gray-100 transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6 hover:rounded-md">
+                                        <span>Online Group classes</span>
+                                    </a>
+                                    <a href="#"
+                                        class="flex gap-3 items-center px-4 py-3 text-black border-b border-gray-100 transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6 hover:rounded-md">
+                                        <span>Online Private classes</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- Events Link -->
+                        <a href="#"
+                            class="px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm">
+                            events
+                        </a>
+
+                        <!-- Help Dropdown -->
+                        <div class="relative nav-dropdown">
+                            <button
+                                class="flex gap-1 items-center px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm group">
+                                <span>Help</span>
+                                <i
+                                    class="text-xs transition-transform duration-300 transform fas fa-chevron-down group-hover:rotate-180"></i>
+                            </button>
+                            <div
+                                class="absolute top-full invisible z-50 mt-2 w-48 bg-white rounded-xl border border-gray-100 shadow-lg opacity-0 transition-all duration-300 transform translate-y-2 start-0">
+                                <div class="py-3">
+                                    <a href="#"
+                                        class="flex gap-3 items-center px-4 py-3 text-black border-b border-gray-100 transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6 hover:rounded-md">
+                                        <span>Help Center</span>
+                                    </a>
+                                    <a href="#"
+                                        class="flex gap-3 items-center px-4 py-3 text-black border-b border-gray-100 transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6 hover:rounded-md">
+                                        <span>Contact Us</span>
+                                    </a>
+                                    <a href="#"
+                                        class="flex gap-3 items-center px-4 py-3 text-black border-b border-gray-100 transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6 hover:rounded-md">
+                                        <span>FAQ</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <!-- About Dropdown -->
+                        <div class="relative nav-dropdown">
+                            <button
+                                class="flex gap-1 items-center px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm group">
+                                <span>About</span>
+                                <i
+                                    class="text-xs transition-transform duration-300 transform fas fa-chevron-down group-hover:rotate-180"></i>
+                            </button>
+                            <div
+                                class="absolute top-full invisible z-50 mt-2 w-48 bg-white rounded-xl border border-gray-100 shadow-lg opacity-0 transition-all duration-300 transform translate-y-2 start-0">
+                                <div class="py-3">
+                                    <a href="#"
+                                        class="flex gap-3 items-center px-4 py-3 text-black border-b border-gray-100 transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6 hover:rounded-md">
+                                        <span>About Us</span>
+                                    </a>
+                                    <a href="#"
+                                        class="flex gap-3 items-center px-4 py-3 text-black border-b border-gray-100 transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6 hover:rounded-md">
+                                        <span>Our Team</span>
+                                    </a>
+                                    <a href="#"
+                                        class="flex gap-3 items-center px-4 py-3 text-black border-b border-gray-100 transition-all duration-300 hover:bg-primary hover:text-white hover:ps-6 hover:rounded-md">
+                                        <span>Careers</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </nav>
+
+                    <!-- Auth Section -->
+                    <div class="hidden gap-4 items-center lg:flex">
+
+                        <!-- Guest User (Login/Signup) -->
+                        <div class="flex items-center guest-auth text-[15px]">
+                            <button type="button" data-open="#loginModal"
+                                class="overflow-hidden relative px-2 py-0 font-medium text-gray-700 transition-all duration-300 hover:text-primary-600 group rtl:border-black rtl:border-l-2">
+                                <span class="relative z-10">Login</span>
+                                <span
+                                    class="absolute bottom-0 w-0 h-0.5 transition-all duration-500 start-0 bg-primary-600 group-hover:w-full"></span>
+                            </button>
+                            <a href="./signup.html"
+                                class="overflow-hidden relative px-2 py-0 font-medium text-gray-700 transition-all duration-300 ltr:border-black ltr:border-l-2 hover:text-primary-600 group">
+                                <span class="relative z-10">Sign Up</span>
+                                <span
+                                    class="absolute bottom-0 w-0 h-0.5 transition-all duration-500 start-0 bg-primary-600 group-hover:w-full"></span>
+                            </a>
+                        </div>
+
+                        <!-- Logged In User (Hidden by default) -->
+                        <div class="hidden relative user-menu-mobile">
+                            <button
+                                class="flex gap-2 items-center p-2 text-gray-700 rounded-lg transition-all duration-300 hover:text-primary-600 hover:bg-white hover:shadow-sm group">
+                                <img src="./assets/imgs/user-avatar.jpg" alt="User" class="w-8 h-8 rounded-full">
+                                <span class="font-medium">John Doe</span>
+                                <i
+                                    class="text-xs transition-transform duration-300 transform fas fa-chevron-down group-hover:rotate-180"></i>
+                            </button>
+
+                            <div
+                                class="absolute top-full invisible z-50 mt-2 w-48 bg-white rounded-xl border border-gray-100 shadow-lg opacity-0 transition-all duration-300 transform translate-y-2 end-0">
+                                <div class="py-3">
+                                    <a href="#"
+                                        class="flex gap-3 items-center px-4 py-3 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">
+                                        <i class="fas fa-user text-primary-600"></i>
+                                        <span>My Profile</span>
+                                    </a>
+                                    <a href="#"
+                                        class="flex gap-3 items-center px-4 py-3 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">
+                                        <i class="fas fa-book text-primary-600"></i>
+                                        <span>My Courses</span>
+                                    </a>
+                                    <a href="#"
+                                        class="flex gap-3 items-center px-4 py-3 text-gray-700 transition-all duration-300 hover:bg-gray-50 hover:text-primary-600 hover:ps-6">
+                                        <i class="fas fa-cog text-primary-600"></i>
+                                        <span>Settings</span>
+                                    </a>
+                                    <hr class="my-2 border-gray-100">
+                                    <a href="#"
+                                        class="flex gap-3 items-center px-4 py-3 text-red-600 transition-all duration-300 hover:bg-red-50 hover:ps-6">
+                                        <i class="fas fa-sign-out-alt"></i>
+                                        <span>Logout</span>
+                                    </a>
+                                </div>
+                            </div>
+                        </div>
+
+                    </div>
+
+                    <!-- Mobile Menu Button -->
+                    <button id="mobile-menu-toggle"
+                        class="p-2 text-gray-700 rounded-lg transition-all duration-300 lg:hidden hover:text-primary-600 hover:bg-white hover:shadow-sm">
+                        <i class="text-xl fas fa-bars"></i>
+                    </button>
+
+                </div>
+            </div>
+        </div>
+        <!-- Mobile Menu - يوضع داخل الـ header قبل إغلاق header -->
+        <div id="mobile-menu"
+            class="hidden absolute right-0 left-0 top-full z-50 bg-white border-t border-gray-100 shadow-lg lg:hidden">
+            <div class="px-4 py-4 space-y-2 h-[calc(100vh-120px)] overflow-y-auto">
+
+                <!-- Home Link -->
+                <a href="index.html"
+                    class="block px-3 py-2 text-gray-700 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                    <i class="w-5 text-center fas fa-home text-primary-600 me-2"></i>
+                    <span>الرئيسية</span>
+                </a>
+
+                <!-- Categories Dropdown -->
+                <div class="mobile-dropdown">
+                    <button
+                        class="flex justify-between items-center px-3 py-2 w-full text-gray-700 rounded-lg transition-colors duration-200 hover:text-primary-600 hover:bg-gray-50 mobile-dropdown-btn">
+                        <div class="flex items-center">
+                            <i class="w-5 text-center fas fa-th-large text-primary-600 me-2"></i>
+                            <span>الفئات</span>
+                        </div>
+                        <i class="text-xs transition-transform duration-300 fas fa-chevron-down"></i>
+                    </button>
+                    <div class="hidden mt-2 space-y-1 mobile-dropdown-content ps-6">
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="w-5 text-center fas fa-code text-primary-600 me-2"></i>
+                            <span>البرمجة</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="w-5 text-center fas fa-palette text-primary-600 me-2"></i>
+                            <span>التصميم</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="w-5 text-center fas fa-language text-primary-600 me-2"></i>
+                            <span>اللغات</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- K-12 Link -->
+                <a href="#"
+                    class="block px-3 py-2 text-gray-700 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                    <i class="w-5 text-center fas fa-graduation-cap text-primary-600 me-2"></i>
+                    <span>K-12</span>
+                </a>
+
+                <!-- Blog Link -->
+                <a href="blog.html"
+                    class="block px-3 py-2 text-gray-700 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                    <i class="w-5 text-center fas fa-article text-primary-600 me-2"></i>
+                    <span>المدونة</span>
+                </a>
+
+                <!-- Classes Dropdown -->
+                <div class="mobile-dropdown">
+                    <button
+                        class="flex justify-between items-center px-3 py-2 w-full text-gray-700 rounded-lg transition-colors duration-200 hover:text-primary-600 hover:bg-gray-50 mobile-dropdown-btn">
+                        <div class="flex items-center">
+                            <i class="w-5 text-center fas fa-chalkboard-teacher text-primary-600 me-2"></i>
+                            <span>الفصول</span>
+                        </div>
+                        <i class="text-xs transition-transform duration-300 fas fa-chevron-down"></i>
+                    </button>
+                    <div class="hidden mt-2 space-y-1 mobile-dropdown-content ps-6">
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="w-5 text-center fas fa-video text-primary-600 me-2"></i>
+                            <span>فصول مباشرة</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="w-5 text-center fas fa-users text-primary-600 me-2"></i>
+                            <span>فصول جماعية</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="w-5 text-center fas fa-user text-primary-600 me-2"></i>
+                            <span>فصول خاصة</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Events Link -->
+                <a href="#"
+                    class="block px-3 py-2 text-gray-700 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                    <i class="w-5 text-center fas fa-calendar-alt text-primary-600 me-2"></i>
+                    <span>الأحداث</span>
+                </a>
+
+                <!-- Help Dropdown -->
+                <div class="mobile-dropdown">
+                    <button
+                        class="flex justify-between items-center px-3 py-2 w-full text-gray-700 rounded-lg transition-colors duration-200 hover:text-primary-600 hover:bg-gray-50 mobile-dropdown-btn">
+                        <div class="flex items-center">
+                            <i class="w-5 text-center fas fa-question-circle text-primary-600 me-2"></i>
+                            <span>المساعدة</span>
+                        </div>
+                        <i class="text-xs transition-transform duration-300 fas fa-chevron-down"></i>
+                    </button>
+                    <div class="hidden mt-2 space-y-1 mobile-dropdown-content ps-6">
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="w-5 text-center fas fa-life-ring text-primary-600 me-2"></i>
+                            <span>مركز المساعدة</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="w-5 text-center fas fa-envelope text-primary-600 me-2"></i>
+                            <span>اتصل بنا</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="w-5 text-center fas fa-question text-primary-600 me-2"></i>
+                            <span>الأسئلة الشائعة</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- About Dropdown -->
+                <div class="mobile-dropdown">
+                    <button
+                        class="flex justify-between items-center px-3 py-2 w-full text-gray-700 rounded-lg transition-colors duration-200 hover:text-primary-600 hover:bg-gray-50 mobile-dropdown-btn">
+                        <div class="flex items-center">
+                            <i class="w-5 text-center fas fa-info-circle text-primary-600 me-2"></i>
+                            <span>حولنا</span>
+                        </div>
+                        <i class="text-xs transition-transform duration-300 fas fa-chevron-down"></i>
+                    </button>
+                    <div class="hidden mt-2 space-y-1 mobile-dropdown-content ps-6">
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="w-5 text-center fas fa-building text-primary-600 me-2"></i>
+                            <span>من نحن</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="w-5 text-center fas fa-users text-primary-600 me-2"></i>
+                            <span>فريقنا</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="w-5 text-center fas fa-briefcase text-primary-600 me-2"></i>
+                            <span>الوظائف</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Auth Section -->
+                <div class="pt-4 mt-4 space-y-2 border-t border-gray-100 guest-auth">
+                    <a href="#"
+                        class="flex justify-center items-center px-3 py-2 text-gray-700 rounded-lg border border-gray-200 transition-colors duration-200 hover:text-primary-600 hover:bg-gray-50">
+                        <i class="fas fa-sign-in-alt text-primary-600 me-2"></i>
+                        <span>Login</span>
+                    </a>
+                    <a href="#"
+                        class="flex justify-center items-center px-3 py-2 text-white rounded-lg transition-colors duration-200 bg-primary-600 hover:bg-primary-700">
+                        <i class="fas fa-user-plus me-2"></i>
+                        <span>Sign Up</span>
+                    </a>
+                </div>
+
+                <div class="hidden mobile-dropdown user-menu-mobile">
+                    <button
+                        class="flex gap-2 items-center p-2 text-gray-700 rounded-lg transition-all duration-300 hover:text-primary-600 hover:bg-white hover:shadow-sm group mobile-dropdown-btn">
+                        <img src="./assets/imgs/user-avatar.jpg" alt="User" class="w-8 h-8 rounded-full">
+                        <span class="font-medium">John Doe</span>
+                        <i
+                            class="text-xs transition-transform duration-300 transform fas fa-chevron-down group-hover:rotate-180"></i>
+                    </button>
+                    <div class="hidden mt-2 space-y-1 mobile-dropdown-content ps-6">
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="fas fa-user text-primary-600"></i>
+                            <span>My Profile</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="fas fa-book text-primary-600"></i>
+                            <span>My Courses</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 nav-mobile-link hover:text-primary-600 hover:bg-gray-50">
+                            <i class="fas fa-cog text-primary-600"></i>
+                            <span>Settings</span>
+                        </a>
+                        <a href="#"
+                            class="flex items-center px-3 py-2 text-gray-600 rounded-lg transition-colors duration-200 hover:text-primary-600 hover:bg-gray-50">
+                            <i class="fas fa-sign-out-alt"></i>
+                            <span>Logout</span>
+                        </a>
+                    </div>
+                </div>
+
+                <!-- Language Toggle (Mobile Only) -->
+                <div class="pt-4 mt-4 border-t border-gray-100">
+                    <button id="mobile-direction-toggle"
+                        class="flex justify-center items-center px-3 py-2 w-full text-gray-700 rounded-lg border border-gray-200 transition-colors duration-200 hover:text-primary-600 hover:bg-gray-50">
+                        <i class="fas fa-globe text-primary-600 me-2"></i>
+                        <span>English</span>
+                    </button>
+                </div>
+
+            </div>
+        </div>
+    </header>
+
+    <!-- Main Content - Tutor Profile -->
+    <section class="py-8 md:py-16 mt-[120px]">
+        <div class="container px-4 mx-auto">
+            <div class="grid grid-cols-1 lg:grid-cols-3 gap-8">
+                <!-- Left Column - Main Content -->
+                <div class="lg:col-span-2 space-y-6">
+
+                    <!-- Tutor Card -->
+                    <div class="bg-white rounded-lg shadow-md border border-gray-200 p-6">
+                        <div class="flex gap-6 items-start">
+                            <!-- Tutor Image -->
+                            <img src="./assets/imgs/user-avatar.jpg" alt="Tutor Jinn"
+                                class="w-36 h-36 rounded-lg object-cover flex-shrink-0">
+
+                            <!-- Tutor Info -->
+                            <div class="flex-1">
+                                <h2 class="text-2xl font-bold text-primary mb-2">Tutor Jinn</h2>
+                                <p class="text-gray-600 mb-4">headline 1</p>
+
+                                <div class="space-y-2">
+                                    <div class="flex items-center gap-2 text-gray-700">
+                                        <i class="fas fa-comment text-primary"></i>
+                                        <span>Speaks english Language</span>
+                                    </div>
+                                    <div class="flex items-center gap-2 text-gray-700">
+                                        <i class="fas fa-book text-primary"></i>
+                                        <span>Teaches english-language Subject</span>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tabs Section -->
+                    <div class="bg-white rounded-lg p-6">
+                        <!-- Tab Buttons -->
+                        <div class="flex gap-3 mb-6">
+                            <button data-tab="about"
+                                class="tab-button active px-8 py-3 text-base font-semibold rounded-lg transition-all duration-300 bg-primary text-white hover:bg-primary hover:text-white">
+                                About
+                            </button>
+                            <button data-tab="schedule"
+                                class="tab-button px-8 py-3 text-base font-semibold rounded-lg transition-all duration-300 text-black hover:bg-primary hover:text-white">
+                                Schedule
+                            </button>
+                            <button data-tab="reviews"
+                                class="tab-button px-8 py-3 text-base font-semibold rounded-lg transition-all duration-300 text-black hover:bg-primary hover:text-white">
+                                Reviews (2)
+                            </button>
+                        </div>
+
+                        <!-- Tab Contents -->
+                        <div>
+                            <!-- About Tab Content -->
+                            <div id="about-tab" class="tab-content">
+                                <h3 class="text-2xl font-bold text-primary mb-4">Tutor Jinn</h3>
+                                <div class="text-gray-700 leading-relaxed">
+                                    <p class="mb-4">
+                                        Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor
+                                        incididunt ut labore et
+                                        dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex
+                                        ea commodo consequat. Duis aute irure dolor in reprehenderit in voluptate velit
+                                        esse cillum dolore eu
+                                        fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in
+                                        culpa qui officia deserunt
+                                        mollit anim id est Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed
+                                        do eiusmod tempor
+                                        incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam, quis
+                                        nostrud exercitation ullamco
+                                        laboris nisi ut aliquip ex ea commodo consequat. Duis aute irure dolor in
+                                        reprehenderit in voluptate velit
+                                        esse cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat
+                                        non proident, sunt in culpa qui officia deserunt
+                                        mollit anim id est laborum.
+                                    </p>
+                                    <div class="about-text-extra hidden">
+                                        <p class="mb-4">
+                                            Sed ut perspiciatis unde omnis iste natus error sit voluptatem accusantium
+                                            doloremque laudantium,
+                                            totam rem aperiam, eaque ipsa quae ab illo inventore veritatis et quasi
+                                            architecto beatae vitae dicta sunt explicabo.
+                                            Nemo enim ipsam voluptatem quia voluptas sit aspernatur aut odit aut fugit,
+                                            sed quia consequuntur magni dolores eos qui ratione
+                                            voluptatem sequi nesciunt.
+                                        </p>
+                                    </div>
+                                    <button id="showMoreBtn" class="text-primary font-bold hover:underline mt-2">
+                                        Show More
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Schedule Tab Content -->
+                            <div id="schedule-tab" class="tab-content hidden">
+                                <!-- Title and Date Navigation -->
+                                <div class="mb-6">
+                                    <h3 class="text-2xl font-bold text-primary mb-3">Tutor Schedule Wedne</h3>
+                                    <div class="flex items-center gap-3">
+                                        <span id="weekDate" class="text-base text-gray-700 font-medium">Wednesday,
+                                            10/15/2025</span>
+                                        <button id="prevWeek"
+                                            class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full hover:bg-primary-700 transition-colors">
+                                            <i class="fas fa-chevron-left text-sm"></i>
+                                        </button>
+                                        <button id="nextWeek"
+                                            class="w-8 h-8 flex items-center justify-center bg-primary text-white rounded-full hover:bg-primary-700 transition-colors">
+                                            <i class="fas fa-chevron-right text-sm"></i>
+                                        </button>
+                                    </div>
+                                </div>
+
+                                <!-- Schedule Table -->
+                                <div class="overflow-x-auto mb-8">
+                                    <div id="scheduleGrid" class="flex gap-3 min-w-max">
+                                        <!-- Days will be generated dynamically by JavaScript -->
+                                    </div>
+                                </div>
+
+                                <!-- View Full Schedule Button -->
+                                <div class="text-center">
+                                    <button id="viewFullScheduleBtn"
+                                        class="px-10 py-3 bg-primary text-white font-semibold rounded-lg hover:bg-primary-700 transition-all">
+                                        View Full Schedule
+                                    </button>
+                                </div>
+                            </div>
+
+                            <!-- Reviews Tab Content -->
+                            <div id="reviews-tab" class="tab-content hidden">
+                                <h3 class="text-xl font-bold text-primary mb-6">Tutor Schedule Wedne</h3>
+
+                                <div class="space-y-6">
+                                    <!-- Review Item 1 -->
+                                    <div class="pb-6">
+                                        <div class="flex items-center  gap-4">
+                                            <img src="./assets/imgs/user-avatar.jpg" alt="Reviewer"
+                                                class="w-18 h-18 rounded-md object-cover">
+                                            <div class="flex-1">
+                                                <div class="flex items-start flex-col  mb-2">
+                                                    <h4 class="font-bold text-gray-800">joud-shaheen</h4>
+                                                    <div class="flex items-center gap-1">
+                                                        <i class="fas fa-star text-yellow-400"></i>
+                                                        <span class="font-semibold">2 / 5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <p class="text-gray-600 text-sm leading-relaxed">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam, quis nostrud
+                                                exercitation ullamco laboris nisi ut ali
+                                            </p>
+                                        </div>
+                                    </div>
+                                    <div class="pb-6">
+                                        <div class="flex items-center  gap-4">
+                                            <img src="./assets/imgs/user-avatar.jpg" alt="Reviewer"
+                                                class="w-18 h-18 rounded-md object-cover">
+                                            <div class="flex-1">
+                                                <div class="flex items-start flex-col  mb-2">
+                                                    <h4 class="font-bold text-gray-800">joud-shaheen</h4>
+                                                    <div class="flex items-center gap-1">
+                                                        <i class="fas fa-star text-yellow-400"></i>
+                                                        <span class="font-semibold">2 / 5</span>
+                                                    </div>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class="mt-2">
+                                            <p class="text-gray-600 text-sm leading-relaxed">
+                                                Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do
+                                                eiusmod tempor
+                                                incididunt ut labore et dolore magna aliqua. Ut enim ad minim
+                                                veniam, quis nostrud
+                                                exercitation ullamco laboris nisi ut ali
+                                            </p>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                    <!-- Tutor Suggestions Section -->
+                    <div class="bg-white rounded-lg shadow-md border border-gray-200 p-6">
+                        <h3 class="text-2xl font-bold text-primary mb-6">Tutor Suggestions</h3>
+
+                        <div class="space-y-3">
+                            <div
+                                class="tutor-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
+                                <div class="flex gap-4">
+                                    <!-- Tutor Image -->
+                                    <div class="flex-shrink-0">
+                                        <img src="./assets/imgs/tutors/1.jpg" alt="Tutor Jinn"
+                                            class="w-53 h-full object-cover">
+                                    </div>
+
+                                    <!-- Tutor Info -->
+                                    <div class="flex-1 p-5 ">
+                                        <div class="flex justify-between items-center mb-3">
+                                            <div>
+                                                <h3 class="text-xl font-bold text-primary mb-1">Tutor Jinn</h3>
+                                            </div>
+                                            <!-- Price & Rating -->
+                                            <div class="flex items-center justify-between gap-3">
+                                                <div class="flex flex-col items-start justify-end">
+                                                    <span class="text-lg font-bold text-primary">50$</span>
+                                                    <span class="text-sm text-black">Per hour</span>
+                                                </div>
+                                                <div class="flex flex-col items-start justify-end">
+                                                    <div class="flex items-center gap-1">
+                                                        <svg class="w-4 h-4 text-yellow-400 fill-current"
+                                                            viewBox="0 0 20 20">
+                                                            <path
+                                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                                        </svg>
+                                                        <span class="text-lg text-gray-700">4</span>
+                                                    </div>
+                                                    <span class="text-sm text-black">2 Reviews</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Info Rows -->
+                                        <div class="space-y-2 mb-4">
+                                            <div class="flex items-center gap-2 text-sm text-gray-700">
+                                                <svg class="w-4 h-4 text-primary flex-shrink-0" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                                                </svg>
+                                                <span>English language</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 text-sm text-gray-700">
+                                                <svg class="w-4 h-4 text-primary flex-shrink-0" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                                                </svg>
+                                                <span>8 Students</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 text-sm text-gray-700">
+                                                <svg class="w-4 h-4 text-primary flex-shrink-0" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd"
+                                                        d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.723 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                                <span>Speaks <span
+                                                        class="text-primary font-semibold">(Native)</span></span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Buttons -->
+                                        <div class="flex gap-3 w-2/3">
+                                            <button
+                                                class="cursor-pointer flex-1 px-4 py-2.5 text-sm font-semibold text-primary border border-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                                                View Details
+                                            </button>
+                                            <button
+                                                class="cursor-pointer flex-1 px-4 py-2.5 text-sm font-semibold text-white bg-primary rounded-lg hover:bg-primary-700 transition-all duration-300 join-now-btn">
+                                                Join Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div
+                                class="tutor-card bg-white rounded-lg overflow-hidden shadow-md transition-all duration-300 hover:shadow-xl">
+                                <div class="flex gap-4">
+                                    <!-- Tutor Image -->
+                                    <div class="flex-shrink-0">
+                                        <img src="./assets/imgs/tutors/2.jpg" alt="Tutor Jinn"
+                                            class="w-53 h-full object-cover">
+                                    </div>
+
+                                    <!-- Tutor Info -->
+                                    <div class="flex-1 p-5 ">
+                                        <div class="flex justify-between items-center mb-3">
+                                            <div>
+                                                <h3 class="text-xl font-bold text-primary mb-1">Tutor Jinn</h3>
+                                            </div>
+                                            <!-- Price & Rating -->
+                                            <div class="flex items-center justify-between gap-3">
+                                                <div class="flex flex-col items-start justify-end">
+                                                    <span class="text-lg font-bold text-primary">50$</span>
+                                                    <span class="text-sm text-black">Per hour</span>
+                                                </div>
+                                                <div class="flex flex-col items-start justify-end">
+                                                    <div class="flex items-center gap-1">
+                                                        <svg class="w-4 h-4 text-yellow-400 fill-current"
+                                                            viewBox="0 0 20 20">
+                                                            <path
+                                                                d="M10 15l-5.878 3.09 1.123-6.545L.489 6.91l6.572-.955L10 0l2.939 5.955 6.572.955-4.756 4.635 1.123 6.545z" />
+                                                        </svg>
+                                                        <span class="text-lg text-gray-700">4</span>
+                                                    </div>
+                                                    <span class="text-sm text-black">2 Reviews</span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                        <!-- Info Rows -->
+                                        <div class="space-y-2 mb-4">
+                                            <div class="flex items-center gap-2 text-sm text-gray-700">
+                                                <svg class="w-4 h-4 text-primary flex-shrink-0" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M10.394 2.08a1 1 0 00-.788 0l-7 3a1 1 0 000 1.84L5.25 8.051a.999.999 0 01.356-.257l4-1.714a1 1 0 11.788 1.838L7.667 9.088l1.94.831a1 1 0 00.787 0l7-3a1 1 0 000-1.838l-7-3zM3.31 9.397L5 10.12v4.102a8.969 8.969 0 00-1.05-.174 1 1 0 01-.89-.89 11.115 11.115 0 01.25-3.762zM9.3 16.573A9.026 9.026 0 007 14.935v-3.957l1.818.78a3 3 0 002.364 0l5.508-2.361a11.026 11.026 0 01.25 3.762 1 1 0 01-.89.89 8.968 8.968 0 00-5.35 2.524 1 1 0 01-1.4 0zM6 18a1 1 0 001-1v-2.065a8.935 8.935 0 00-2-.712V17a1 1 0 001 1z" />
+                                                </svg>
+                                                <span>English language</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 text-sm text-gray-700">
+                                                <svg class="w-4 h-4 text-primary flex-shrink-0" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path
+                                                        d="M9 6a3 3 0 11-6 0 3 3 0 016 0zM17 6a3 3 0 11-6 0 3 3 0 016 0zM12.93 17c.046-.327.07-.66.07-1a6.97 6.97 0 00-1.5-4.33A5 5 0 0119 16v1h-6.07zM6 11a5 5 0 015 5v1H1v-1a5 5 0 015-5z" />
+                                                </svg>
+                                                <span>8 Students</span>
+                                            </div>
+                                            <div class="flex items-center gap-2 text-sm text-gray-700">
+                                                <svg class="w-4 h-4 text-primary flex-shrink-0" fill="currentColor"
+                                                    viewBox="0 0 20 20">
+                                                    <path fill-rule="evenodd"
+                                                        d="M7 2a1 1 0 011 1v1h3a1 1 0 110 2H9.578a18.87 18.87 0 01-1.724 4.78c.29.354.596.696.914 1.026a1 1 0 11-1.44 1.389c-.188-.196-.373-.396-.554-.6a19.098 19.098 0 01-3.107 3.567 1 1 0 01-1.334-1.49 17.087 17.087 0 003.13-3.733 18.992 18.992 0 01-1.487-2.494 1 1 0 111.79-.89c.234.47.489.928.764 1.372.417-.934.752-1.913.997-2.927H3a1 1 0 110-2h3V3a1 1 0 011-1zm6 6a1 1 0 01.894.553l2.991 5.982a.869.869 0 01.02.037l.99 1.98a1 1 0 11-1.79.895L15.383 16h-4.764l-.723 1.447a1 1 0 11-1.788-.894l.99-1.98.019-.038 2.99-5.982A1 1 0 0113 8zm-1.382 6h2.764L13 11.236 11.618 14z"
+                                                        clip-rule="evenodd" />
+                                                </svg>
+                                                <span>Speaks <span
+                                                        class="text-primary font-semibold">(Native)</span></span>
+                                            </div>
+                                        </div>
+
+                                        <!-- Buttons -->
+                                        <div class="flex gap-3 w-2/3">
+                                            <button
+                                                class="cursor-pointer flex-1 px-4 py-2.5 text-sm font-semibold text-primary border border-primary rounded-lg hover:bg-primary hover:text-white transition-all duration-300">
+                                                View Details
+                                            </button>
+                                            <button
+                                                class="cursor-pointer flex-1 px-4 py-2.5 text-sm font-semibold text-white bg-primary rounded-lg hover:bg-primary-700 transition-all duration-300 join-now-btn">
+                                                Join Now
+                                            </button>
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+
+                </div>
+
+                <!-- Right Column - Sidebar -->
+                <div class="lg:col-span-1">
+                    <div class="lg:sticky lg:top-32 space-y-4">
+                        <!-- Price Card -->
+                        <div class="bg-white rounded-lg shadow-md border border-gray-200 p-3">
+                            <!-- Price at Top -->
+                            <div class="text-center mb-4">
+                                <div class="text-4xl font-bold text-primary mb-1">0 <span class="text-2xl text-black">USD</span>
+                                </div>
+                            </div>
+
+                            <!-- Video Preview -->
+                            <div class="relative rounded-lg overflow-hidden bg-black aspect-video">
+                                <video class="w-full h-full" controls poster="./assets/imgs/user-avatar.jpg">
+                                    <source src="#" type="video/mp4">
+                                    Your browser does not support the video tag.
+                                </video>
+                            </div>
+                        </div>
+
+                        <div>
+                            
+                            <!-- Stats Grid -->
+                            <div class="grid grid-cols-3 gap-4 mb-6 text-start">
+                                <div>
+                                    <div class="flex items-center justify-start gap-1 mb-1">
+                                        <i class="fas fa-star text-yellow-400"></i>
+                                        <span class="font-bold text-lg text-primary">4/5</span>
+                                    </div>
+                                    <div class="text-xs text-black">96 reviews</div>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-lg text-primary mb-1">11773</div>
+                                    <div class="text-xs text-black">lessons</div>
+                                </div>
+                                <div>
+                                    <div class="font-bold text-lg text-primary mb-1">$1,904</div>
+                                    <div class="text-xs text-black">50-min lesson</div>
+                                </div>
+                            </div>
+
+                            <!-- Action Buttons -->
+                            <div class="space-y-3">
+                                <button
+                                    class="w-full py-3 text-white bg-primary rounded-lg font-semibold hover:bg-primary-700 transition-all duration-300 shadow-sm hover:shadow-md">
+                                    Book trial lesson
+                                </button>
+                                <button
+                                    class="cursor-pointer w-full px-4 py-3 text-sm font-semibold text-primary border border-primary rounded-md hover:bg-primary hover:text-white transition-all duration-300">
+                                    Message Cheryl
+                                </button>
+                                <button
+                                    class="cursor-pointer w-full px-4 py-3 text-sm font-semibold text-primary border border-primary rounded-md hover:bg-primary hover:text-white transition-all duration-300">
+                                    Save to my list
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+            </div>
+        </div>
+    </section>
+
+    <!-- Full Schedule Modal -->
+    <div id="fullScheduleModal" class="hidden fixed inset-0 bg-black bg-opacity-50 z-50 items-center justify-center">
+        <div class="bg-white rounded-lg shadow-xl max-w-4xl w-full mx-4 max-h-[90vh] overflow-y-auto">
+            <div class="p-6">
+                <div class="flex items-center justify-between mb-6">
+                    <h3 class="text-2xl font-bold text-primary">Full Schedule</h3>
+                    <button id="closeModalBtn" class="text-gray-500 hover:text-gray-700">
+                        <i class="fas fa-times text-2xl"></i>
+                    </button>
+                </div>
+                <p class="text-gray-600">Full schedule content will be displayed here...</p>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="bg-[#374151] text-white px-4">
+        <!-- المحتوى الرئيسي للفوتر -->
+        <div class="container pt-12 pb-6 mx-auto">
+            <div class="grid grid-cols-1 gap-8 md:grid-cols-7 lg:gap-12">
+
+                <!-- العمود الأول: الشعار والوصف -->
+                <div class="col-span-1 text-center md:col-span-2 md:text-left rtl:md:text-right">
+                    <div class="flex justify-center mb-4 lg:justify-start">
+                        <img src="./assets/imgs/logo-white.png" alt="Jinn Education Logo" class="w-32">
+                    </div>
+                    <p class="text-sm leading-relaxed text-gray-300 md:text-[13px]">
+                        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Sed do eiusmod tempor incididunt ut
+                        labore et dolore magna aliqua. Ut enim ad minim veniam.
+                    </p>
+                </div>
+
+                <!-- العمود الثاني: قوائم الروابط -->
+                <div class="grid grid-cols-2 col-span-1 gap-2 md:col-span-3 lg:grid-cols-3 md:grid-cols-2">
+                    <div>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Home
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    About Us
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    How JINN Works
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Live Private Classes
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Live Group Classes
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Categories
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    K-12
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Contact Us
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Help For Student
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Help For Tutor
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Student Guide
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Tutor Guide
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Help Center
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Technical Support
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Free Courses
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                    <div>
+                        <ul class="space-y-2">
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Terms and Conditions
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Privacy and Usage Policy
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Intellectual Property and Copyrights
+                                </a>
+                            </li>
+                            <li>
+                                <a href="#"
+                                    class="flex items-center text-sm text-gray-300 transition-all duration-300 hover:text-primary-400 hover:pr-2 rtl:hover:pl-2 rtl:hover:pr-0 md:text-[12px] group">
+                                    <span
+                                        class="mr-2 w-1 h-1 bg-gray-400 rounded-full transition-colors duration-300 rtl:ml-2 rtl:mr-0 group-hover:bg-primary-400"></span>
+                                    Refund Policy
+                                </a>
+                            </li>
+
+                        </ul>
+                    </div>
+                </div>
+
+                <!-- العمود الثالث: النشرة الإخبارية -->
+                <div class="col-span-1 text-center md:col-span-2 md:text-left rtl:md:text-right">
+                    <p class="mb-6 text-sm text-gray-300 md:text-base">
+                        Subscribe to our newsletter Updated digest of what's new and exciting from JINN EDU.
+                    </p>
+                    <!-- نموذج الاشتراك -->
+                    <div class="flex gap-3 mx-auto max-w-md md:mx-0">
+                        <input type="email" placeholder="Enter your email"
+                            class="flex-1 px-4 py-3 min-w-0 placeholder-gray-400 text-black bg-white rounded-lg border border-gray-500 transition-all duration-300 focus:border-primary-400 focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-opacity-50" />
+
+                        <button
+                            class="px-6 py-3 font-medium text-white rounded-lg transition-all duration-300 transform bg-primary hover:bg-primary-700 hover:scale-105 hover:shadow-lg focus:outline-none focus:ring-2 focus:ring-primary-400 focus:ring-opacity-50">
+                            Subscribe
+                        </button>
+                    </div>
+
+                </div>
+            </div>
+        </div>
+
+        <!-- أسفل الفوتر -->
+        <div class="container px-6 pb-6 mx-auto">
+            <!-- خط الفصل -->
+            <div class="mb-6 border-t border-gray-600"></div>
+
+            <div class="flex flex-col-reverse gap-4 justify-between items-center md:flex-row">
+                <!-- حقوق النشر -->
+                <div class="flex items-center text-sm text-gray-400">
+                    <i class="mr-2 far fa-copyright rtl:ml-2 rtl:mr-0"></i>
+                    2025 JINN EDU. All rights reserved.
+                </div>
+
+                <!-- أيقونات السوشال ميديا -->
+                <div class="flex space-x-2 rtl:space-x-reverse">
+                    <a href="#"
+                        class="flex justify-center items-center w-7 h-7 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-primary hover:scale-110 group">
+                        <i class="text-md fab fa-facebook-f group-hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="flex justify-center items-center w-7 h-7 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-pink-600 hover:scale-110 group">
+                        <i class="text-md fab fa-instagram group-hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="flex justify-center items-center w-7 h-7 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-gray-800 hover:scale-110 group">
+                        <i class="text-md fab fa-x-twitter group-hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="flex justify-center items-center w-7 h-7 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-primary-700 hover:scale-110 group">
+                        <i class="text-md fab fa-linkedin-in group-hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="flex justify-center items-center w-7 h-7 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-red-600 hover:scale-110 group">
+                        <i class="text-md fab fa-youtube group-hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="flex justify-center items-center w-7 h-7 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-purple-600 hover:scale-110 group">
+                        <i class="text-md fab fa-discord group-hover:text-white"></i>
+                    </a>
+                    <a href="#"
+                        class="flex justify-center items-center w-7 h-7 text-gray-600 bg-white rounded-full transition-all duration-300 transform hover:bg-primary-900 hover:scale-110 group">
+                        <i class="text-md fab fa-telegram-plane group-hover:text-white"></i>
+                    </a>
+                </div>
+            </div>
+        </div>
+    </footer>
+
+    <!-- زر واتساب عائم -->
+    <div class="fixed right-6 bottom-6 z-50 rtl:left-6 rtl:right-auto group">
+        <a href="https://wa.me/1234567890?text=مرحبا، أحتاج مساعدة" target="_blank"
+            class="flex relative justify-center items-center w-14 h-14 text-white bg-green-500 rounded-full shadow-lg transition-all duration-300 transform hover:bg-green-600 hover:scale-110 hover:shadow-xl group">
+            <i class="text-2xl fab fa-whatsapp"></i>
+
+            <!-- رسالة التوضيح من الجانب -->
+            <div
+                class="absolute top-1/2 right-full px-3 py-2 mr-3 text-sm text-white whitespace-nowrap bg-gray-800 rounded-lg shadow-lg opacity-0 transition-all duration-300 transform -translate-y-1/2 pointer-events-none rtl:left-full rtl:right-auto rtl:ml-3 rtl:mr-0 group-hover:opacity-100">
+                تواصل معنا عبر واتساب
+                <!-- السهم الجانبي -->
+                <div
+                    class="absolute top-1/2 left-full w-0 h-0 border-t-4 border-b-4 border-l-4 border-transparent transform -translate-y-1/2 rtl:right-full rtl:left-auto rtl:border-r-4 rtl:border-l-0 border-l-gray-800 rtl:border-r-gray-800">
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <!-- Direction Toggle Button -->
+    <div class="fixed bottom-4 z-50 start-4">
+        <button id="direction-toggle"
+            class="px-4 py-2 text-white rounded-lg shadow-lg transition-colors duration-300 bg-primary-600 hover:bg-primary-700">
+            <i class="fas fa-exchange-alt me-2"></i>
+            <span>RTL</span>
+        </button>
+    </div>
+
+    <script src="./assets/js/jquery-3.6.0.min.js"></script>
+    <script src="./assets/js/main.js"></script>
+    <script src="./assets/js/tutor_profile.js"></script>
+</body>
+
+</html>

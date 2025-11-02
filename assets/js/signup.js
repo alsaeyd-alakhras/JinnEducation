@@ -142,7 +142,7 @@ $(function () {
     const $googleBtn = $("#account-info .btn-google");
     const $continueBtn = $("#account-info .btn-continue");
     const $submitBtn = $("#account-info .btn-submit");
-    const account_type = localStorage.getItem('accountType');
+    const $account_type = localStorage.getItem('accountType');
 
     // اخفِ زر Continue بالبداية
     $continueBtn.hide();
@@ -214,7 +214,8 @@ $(function () {
         // لو كل الحقول مليانة (مش فارغة)
         if (filled && passwordsOK) {
             $googleBtn.fadeOut(200, function () {
-                if(account_type == 'student') {
+                console.log($account_type);
+                if($account_type == 'student') {
                     $submitBtn.fadeIn(200);
                 } else {
                     $continueBtn.fadeIn(200);

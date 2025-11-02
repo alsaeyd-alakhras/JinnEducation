@@ -254,3 +254,27 @@ nav a:hover,
     /* Firefox */
   }
 }
+/* *************************** Navbar *************************** */
+.nav-link {
+  @apply px-3 py-2 font-medium text-gray-700 rounded-lg transition-all duration-300 hover:text-primary hover:font-bold hover:bg-white hover:shadow-sm;
+}
+.nav-link.active{
+  @apply text-primary-600 font-semibold hover:text-primary-600 hover:bg-white hover:font-bold hover:shadow-sm;
+}
+
+/* *************************** Schedule Time Slots *************************** */
+.time-slot {
+  @apply transition-all duration-200;
+}
+
+.time-slot:not(.selected):hover {
+  @apply text-primary-600 border-primary-400;
+}
+
+.time-slot.selected {
+  @apply bg-primary text-white border-primary;
+}
+
+.time-slot.selected:hover {
+  @apply bg-primary-700;
+}
