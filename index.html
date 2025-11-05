@@ -587,16 +587,23 @@
 
     <!-- Hero Section -->
     <section class="flex overflow-hidden relative items-center bg-white mt-[120px] min-h-screen-hero shadow-sm">
-        <!-- Background Shape 1 - Bottom Left -->
-        <div class="absolute bottom-[-7px] left-0 pointer-events-none animate-float" id="shape1">
-            <img src="./assets/imgs/hero/shape2.png" alt="">
+        <!-- Background Shape 1 - Bottom Left (RTL-aware, image flipped for RTL) -->
+        <div class="absolute bottom-[-7px] left-0 rtl:right-0 rtl:left-auto pointer-events-none animate-float" id="shape1">
+            <img 
+                src="./assets/imgs/hero/shape2.png" 
+                alt="" 
+                class="transition-transform duration-700 rtl:scale-x-[-1]"
+            >
         </div>
 
-        <!-- Background Shape 2 - Top Right -->
-        <div class="absolute -top-[10px] right-0 w-auto pointer-none:nter-events-none h-shape1 animate-float-reverse"
+        <!-- Background Shape 2 - Top Right (RTL-aware, image flipped for RTL) -->
+        <div class="absolute -top-[10px] right-0 rtl:left-0 rtl:right-auto w-auto pointer-events-none h-shape1 animate-float-reverse"
             id="shape2">
-            <img src="./assets/imgs/hero/shape1.png" alt="" class="h-full">
-
+            <img 
+                src="./assets/imgs/hero/shape1.png" 
+                alt="" 
+                class="h-full transition-transform duration-700 rtl:scale-x-[-1]"
+            >
         </div>
 
         <!-- Main Container -->
