@@ -142,6 +142,15 @@ $(document).ready(function () {
     startAutoplay();
   });
 
+  // إيقاف مؤقت للـ autoplay عند hover على السلايدر
+  $(".hero-text-container, .hero-image-container").on("mouseenter", function() {
+    stopAutoplay();
+  });
+
+  $(".hero-text-container, .hero-image-container").on("mouseleave", function() {
+    startAutoplay();
+  });
+
   startAutoplay();
 });
 

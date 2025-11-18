@@ -278,3 +278,7 @@ nav a:hover,
 .time-slot.selected:hover {
   @apply bg-primary-700;
 }
+
+button , a {
+  @apply cursor-pointer;
+}
