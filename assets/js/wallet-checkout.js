@@ -48,13 +48,14 @@ $(document).ready(function() {
     // ============================================
     $('.payment-gateway').on('click', function() {
         // Remove active state from all gateways
-        $('.payment-gateway').removeClass('border-primary border-2').addClass('border-gray-200');
+        $('.payment-gateway').removeClass('border-primary').addClass('border-gray-200');
         
         // Add active state to selected gateway
-        $(this).removeClass('border-gray-200').addClass('border-primary border-2');
+        $(this).removeClass('border-gray-200').addClass('border-primary');
         
         // Store selected gateway
         selectedGateway = $(this).data('gateway');
+        $('#payment-gateway').val(selectedGateway);
         
         // Visual feedback
         $(this).css('transform', 'scale(0.98)');
@@ -89,7 +90,7 @@ $(document).ready(function() {
             const amount = parseFloat($('#wallet-amount').val()) || 0;
             updateTotals(amount);
         } else {
-            showMessage('Invalid discount code. Try: DISCOUNT10', 'error');
+            showMessage('Invalid discount code. Try: DISCOUNT10 or SAVE20', 'error');
         }
     });
 
@@ -111,8 +112,7 @@ $(document).ready(function() {
         }
         
         // Success - would redirect to payment gateway in real application
-        const gatewayName = selectedGateway === 'pay' ? 'PAY' : 'PALPAY';
-        showMessage(`Redirecting to ${gatewayName} payment gateway...`, 'success');
+        showMessage(`Redirecting to ${selectedGateway} payment gateway...`, 'success');
         
         // Simulate loading state
         $(this).prop('disabled', true).html('<span class="inline-block animate-pulse">Processing...</span>');
@@ -120,7 +120,10 @@ $(document).ready(function() {
         // Simulate redirect after 2 seconds
         setTimeout(() => {
             $(this).prop('disabled', false).text('Purchase confirmation');
-            showMessage('Demo mode - No actual payment processed', 'info');
+            showMessage('Redirecting to page check', 'info');
+            setTimeout(function() {
+                window.location.href = 'complete_checkout.html';
+            }, 2000);
         }, 2000);
     });
 
@@ -128,6 +131,14 @@ $(document).ready(function() {
     // Update Totals Function
     // ============================================
     function updateTotals(baseAmount) {
+        // Calculate all elements total (negative - to deduct from wallet)
+        // All existing elements are automatically deducted
+        let elementsTotal = 0;
+        $('.element-item').each(function() {
+            const price = parseFloat($(this).data('price')) || 0;
+            elementsTotal += price;
+        });
+        
         // Calculate tax
         const taxAmount = baseAmount * TAX_RATE;
         
@@ -140,8 +151,8 @@ $(document).ready(function() {
             discount = baseAmount * 0.10; // 10% discount
         }
         
-        // Calculate total
-        const total = baseAmount - discount;
+        // Calculate total (subtract elements total as negative)
+        const total = baseAmount - discount - elementsTotal;
         const finalTotal = total + taxAmount + serviceFee;
         
         // Update display
