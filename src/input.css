@@ -67,11 +67,6 @@ body {
 /* *************************** home *************************** */
 /* Header Specific Styles - Add to input.css */
 
-/* Dropdown Arrow Rotation */
-.rotate-180 {
-  transform: rotate(180deg);
-}
-
 /* Smooth Dropdown Animations */
 .nav-dropdown>div,
 .language-dropdown>div,

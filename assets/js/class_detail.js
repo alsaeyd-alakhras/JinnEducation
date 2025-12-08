@@ -1,5 +1,6 @@
-// Course Detail Page - Interactive Elements for course.html
+// Course Detail Page - Interactive Elements for online_group_classe.html
 $(document).ready(function () {
+    let selectedSlot = null;
 
     // ==================== FAQ Accordion ====================
     $('.faq-question').on('click', function() {
@@ -16,37 +17,17 @@ $(document).ready(function () {
         $icon.toggleClass('rotate-180');
     });
 
-    // ==================== Course Content Accordions ====================
-    $('.accordion-header').on('click', function() {
-        const $accordionBody = $(this).next('.accordion-body');
-        const $icon = $(this).find('.icon');
-        
-        // Toggle accordion body with callback
-        $accordionBody.slideToggle(200, function() {
-            // After animation, update icon based on visibility
-            if ($accordionBody.is(':visible')) {
-                // Open - show minus icon
-                $icon.html('<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M20 12H4"></path>');
-                $icon.addClass('rotate-180');
-            } else {
-                // Closed - show plus icon
-                $icon.html('<path stroke-linecap="round" stroke-linejoin="round" stroke-width="2" d="M12 4v16m8-8H4"></path>');
-                $icon.removeClass('rotate-180');
-            }
-        });
-    });
-
     // ==================== Course Tabs ====================
     $('.course-tab').on('click', function(e) {
         e.preventDefault();
         
         // Remove active classes from all tabs
-        $('.course-tab').removeClass('font-bold text-white bg-primary border-primary')
-                       .addClass('bg-white text-black border-[#CAC6C6]');
+        $('.course-tab').removeClass('font-semibold text-primary border-primary')
+                       .addClass('text-gray-600 border-transparent');
         
         // Add active classes to clicked tab
-        $(this).removeClass('bg-white text-black border-[#CAC6C6]')
-               .addClass('bg-primary text-white border-primary font-bold');
+        $(this).removeClass('text-gray-600 border-transparent')
+               .addClass('font-semibold text-primary border-primary');
         
         // Get target section
         const target = $(this).data('target');
@@ -58,6 +39,62 @@ $(document).ready(function () {
                     scrollTop: $targetSection.offset().top - 120
                 }, 500);
             }
+        }
+    });
+
+    // ==================== Time Slot Selection ====================
+    $('.time-slot').on('click', function() {
+        // Remove selection styling from all slots
+        $('.time-slot').removeClass('border-primary-600 bg-primary-50')
+                       .addClass('border-gray-200');
+        
+        // Add selection styling to clicked slot
+        $(this).removeClass('border-gray-200')
+               .addClass('border-primary-600 bg-primary-50');
+        
+        // Store selected slot information
+        selectedSlot = {
+            id: $(this).data('slot'),
+            date: $(this).find('span:first').text(),
+            time: $(this).find('span:last').text()
+        };
+        
+        console.log('Selected slot:', selectedSlot);
+    });
+
+    // ==================== Book Now Button ====================
+    $('#bookNowBtn').on('click', function() {
+        if (selectedSlot) {
+            // Show booking confirmation
+            const message = 'Booking Confirmed!\n\n' +
+                          'Date: ' + selectedSlot.date + '\n' +
+                          'Time: ' + selectedSlot.time + '\n\n' +
+                          'The course tutor will contact you within 24 hours to schedule and set a payment method.';
+            
+            alert(message);
+            
+            console.log('Booking details:', selectedSlot);
+            
+            // Optional: Send booking to server
+            // $.ajax({
+            //     url: '/api/course-bookings',
+            //     method: 'POST',
+            //     data: {
+            //         courseId: 'write-essay-confidence',
+            //         ...selectedSlot
+            //     },
+            //     success: function(response) {
+            //         console.log('Booking successful:', response);
+            //         // Redirect to confirmation page or show success modal
+            //     },
+            //     error: function(error) {
+            //         console.error('Booking failed:', error);
+            //         alert('Booking failed. Please try again.');
+            //     }
+            // });
+        } else {
+            // Alert user to select a time slot
+            alert('Please select a time slot before booking.');
         }
     });
 
@@ -96,6 +133,8 @@ $(document).ready(function () {
     if (!$('style#dynamic-rotate').length) {
         $('head').append('<style id="dynamic-rotate">.rotate-180 { transform: rotate(180deg); transition: transform 0.3s ease; }</style>');
     }
+    // Optional: Auto-select first time slot
+    // $('.time-slot').first().trigger('click');
 
     // $(function(){
     //     $('#fav-btn').on('click', function(){
@@ -116,59 +155,3 @@ $(document).ready(function () {
         });
 });
 
-
-// Courses Filtering
-$(document).ready(function () {
-    let currentDisplayed = 4;
-    // Load More Function
-    $("#loadMoreBtn").on("click", function () {
-      let hiddenCards = $(".course-card")
-        .filter(function () {
-          return $(this).css("display") === "none";
-        })
-        .slice(0, 4);
-  
-      if (hiddenCards.length > 0) {
-        hiddenCards.each(function (index) {
-          $(this)
-            .delay(index * 80)
-            .fadeIn(300)
-            .css({
-              transform: "translateY(30px)",
-              opacity: "0",
-            })
-            .animate(
-              {
-                opacity: "1",
-              },
-              {
-                duration: 300,
-                step: function (now, fx) {
-                  if (fx.prop === "opacity") {
-                    $(this).css(
-                      "transform",
-                      "translateY(" + (30 - 30 * now) + "px)"
-                    );
-                  }
-                },
-                complete: function () {
-                  $(this).css("transform", "translateY(0)");
-  
-                  if (index === hiddenCards.length - 1) {
-                    updateLoadMoreButton();
-                  }
-                },
-              }
-            );
-        });
-        currentDisplayed += hiddenCards.length;
-      }
-  
-      if (hiddenCards.length === 0 || $(".course-card").length <= 4) {
-        $("#loadMoreBtn").fadeOut(200);
-      } else {
-        $("#loadMoreBtn").fadeIn(200);
-      }
-    });
-  });
-  
